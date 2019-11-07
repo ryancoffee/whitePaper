@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{unsrt}
+
+\title{Adaptive EdgeAI: Transforming signals to informed actions at the point of production}
+\author{Ryan Coffee}
+
+\begin{document}
+
+\begin{abstract}
+	Robust, reconstructable, and reconfigurable machine learned models that map raw data input to lower dimensional information. Autonomous data routing and adaptive mapping is made at points along the chair, each routing decision is added to the accompanying block chain to allow forensic reconstruction. The computational hardware should simultaneously make the data transformations and produce the ledger entries chain for the reconstruction ledger.
+
+\end{abstract}
+
+
+\maketitle
+
+\section{Notes}
+
+
+Example is using an x-ray attosecond double pulse experiment that quietly records spooktroscopy data with a forked data path. The producer of the spooltroscopy data then gets credit for his/her background production of that data even though that wasn’t the original goal of the experiment.
+
+Depending on the data mappings, a suggestion engine could recommend what background transformation chains would a) fit the hardware, and b) maximize the likelihood of background data relevance for the broader external community.
+
+Early in the FPGA, a highliy parallel but 
+The layer with the highest connectivity will likely be the longest latency layer in a given neural network, therefore one would design early data routing decisions at the highest throughput level to determine the downstream routing for a given event.  
+The example we like is that a light weight classification network running in a diagnostic detector could signal single or double shots and veto multiple SASE spike events.
+A more inventive approach would be that users would be prompted with a query window if they would allow the quiet collection of the veto data for use in community open access data repository that would be free of access restriction embargo.
+Such a repository could then serve as algorithm development research and ultimately help improve the Edge models used in future experiments.
+When such data from the community repository is used for improvements and or publication, then there will be a note of credit ascribed to the generating experiment as the data producer.
+Such credits could then serve as metrics for both the facility, the detector, the FEL operation mode, and even the experimenter his or herself, increasing likelihood for subsequent beamtimes for instance.
+Such incentives would then encourage users not only to open the ``veto'' data to un-embargoed repositories, but it would also create a value for being a data producer rather than exclusively assigning academic credit for data developers and financial gain for data consumers as is the current paradigm.
+
+
+
+\section{Introduction}
+Scientific advancement, like all human technological advancement \cite{Kurzweil}, progresses with exponential rapidity.
+
+Researchers physically cannot incorporate the developing methods at the rate of ideation, but the future of AI assisted scientific discovery would allow for the near real time implimentation of novel new methods if not directly at experiemtnal execution, then shortly thereafrter based on known data and recoverable raw data.
+
+However, raw data is rates are also increasing at an exponential rate and therefore are now growing to data velocities ( GB/s) that exceed network and storage capacity.  This is a common problem also in the private sector, notable AI assisted Agriculture whereby extant hyperspectaral imaging technology can not be appropriately leveraged simply owing to its excessive data velocity.
+Modern science is no different.
+
+\begin{wrapfigure}[28]{r}{.5\linewidth}
+\centerline{ \includegraphics[clip,width=\linewidth]{plotting_technology.eps} }
+	\caption{\label{fig::technology} In the upper panel, the utility of increasing compute enabled by increasing transistor density has value matched by the compensation of the roll off of thread performance by increasing the number of concurrent threads.
+	The roll off in thread performance is temporally correlated with the GHz limit in clock frequency as noted in the text.
+	Data is used from the compilation in ref.~\cite{MicroprocessorTrendData}
+	}
+\end{wrapfigure}
+
+The thermal conductivity of liquid water is on the order of $k \sim 7 \mbox{mW} \mbox{cm}^{-1} \mbox{K}^{-1}$.
+The conductance of heat from the chip is governed by $q = k \delta T / \delta x \sim \mbox{mW} \mbox{cm}^{-2}$ assuming $\delta T \simeq 50 \mbox{K}$ and $\delta x \simeq 0.1 \mbox{cm}$ is about 3.5 $\mbox{W} \mbox{cm}^{-2}$.
+For a heatsink of about $2\mbox{cm}\times2\mbox{cm}$ with 2 cm tall vanes separated by 1 mm gives a total surface area of about $80 \mbox{cm}^{2}$ and thus corresponds to a thermal dissipation capacity of 280 W.
+We note that the in the bottom panel of Fig.~\ref{fig::technology} we see that the power of the processors looks to be approaching a few hundred Watt assymptote.
+Likewise, the speed of light is 30 cm/ns such that the typical chip scale of 3 cm corresponds to one wavelength of 10 GHz light, and so it is no surprise that our clock rates have run into a limit in the vicinity of few GHz.
+These physical limitations have motivated a the shift away from thread performance with faster clocks in favor of multi-threaded processing that can better leverage the utility of the increased transistor density.
+In the next decade, we will likely see the transistor size encroach on a qunatum mechanical limit of tens of atoms wide transistors, and this limit will again motivate a redesign of some other part of the computing story.
+We purport that the redesign will be in how we consider the value of data versus information.
+
+Physical limitations motivate us to rethink how we extract value from computing.  
+We are opening the data volume flood but at a time when we wil lbe hitting a physical wall in computing, so now is an opportune moment to rethink how we extract value from recorded data.
+
+
+
+\section{More information}
+"Because we have an intuitive understanding of data, often we don’t ask important questions. We
+know what data is, how it can be stored, how to move it, how to analyze it, and in a sense, we
+think we understand the nature of data.
+But a closer look at the world of data shows that there is no Moore’s Law in effect. More data
+just means more data. In many cases data is a liability. More data means more costs for storage,
+for governance and having too much unorganized data may make it more difficult to find what
+you need. In other words more data can mean less value." -- Dan Woods \cite{Woods2013}
+%"How To Create A Moore's Law For Data" Forbes Dec 12 2013, https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-a-moores-law-for-data/#7051ed4f44ca
+
+"To make a Moore’s Law for data, we also need two layers, a data stack and a data economy layer. If both of these layers were as mature as the hardware and software industries, more data would
+mean more value." -- Dan Woods \cite{Woods2013} %"How To Create A Moore's Law For Data" Forbes Dec 12 2013, https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-a-moores-law-for-data/#7051ed4f44ca
+
+\subsection{The Data Stack}
+Look up "The Data Stack: A Structured Approach" -- \cite{Elbaz2012}% http://blog.factual.com/how-the-data-stack-can-organize-your-data-science-program
+
+"The data stack defines all the capabilities needed to connect to data, collect it, clean it, and join it together into a form that makes sense.
+Then the data stack describes capabilities for delivering that data to those who use it in multiple
+ways, through subscriptions or through APIs." -- Dan Woods "How To Create A Moore's Law For Data" Forbes Dec 12 2013, \cite{Woods2013} %https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-a-moores-law-for-data/#7051ed4f44ca
+
+Conventional data warehouses collect and organize only the data that is generated in premisis or within the tight knit collaborative group.
+This is the typical case for DOE facilities that generate enormous high velocity data, there is typically an on premesis data storage facility that houses all raw data generated by the facility and allow temporary user storage for auxillary and or augmentation data used for analysis and interpretation, e.g. intermediate analysis stages and code repositories.
+More common than on-prem code repositories is the changelog of code evolution that is tracked via git, svn or other code repositories.
+Unfortunately, such code repositories are not tightly coupled to the data these codes were used to manipulate.
+
+This is where The Data Stack comes in.
+The Data Stack is like a supply chain, each analysis step or ML model application is a data manipulation or mapping that constitutes a transaction between the algorithm unit and the data unit.
+Each transacting party should retain a ledger of the applied transactions with an identification marker unique to the algortimn or data unit.
+
+
+The Data Stack compiles disparate data shards or individuals as potentially multi-modal data collections, with the associated mapping algortihms will make for a more fundamentally integrated data fusion infrastructure.
+
+An interoperable stack with fundamental coupling between algorithm and data individuals would allow for multiple data pipelines, some very low latency for making feedback control decisions, and others that are higher fidelity though lower throughput that provide validation and testing.  Furthermore, this is critical in a sensor ecosystem whereby the sensor reporting duty cycles may have vastly different timescales. 
+This is not unique to DOE facilities like the LCLS-II where come sensors will report at the 1MFps machine rate and others at a much slower e.g. pre-scaled 100Hz "validation" rate.  
+In the agriculture industry, aereal drones can provide hourly hyperspectral imaging data while soil testing likely occurs at most daily or monthly, thus also a multiple duty cycle sensor reporting rate that needs be fused.
+
+Provenance must be fundamentally included together with the data in particular as it is required for data fusion, and uplimately for forensic reconstruction in our common case of very high price of being wrong in autonomous inference.
+
+"Data stacks assume that data must be curated and maintained, in other words data is both
+an asset and a liability. Often, the fact that a data set is actually a liability is ignored in
+much data processing. In data stacks, the responsibility for curation is addressed as part
+the initial design." -- Dan Woods "How To Create A Moore's Law For Data" Forbes Dec 12 2013, \cite{Woods2013} %https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-a-moores-law-for-data/#7051ed4f44ca
+
+Data curation must be fundamentally integrated into the design of the data acquisition.  This is a tremendous challenge in the context of DOE user facilities where the data transfomraion chain, the algorithm/data transaction chain, will make step changes each experiment cycle, every week at every beamiline will be a new data representaiton algorithm which will need to accommodate user and domain specific algorithms.
+This domain specificity lends better to a model of heterogeneous edge hardware whereby the data and algorithm identifiers are built into a transaction log or ledger while the specific algorithm is flashed to a user accessible logic region.
+In FPGAs for instance, there can be IPcores that are hidden from user access.  These cores allow the Data Stack infrastrucure.  The user logic cores then serve the domain specific, potentially user developed, data transfomration logic and algorithm.
+
+
+Some counter examples are the Materials Data Base, Observational astronomy, HEP.  Still, these counter examples benefit from a community consensus for data structure and 
+
+Look up Why Building a Distributed Supply Chain is More Important than Big Data -- http://www.forbes.com/sites/danwoods/2013/06/27/why-building-a-distributed-data-supply-chain-is-more-important-than-big-data/
+
+The second missing step is that the data producers, owners, and curators all work together.  This we can motivate if the data identifiers themselves can carry a representaiton of value, a value that get incremented whenever a data individual or algorithm unit is used or referenced in publication and research value metrics.
+This motivation ideally support something of a data economy such that it will self sustain as a community economic system.  But this econmomy can't be based on raw data, that would be fragile to hyperinflation, but if there is real measurable and tracable value to the data and respective algorithms, then we move into an information economy whereby information we mean the valuable combination of data nad algortihm.
+
+
+
+%% look up Factual %% to see what they have/are building.
+
+In a data economy, one could imagine not only a single lab economy, but also an inter-lab and ultimately an international data economy.
+
+Data supply chain:
+\begin{itemize}
+\item Providers, these are the instruments and sensors that report state during data acquisition as well as the scientific detectors themselves (those who have data that may be able to help create a valuable data set.)
+\item Curators, these are likely the instrument scientists and user consortia who agree upon dommain specific representations and shareable labels. (those who collect data from providers, use technology and other means to create valuable datasets, and then provide it to developers and consumers.)
+\item Developers, these are the individual PIs at labs and universities who combine the curated data into scientifically meaningful models in their expertise domains. (those who use the data from curators and providers to create or enhance products.)
+\item Consumers, likely this is the private sector companies who wil leverage the scientific developments to promote commercially viable technology transfer paths. (those who make use of the data directly or through products.)
+\end{itemize}
+
+
+One approach is Government initiative toward altruistic data sharing, however this is often at odds with individual motivations for e.g. tenure, professional recognition, attracting graduate students, procuring grant funding and also appropriately assigning credit to government funded research facilities for their roles in data prduction.  Typically the scientific credit is only delivered to the data consumer, however the providers (DOE labs) lie at the foundation of the data economy.
+If there is a measureable and tracable value metric, then the entire data production chain, from accelerator operation and construction to detector creation and development all the way to new technologies transferred to comercial sector would recieve the due credit.
+
+"One huge barrier Elbaz points out is the assumption of altruism that seems to motivate many
+efforts at sharing data, especially projects that fall under the open data umbrella. When
+organizations consider sharing data, they often incorrectly assume that they must just give the
+data away and hope that some benefit accrues to someone. Government initiative have resulted
+many victories using this model. But organizations are sitting on massive troves of data that
+won’t be shared unless there is a fair trade."
+
+
+\section{Forensic reconstruction}
+\begin{itemize}
+\item Unique data identifiers
+\item Ledger of training samples used to produce models
+\item Ledger of model chains in decision chain, tied to the data
+\end{itemize}
+
+\section{}
+
+\bibliography{whitepaper.bib}
+
+\end{document}
