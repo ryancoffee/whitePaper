@@ -2,23 +2,62 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage[margin=1in]{geometry}
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{unsrt}
 
-\title{Adaptive EdgeAI: Transforming signals to informed actions at the point of production}
+\title{Adaptive EdgeAI in an intelligent Scientific Information Maketplace}
 \author{Ryan Coffee}
 
 \begin{document}
 
-\begin{abstract}
-	Robust, reconstructable, and reconfigurable machine learned models that map raw data input to lower dimensional information. Autonomous data routing and adaptive mapping is made at points along the chair, each routing decision is added to the accompanying block chain to allow forensic reconstruction. The computational hardware should simultaneously make the data transformations and produce the ledger entries chain for the reconstruction ledger.
-
-\end{abstract}
-
-
 \maketitle
 
+\paragraph{Abstract:} %The advent of very high frame-rate sensors as needed for the upcoming ultra-high duty cycle user facilities in the Department of Energy research portfolio necessitates a fundamental shift in how experimental data is recorded and stored.
+A continued exponential increase in value from scientific experiments can only endure the impending end of Moore's scaling if we reinvent how experimental data is recorded, stored, and compared with theory.
+We must develop an intelligent data pipeline that is reconfigurable, robust, and reconstructable that incorporates machine learning and enables autonomous real-time decision making.
+The reinvention of such a processing chain should not only produce unique data identifiers, but should incentivize open sharing in a market place whereby data producers receive credit for data generation that is commensurate with the impact afforded to data consumers via publication and technology transfer.
+
+\section{Motivation}
+\begin{wrapfigure}[33]{r}{.5\linewidth}
+	\centerline{ \includegraphics[clip,trim={-2cm -2cm 1.5cm 1.5cm},width=\linewidth]{plotting_technology.eps} }
+	\caption{
+		\label{fig::technology} 
+		Data adapted from Ref.~\cite{MicroprocessorTrendData}. 
+	}
+\end{wrapfigure}
+
+The upcoming very high frame-rate sensors and the correspondingly ultra-high duty cycle user facilities in the Department of Energy research portfolio requires use of low-latency and very high through put data processing engines that typically have very different compute constraints than conventional cloud-based machine learning.
+
+We propose a shift to processing information at or very near to the point of production, ideally in the experimental sensors themselves, that provides orders of magnitude in data compression while preserving both validation and forensic reconstruction of decision chains.
+\subsection{Adaptive EdgeAI}
+\paragraph{Heterogeneous Hardware}
+\paragraph{Scientific Integrity versus the AI Black Box}
+\subsection{Scientific Information Marketplace}
+\paragraph{Embargoes and Retention}
+\paragraph{Sharing is Caring, or share what you don't care}
+
+\section{Scope}
+
+\subsection{Algorithm Development}
+\paragraph{Facility based sharp inspirational examples}
+\paragraph{Hardware dependent architecture considerations}
+\paragraph{Developing a palette of hardware}
+
+\subsection{Transaction record}
+\paragraph{ID generation at point of production}
+\paragraph{Model encoding into transaction record}
+\paragraph{Forensic reconstruction via pointers to original data}
+\paragraph{SmartID for tracking data value that informs embargo and retention decisions}
+
+\section{Schedule}
+
+\section{Cost}
+
+\pagebreak
 \section{Notes}
+
+Models that map raw data input to lower dimensional information. Autonomous data routing and adaptive mapping is made at points along the chair, each routing decision is added to the accompanying block chain to allow forensic reconstruction. The computational hardware should simultaneously make the data transformations and produce the ledger entries chain for the reconstruction ledger.
 
 
 Example is using an x-ray attosecond double pulse experiment that quietly records spooktroscopy data with a forked data path. The producer of the spooltroscopy data then gets credit for his/her background production of that data even though that wasn’t the original goal of the experiment.
@@ -36,6 +75,7 @@ Such incentives would then encourage users not only to open the ``veto'' data to
 
 
 
+
 \section{Introduction}
 Scientific advancement, like all human technological advancement \cite{Kurzweil}, progresses with exponential rapidity.
 
@@ -44,13 +84,31 @@ Researchers physically cannot incorporate the developing methods at the rate of 
 However, raw data is rates are also increasing at an exponential rate and therefore are now growing to data velocities ( GB/s) that exceed network and storage capacity.  This is a common problem also in the private sector, notable AI assisted Agriculture whereby extant hyperspectaral imaging technology can not be appropriately leveraged simply owing to its excessive data velocity.
 Modern science is no different.
 
-\begin{wrapfigure}[28]{r}{.5\linewidth}
-\centerline{ \includegraphics[clip,width=\linewidth]{plotting_technology.eps} }
-	\caption{\label{fig::technology} In the upper panel, the utility of increasing compute enabled by increasing transistor density has value matched by the compensation of the roll off of thread performance by increasing the number of concurrent threads.
-	The roll off in thread performance is temporally correlated with the GHz limit in clock frequency as noted in the text.
-	Data is used from the compilation in ref.~\cite{MicroprocessorTrendData}
-	}
-\end{wrapfigure}
+
+We predict another catalyzing event in the first half of the 2020s.
+Sometime early in this decade the size of transistors will approach the a quantum mechanical scale of tens of atoms along a dimension.
+As observed in the mid-2000s, the then catalyzing limit of clock frequencies approaching the wavelength of light comparable to the physical dimension of the chip and the power dissipation comparable to the capacity of cooling systems, we saw a move toward parallel architectures. 
+This transition is very nicely coincident in time with the physical clock and power limitations but we see the innovation step toward multi-threading allows the continued exponential growth of compute utilization by now scaling the physics limited per-thread efficiency by parallel algorthm design.
+By scaling the per-thread efficiency by the numer of cores (blue triangles) in Fig.~\ref{fig::technology}, we see that parallelization allowed computing value to keep pace with the still exponential transistor growth in spite of the clock and power physical limitations.
+
+We predict that a similar catalyzing physical limitation will arrive in the early 2020s as the transistor dimension encroaches on the atomic limit.
+When this dimension is reduced to the 1 nm scale, the quantum mechanical properties of groups of tens of atoms will begin to dominate the function of transistors.
+Barring a wholescale conversion to quantum computing, an alternative classical computing innovation, and one particularly important to the future of machine learning, could be a shift in how we view data versus information.
+
+But the Department of Energy is not alone in its quandry regarding ever increasing data volume and velocity.
+In a recent conversation with a representative of the agriculture industry, the use of hyperspectral imaging would be revolutionary, but the data volume produced is prohibitively impractical for real-world industrial agricultural application.
+The information contained in the 3 dimensions of 2 spatial and 1 spectral could deliver exquisite predictive power, except that such sensors run in remote areas typically in areal drones and thus have limited local storage and network capacity.
+As with the high speed sensors being developed by the Department of Energy that are expected to keep abreast of the TBs per second potential data rates, we face the increasingly well understood liability of excessive data. 
+Novel event based camera technology is arising both within DOE R\&D programs and in the commercial sector \cite{Prophesee}.  
+Such technology will work well to capture relevant changing visual fields elements while suppressing the storage of still backround information, but in many applications in science, the backgrounds that should be suppressed are themselves vayring in time, and therefore a domain specific foreground/background identification must be implemented.
+For such experiment specific cases, we seek a computing solution that allows for user costomizable logic, be it conventional algortihm or custom machine learned inference models.
+In either case, the bespoke logic design will likely require adaptation to the existing computational environment, and as we have already begun to see with FPGAs, some architectures are better suited to GPUs than they are for FPGAs, and vice versa.
+One fairly common trend observed is that the GPU is better adept at dynamically changing the model over the course of hours or days, while the FPGA is a robust and high throughput data pipeline machine, but is significantly more fragile to even well compartmentalized modification.
+We expect therefore that FPGAs will likely collect in the early 
+
+
+In the upper panel, the utility of increasing compute enabled by increasing transistor density has value matched by the compensation of the roll off of thread performance by increasing the number of concurrent threads.
+The roll off in thread performance is temporally correlated with the GHz limit in clock frequency as noted in the text.
 
 The thermal conductivity of liquid water is on the order of $k \sim 7 \mbox{mW} \mbox{cm}^{-1} \mbox{K}^{-1}$.
 The conductance of heat from the chip is governed by $q = k \delta T / \delta x \sim \mbox{mW} \mbox{cm}^{-2}$ assuming $\delta T \simeq 50 \mbox{K}$ and $\delta x \simeq 0.1 \mbox{cm}$ is about 3.5 $\mbox{W} \mbox{cm}^{-2}$.
@@ -154,7 +212,14 @@ won’t be shared unless there is a fair trade."
 \item Ledger of model chains in decision chain, tied to the data
 \end{itemize}
 
-\section{}
+\section{Data Flow at the Edge}
+\begin{figure}
+	\centerline{\includegraphics[clip,width=\linewidth]{EdgeFlow.eps}}
+	\caption{
+		\label{fig::EdgeFlow}
+		Schematic of information flow through heterogeneous hardware with ID generation and provenance tracking.
+		}
+\end{figure}
 
 \bibliography{whitepaper.bib}
 

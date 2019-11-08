@@ -3,15 +3,31 @@
 \bibitem{MicroprocessorTrendData}
 Karl Rupp.
 \newblock Microprocessor trend data -- git repository.
+\newblock Available at:
+  \\{https://github.com/karlrupp/microprocessor-trend-data}.
+
+\bibitem{Kurzweil}
+Ray Kurzweil.
+\newblock {\em The Singularity Is Near: When Humans Transcend Biology}.
+\newblock Penguin Books, Inc., 2006.
+
+\bibitem{Prophesee}
+Prophesee: the world’s first event-based vision sensor.
+\newblock Available at:
+  \\{https://www.prophesee.ai/event-based-sensor-packaged/}.
 
 \bibitem{Woods2013}
 Dan Woods.
 \newblock How to create a moore's law for data.
 \newblock {\em Forbes}, December 12 2013.
+\newblock Available at:
+  \\{https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-a-moores-law-for-data/\#7051ed4f44ca}.
 
 \bibitem{Elbaz2012}
 Gil Elbaz.
 \newblock The data stack: A structured approach.
 \newblock July 24 2012.
+\newblock Available at:
+  \\{https://www.factual.com/blog/how-the-data-stack-can-organize-your-data-science-program/}.
 
 \end{thebibliography}

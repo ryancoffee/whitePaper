@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  6 NOV 2019 23:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  7 NOV 2019 17:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -112,59 +112,133 @@ File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 \WF@everypar=\toks20
 Package: wrapfig 2003/01/31  v 3.6
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count101
+\Gm@cntv=\count102
+\c@Gm@tempcnt=\count103
+\Gm@bindingoffset=\dimen116
+\Gm@wd@mp=\dimen117
+\Gm@odd@mp=\dimen118
+\Gm@even@mp=\dimen119
+\Gm@layoutwidth=\dimen120
+\Gm@layoutheight=\dimen121
+\Gm@layouthoffset=\dimen122
+\Gm@layoutvoffset=\dimen123
+\Gm@dimlist=\toks21
+)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip46
 \bibsep=\skip47
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count101
+\c@NAT@ctr=\count104
 )
 (./whitepaper_EdgeAI.aux)
 \openout1 = `whitepaper_EdgeAI.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
- [1
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
-]
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package natbib Warning: Citation `Kurzweil' on page 2 undefined on input line 4
-0.
-
-[2]
 File: plotting_technology.eps Graphic file (type eps)
- <plotting_technology.eps> [3] [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 132.
+<plotting_technology.eps>
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 33
+.
 
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+Underfull \hbox (badness 3386) in paragraph at lines 36--36
+[]\OT1/cmr/bx/n/12 Scientific In-for-ma-tion Mar-ket-
+ []
+
+[1
+
+] [2] [3] [4]
+Overfull \hbox (171.66302pt too wide) in paragraph at lines 177--178
+[]\OT1/cmr/m/n/10 Look up Why Build-ing a Dis-tributed Sup-ply Chain is More Im
+-por-tant than Big Data -- http://www.forbes.com/sites/danwoods/2013/06/27/why-
+
+ []
+
+[5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 190.
+
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 190.
+File: EdgeFlow.eps Graphic file (type eps)
 
-(./whitepaper_EdgeAI.bbl [6])
+<EdgeFlow.eps> (./whitepaper_EdgeAI.bbl [6]
+Underfull \hbox (badness 10000) in paragraph at lines 20--25
+\OT1/cmr/m/n/10 https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-
+a-moores-law-for-
+ []
 
-Package natbib Warning: There were undefined citations.
-
-[7] (./whitepaper_EdgeAI.aux) ) 
+) [7] (./whitepaper_EdgeAI.aux) ) 
 Here is how much of TeX's memory you used:
- 1630 strings out of 492610
- 19765 string characters out of 6129074
- 90000 words of memory out of 5000000
- 5569 multiletter control sequences out of 15000+600000
- 9976 words of font info for 36 fonts, out of 8000000 for 9000
+ 2138 strings out of 492610
+ 27389 string characters out of 6129074
+ 105527 words of memory out of 5000000
+ 6063 multiletter control sequences out of 15000+600000
+ 9369 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,6n,28p,577b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,6n,32p,513b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on whitepaper_EdgeAI.dvi (7 pages, 21280 bytes).
+Output written on whitepaper_EdgeAI.dvi (7 pages, 27988 bytes).
