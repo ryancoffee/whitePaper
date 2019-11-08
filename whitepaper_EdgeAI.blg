@@ -3,46 +3,47 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: whitepaper_EdgeAI.aux
 The style file: unsrt.bst
 Database file #1: whitepaper.bib
+Warning--I didn't find a database entry for "Audrey"
 Warning--empty journal in Elbaz2012
-You've used 5 entries,
+You've used 12 entries,
             1791 wiz_defined-function locations,
-            475 strings with 4346 characters,
-and the built_in function-call counts, 666 in all, are:
-= -- 53
-> -- 17
-< -- 0
-+ -- 9
-- -- 4
-* -- 15
-:= -- 109
-add.period$ -- 16
-call.type$ -- 5
-change.case$ -- 4
+            524 strings with 7642 characters,
+and the built_in function-call counts, 3641 in all, are:
+= -- 188
+> -- 424
+< -- 1
++ -- 147
+- -- 135
+* -- 332
+:= -- 682
+add.period$ -- 38
+call.type$ -- 12
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 36
-empty$ -- 84
-format.name$ -- 4
-if$ -- 150
+cite$ -- 13
+duplicate$ -- 112
+empty$ -- 229
+format.name$ -- 135
+if$ -- 727
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 4
-newline$ -- 29
-num.names$ -- 4
-pop$ -- 30
+int.to.str$ -- 12
+missing$ -- 10
+newline$ -- 64
+num.names$ -- 11
+pop$ -- 47
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 15
+skip$ -- 62
 stack$ -- 0
-substring$ -- 0
-swap$ -- 4
-text.length$ -- 0
+substring$ -- 61
+swap$ -- 29
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 4
-width$ -- 6
-write$ -- 51
-(There was 1 warning)
+while$ -- 14
+width$ -- 14
+write$ -- 128
+(There were 2 warnings)

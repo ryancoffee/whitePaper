@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{MicroprocessorTrendData}
 Karl Rupp.
@@ -16,12 +16,66 @@ Prophesee: the world’s first event-based vision sensor.
 \newblock Available at:
   \\{https://www.prophesee.ai/event-based-sensor-packaged/}.
 
-\bibitem{Woods2013}
-Dan Woods.
-\newblock How to create a moore's law for data.
-\newblock {\em Forbes}, December 12 2013.
-\newblock Available at:
-  \\{https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-a-moores-law-for-data/\#7051ed4f44ca}.
+\bibitem{Lutman2016}
+Alberto~A. Lutman, James~P. MacArthur, Markus Ilchen, Anton~O. Lindahl, Jens
+  Buck, Ryan~N. Coffee, Georgi~L. Dakovski, Lars Dammann, Yuantao Ding,
+  Hermann~A. D{\"u}rr, Leif Glaser, Jan Gr{\"u}nert, Gregor Hartmann, Nick
+  Hartmann, Daniel Higley, Konstantin Hirsch, Yurii~I. Levashov, Agostino
+  Marinelli, Tim Maxwell, Ankush Mitra, Stefan Moeller, Timur Osipov, Franz
+  Peters, Marc Planas, Ivan Shevchuk, William~F. Schlotter, Frank Scholz,
+  J{\"o}rn Seltmann, Jens Viefhaus, Peter Walter, Zachary~R. Wolf, Zhirong
+  Huang, and Heinz-Dieter Nuhn.
+\newblock Polarization control in an x-ray free-electron laser.
+\newblock {\em Nature Photonics}, 10:468 EP --, May 2016.
+\newblock Article.
+
+\bibitem{Wolfi2017_review}
+Wolfram Helml, Ivanka Grguraš, Pavle~N. Juranić, Stefan Düsterer, Tommaso
+  Mazza, Andreas~R. Maier, Nick Hartmann, Markus Ilchen, Gregor Hartmann, Luc
+  Patthey, Carlo Callegari, John~T. Costello, Michael Meyer, Ryan~N. Coffee,
+  Adrian~L. Cavalieri, and Reinhard Kienberger.
+\newblock Ultrashort free-electron laser x-ray pulses.
+\newblock {\em Applied Sciences}, 7(9), 2017.
+
+\bibitem{Hartmann2018}
+N.~Hartmann, G.~Hartmann, R.~Heider, M.~S. Wagner, M.~Ilchen, J.~Buck, A.~O.
+  Lindahl, C.~Benko, J.~Gr{\"u}nert, J.~Krzywinski, J.~Liu, A.~A. Lutman,
+  A.~Marinelli, T.~Maxwell, A.~A. Miahnahri, S.~P. Moeller, M.~Planas,
+  J.~Robinson, A.~K. Kazansky, N.~M. Kabachnik, J.~Viefhaus, T.~Feurer,
+  R.~Kienberger, R.~N. Coffee, and W.~Helml.
+\newblock Attosecond time-energy structure of x-ray free-electron laser pulses.
+\newblock {\em Nature Photonics}, 12(4):215--220, 2018.
+
+\bibitem{Cryan2016_impulsive}
+James~P. Cryan, Andrei Kamalov, Matthew~R. Ware, Philip~H. Bucksbaum, Daniel~J.
+  Haxton, and Shungo Miyabe.
+\newblock Impulsive stimulated raman scattering by attosecond pulses.
+\newblock In {\em International Conference on Ultrafast Phenomena}, page
+  UTu4A.32. Optical Society of America, 2016.
+
+\bibitem{Feurer2018}
+Tobias Schweizer, Michael~H. Brügmann, Wolfram Helml, Nick Hartmann, Ryan
+  Coffee, and Thomas Feurer.
+\newblock Attoclock ptychography.
+\newblock {\em Applied Sciences}, 8(7), 2018.
+
+\bibitem{IanRobinson2018}
+Xiaowen Shi, Nicolas Burdet, Darren Batey, and Ian Robinson.
+\newblock Multi-modal ptychography: Recent developments and applications.
+\newblock {\em Applied Sciences}, 8(7), 2018.
+
+\bibitem{Driver2019_spooktroscopy}
+Taran Driver, Siqi Li, Elio~G. Champenois, Joseph Duris, Daniel Ratner,
+  TJ~Lane, Philipp Rosenberger, Andre Al-Haddad, Vitali Averbukh, Toby Barnard,
+  Nora Berrah, Christoph Bostedt, Philip~H. Bucksbaum, Ryan Coffee, Louis~F.
+  DiMauro, Li~Fang, Douglas Garratt, Averell Gatton, Zhaoheng Guo, Gregor
+  Hartmann, Daniel Haxton, Wolfram Helml, Zhirong Huang, Aaron LaForge, Andrei
+  Kamalov, Matthias~F. Kling, Jonas Knurr, Ming-Fu Lin, Alberto~A. Lutman,
+  James~P. MacArthur, Jon~P. Marangos, Megan Nantel, Adi Natan, Razib Obaid,
+  Niranjan~H. Shivaram, Aviad Schori, Peter Walter, Anna Wang, Thomas J.~A.
+  Wolf, Agostino Marinelli, and James~P. Cryan.
+\newblock Attosecond transient absorption spooktroscopy: a ghost imaging
+  approach to ultrafast absorption spectroscopy, 2019.
 
 \bibitem{Elbaz2012}
 Gil Elbaz.
@@ -29,5 +83,12 @@ Gil Elbaz.
 \newblock July 24 2012.
 \newblock Available at:
   \\{https://www.factual.com/blog/how-the-data-stack-can-organize-your-data-science-program/}.
+
+\bibitem{Woods2013}
+Dan Woods.
+\newblock How to create a moore's law for data.
+\newblock {\em Forbes}, December 12 2013.
+\newblock Available at:
+  \\{https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-a-moores-law-for-data/\#7051ed4f44ca}.
 
 \end{thebibliography}

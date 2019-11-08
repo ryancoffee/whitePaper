@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  7 NOV 2019 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  8 NOV 2019 13:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -198,47 +198,51 @@ LaTeX Font Info:    ... okay on input line 12.
 File: plotting_technology.eps Graphic file (type eps)
 <plotting_technology.eps>
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 33
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 30
 .
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 36--36
-[]\OT1/cmr/bx/n/12 Scientific In-for-ma-tion Mar-ket-
+Underfull \hbox (badness 2600) in paragraph at lines 38--40
+ \OT1/cmr/bx/n/10 Im-pend-ing phase tran-si-tion[] \OT1/cmr/m/n/10 In the up-pe
+r
  []
 
 [1
 
-] [2] [3] [4]
-Overfull \hbox (171.66302pt too wide) in paragraph at lines 177--178
-[]\OT1/cmr/m/n/10 Look up Why Build-ing a Dis-tributed Sup-ply Chain is More Im
--por-tant than Big Data -- http://www.forbes.com/sites/danwoods/2013/06/27/why-
+] [2]
+File: EdgeFlow.eps Graphic file (type eps)
+ <EdgeFlow.eps>
 
- []
+Package natbib Warning: Citation `Audrey' on page 3 undefined on input line 111
+.
 
-[5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 190.
+[3] [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 157.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 190.
-File: EdgeFlow.eps Graphic file (type eps)
-
-<EdgeFlow.eps> (./whitepaper_EdgeAI.bbl [6]
-Underfull \hbox (badness 10000) in paragraph at lines 20--25
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 157.
+ [5]
+[6] (./whitepaper_EdgeAI.bbl [7]
+Underfull \hbox (badness 10000) in paragraph at lines 88--93
 \OT1/cmr/m/n/10 https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-
 a-moores-law-for-
  []
 
-) [7] (./whitepaper_EdgeAI.aux) ) 
-Here is how much of TeX's memory you used:
- 2138 strings out of 492610
- 27389 string characters out of 6129074
- 105527 words of memory out of 5000000
- 6063 multiletter control sequences out of 15000+600000
- 9369 words of font info for 34 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 27i,6n,32p,513b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+)
 
-Output written on whitepaper_EdgeAI.dvi (7 pages, 27988 bytes).
+Package natbib Warning: There were undefined citations.
+
+[8] (./whitepaper_EdgeAI.aux) ) 
+Here is how much of TeX's memory you used:
+ 2165 strings out of 492610
+ 27950 string characters out of 6129074
+ 105635 words of memory out of 5000000
+ 6090 multiletter control sequences out of 15000+600000
+ 10208 words of font info for 37 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 27i,6n,32p,529b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on whitepaper_EdgeAI.dvi (8 pages, 34384 bytes).
