@@ -1,15 +1,15 @@
 \begin{thebibliography}{10}
 
+\bibitem{Kurzweil}
+Ray Kurzweil.
+\newblock {\em The Singularity Is Near: When Humans Transcend Biology}.
+\newblock Penguin Books, Inc., 2006.
+
 \bibitem{MicroprocessorTrendData}
 Karl Rupp.
 \newblock Microprocessor trend data -- git repository.
 \newblock Available at:
   \\{https://github.com/karlrupp/microprocessor-trend-data}.
-
-\bibitem{Kurzweil}
-Ray Kurzweil.
-\newblock {\em The Singularity Is Near: When Humans Transcend Biology}.
-\newblock Penguin Books, Inc., 2006.
 
 \bibitem{Prophesee}
 Prophesee: the world’s first event-based vision sensor.
@@ -76,6 +76,12 @@ Taran Driver, Siqi Li, Elio~G. Champenois, Joseph Duris, Daniel Ratner,
   Wolf, Agostino Marinelli, and James~P. Cryan.
 \newblock Attosecond transient absorption spooktroscopy: a ghost imaging
   approach to ultrafast absorption spectroscopy, 2019.
+
+\bibitem{Audrey}
+A.C et~al. Therrien.
+\newblock Machine learning at the edge for ultra high rate detectors.
+\newblock In {\em IEEE Nuclear Science Symposium and Medical Imaging
+  Conference}. IEEE, October 2019.
 
 \bibitem{Elbaz2012}
 Gil Elbaz.

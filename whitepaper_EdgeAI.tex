@@ -6,7 +6,7 @@
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{unsrt}
 
-\title{Adaptive EdgeAI in an intelligent Scientific Information Maketplace}
+\title{Adaptive EdgeAI in an Intelligent Scientific Information Maketplace}
 \author{Ryan Coffee}
 
 \begin{document}
@@ -14,11 +14,19 @@
 \maketitle
 
 \paragraph{Abstract:} %The advent of very high frame-rate sensors as needed for the upcoming ultra-high duty cycle user facilities in the Department of Energy research portfolio necessitates a fundamental shift in how experimental data is recorded and stored.
-A continued exponential increase in value from scientific experiments can only endure the impending end of Moore's scaling if we reinvent how experimental data is recorded, stored, and compared with theory.
-We must develop an intelligent data pipeline that is reconfigurable, robust, and reconstructable that incorporates machine learning and enables autonomous real-time decision making.
-The reinvention of such a processing chain should not only produce unique data identifiers, but should incentivize open sharing in a market place whereby data producers receive credit for data generation that is commensurate with the impact afforded to data consumers via publication and technology transfer.
+A continued exponential increase in value from scientific experiments can only endure an impending end of Moore's scaling if we reinvent how experimental data is recorded, stored, reused, and compared with theory.
+An intelligent data pipeline is needed, one that is reconfigurable, robust, and reconstructable that incorporates machine learning and enables autonomous real-time decision making.
+Ideally this data pipeline would not only produce unique data identifiers but also would incentivize information sharing in an open data marketplace.
 
 \section{Motivation}
+
+\subsection{Information not data}
+\paragraph{Exponential advancement}
+Scientific advancement, like all human technological advancement, progresses with exponential rapidity \cite{Kurzweil}.
+At DOE's flagship facilities, data rates are likewise growing to velocities of 100s of GB/s to TB/s that will quickly exceed network and storage capacity.  
+This challenge is not unique to the DOE, in a recent conversation with a leader in AI assisted agriculture it was noted that available hyperspectral imaging technology can not be appropriately used simply due to its excessive data velocity.
+This is the concern of the upcoming light source facilities, the very high brightness beans and extreme pulse repetition rates will enable information acquisition but dectors and sensors will be unable to keep abreast of the data rate. 
+Here, we key in on the idea of information acquisition, not data \textit{per se}, but actionable information in a form compatible with the user specific scientific targets being addressed by experiments.
 \begin{wrapfigure}[33]{r}{.5\linewidth}
 	\centerline{ \includegraphics[clip,trim={-2cm -2cm 1.5cm 1.5cm},width=\linewidth]{plotting_technology.eps} }
 	\caption{
@@ -27,38 +35,46 @@ The reinvention of such a processing chain should not only produce unique data i
 	}
 \end{wrapfigure}
 
-\subsection{Information not data}
-\paragraph{Exponential advancement}
-Scientific advancement, like all human technological advancement \cite{Kurzweil}, progresses with exponential rapidity.
-
-However, raw data rates are also increasing at an exponential rate and therefore are now growing to data velocities (TB/s) that exceed network and storage capacity.  
-This challenge is shared with the private sector, notably, AI assisted agriculture whereby extant hyperspectaral imaging technology can not be appropriately leveraged simply owing to its excessive data velocity.
 
 \paragraph{Impending phase transition}
-In the upper panel, the utility of increasing compute enabled by increasing transistor density has value matched by the compensation of the roll off of thread performance by increasing the number of concurrent threads.
-The roll off in thread performance is temporally correlated with the GHz limit in clock frequency as noted in the text.
+We see in the upper panel of Fig.~\ref{fig::technology} the increasing compute via the increasing transistor density.
+There is as yet no indication of a physical limit in transistor number (purple filled circles), whereas we do see that the per-thread performance experienced a limit in the mid-2000s (blue filled circles).
+In the lower panel, we explore this performace phase change via the clock rate and the power consumption.
+The speed of light is 30 cm/ns such that the typical chip scale of 3 cm corresponds to one wavelength of 10 GHz light.
+It is no suprise that, respecting Nyquist waveform sampling, we hit a physical clock limitation in the vicinity of a few GHz (purple filled circles).
+As for power consuption and dissipation, the thermal conductivity of liquid water is on the order of $k \sim 7 $mW/cm/K.
+We find a heat conductance of $q = k \delta T / \delta x \sim 3.5$ W/cm$^2$ for typical parameters and a typical 80cm$^2$ heat exchange area provides about 280W of cooling, also in appearant agreement with the power trend (green open cirles).
+%\mbox{cm}^{-2}$ assuming $\delta T \simeq 50 \mbox{K}$ and $\delta x \simeq 0.1 \mbox{cm}$ is about 3.5 $\mbox{W} \mbox{cm}^{-2}$.
+%For a heatsink of about $2\mbox{cm}\times2\mbox{cm}$ with 2 cm tall vanes separated by 1 mm gives a total surface area of about $80 \mbox{cm}^{2}$ and thus corresponds to a thermal dissipation capacity of 280 W.
+%We note that the in the bottom panel of Fig.~\ref{fig::technology} we see that the power of the processors looks to be approaching a few hundred Watt assymptote.
+At the time when technology hit these physical limitaitons, the industry nearly immediately responded with multi-threading (green open circles, upper panel).
+When we account for this multi-threading by scaleing the per-thread performance by the number of threads (blue triangles) we see that the multithread-scaled computing performance indeed keeps abreast with the persistent exponential growth in transistor count.
+Truly, the only constant in technological utilization is its exponential change.
 
-The thermal conductivity of liquid water is on the order of $k \sim 7 \mbox{mW} \mbox{cm}^{-1} \mbox{K}^{-1}$.
-The conductance of heat from the chip is governed by $q = k \delta T / \delta x \sim \mbox{mW} \mbox{cm}^{-2}$ assuming $\delta T \simeq 50 \mbox{K}$ and $\delta x \simeq 0.1 \mbox{cm}$ is about 3.5 $\mbox{W} \mbox{cm}^{-2}$.
-For a heatsink of about $2\mbox{cm}\times2\mbox{cm}$ with 2 cm tall vanes separated by 1 mm gives a total surface area of about $80 \mbox{cm}^{2}$ and thus corresponds to a thermal dissipation capacity of 280 W.
-We note that the in the bottom panel of Fig.~\ref{fig::technology} we see that the power of the processors looks to be approaching a few hundred Watt assymptote.
-Likewise, the speed of light is 30 cm/ns such that the typical chip scale of 3 cm corresponds to one wavelength of 10 GHz light, and so it is no surprise that our clock rates have run into a limit in the vicinity of few GHz.
-These physical limitations have motivated a the shift away from thread performance with faster clocks in favor of multi-threaded processing that can better leverage the utility of the increased transistor density.
-In the next decade, we will likely see the transistor size encroach on a qunatum mechanical limit of tens of atoms wide transistors, and this limit will again motivate a redesign of some other part of the computing story.
-We purport that the redesign will be in how we consider the value of data versus information.
 
-Physical limitations motivate us to rethink how we extract value from computing.  
-We are opening the data volume flood but at a time when we wil lbe hitting a physical wall in computing, so now is an opportune moment to rethink how we extract value from recorded data.
+%These physical limitations have motivated a the shift away from thread performance with faster clocks in favor of multi-threaded processing that can better leverage the utility of the increased transistor density.
+Following the trend in transistor dimension one would expect to reach few 100s of atoms wide by the mid-2020s.
+At such a scale, we will likely begin to deal with quantum mechanical artifacts that would once again motivate a core redesign in the computing story.
+We purport that this redesign will be to shift value from data to information.
 
-We predict another catalyzing event in the first half of the 2020s.
-Sometime early in this decade the size of transistors will approach the a quantum mechanical scale of tens of atoms along a dimension.
-As observed in the mid-2000s, the then catalyzing limit of clock frequencies approaching the wavelength of light comparable to the physical dimension of the chip and the power dissipation comparable to the capacity of cooling systems, we saw a move toward parallel architectures. 
-This transition is very nicely coincident in time with the physical clock and power limitations but we see the innovation step toward multi-threading allows the continued exponential growth of compute utilization by now scaling the physics limited per-thread efficiency by parallel algorthm design.
-By scaling the per-thread efficiency by the numer of cores (blue triangles) in Fig.~\ref{fig::technology}, we see that parallelization allowed computing value to keep pace with the still exponential transistor growth in spite of the clock and power physical limitations.
+%Physical limitations motivate us to rethink how we extract value from computing.  
+The looming TB/s data flood provides an opportune moment to rethink how we extract autonomously actionable value directly from intelligent sensors.
+Parallelization allowed computing value to keep pace with the exponential transistor growth in spite of the clock and power physical limitations.
+A fundamental change to our concept of information rather than data will allow us to continue our exponential technolological and scientific advancement in spite of storage and network physical limitations.
 
-We predict that a similar catalyzing physical limitation will arrive in the early 2020s as the transistor dimension encroaches on the atomic limit.
-When this dimension is reduced to the 1 nm scale, the quantum mechanical properties of groups of tens of atoms will begin to dominate the function of transistors.
-Barring a wholescale conversion to quantum computing, an alternative classical computing innovation, and one particularly important to the future of machine learning, could be a shift in how we view data versus information.
+
+%We predict another catalyzing event in the first half of the 2020s.
+%Sometime early in this decade the size of transistors will approach the a quantum mechanical scale of tens of atoms along a dimension.
+%As observed in the mid-2000s, the then catalyzing limit of clock frequencies approaching the wavelength of light comparable to the physical dimension of the chip and the power dissipation comparable to the capacity of cooling systems, we saw a move toward parallel architectures. 
+%This transition is very nicely coincident in time with the physical clock and power limitations but we see the innovation step toward multi-threading allows the continued exponential growth of compute utilization by now scaling the physics limited per-thread efficiency by parallel algorthm design.
+%By scaling the per-thread efficiency by the numer of cores (blue triangles) in Fig.~\ref{fig::technology}, we see that 
+
+
+%We predict that a similar catalyzing physical limitation will arrive in the early 2020s as the transistor dimension encroaches on the atomic limit.
+%When this dimension is reduced to the 1 nm scale, the quantum mechanical properties of groups of tens of atoms will begin to dominate the function of transistors.
+%Barring a wholescale conversion to quantum computing, an alternative classical computing innovation, and one particularly important to the future of machine learning, could be a shift in how we view data versus information.
+
+
 
 \paragraph{Data liability}
 But the Department of Energy is not alone in its quandry regarding ever increasing data volume and velocity.
@@ -133,6 +149,7 @@ Each transacting party should retain a ledger of the applied transactions with a
 The Data Stack compiles disparate data shards or individuals as potentially multi-modal data collections, with the associated mapping algortihms will make for a more fundamentally integrated data fusion infrastructure.
 
 \paragraph{Embargoes and Retention}
+whereby data producers receive credit for data generation that is commensurate with the impact afforded to data consumers via publication and technology transfer.
 
 \paragraph{Sharing is Caring, or share what you don't care}
 
