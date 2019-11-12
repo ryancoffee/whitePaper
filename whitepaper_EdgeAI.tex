@@ -80,22 +80,29 @@ A fundamental change to our concept of information rather than data will allow u
 %But the Department of Energy is not alone in its quandry regarding ever increasing data volume and velocity.
 %In a recent conversation with a representative of the agriculture industry, the use of hyperspectral imaging would be revolutionary, but the data volume produced is prohibitively impractical for real-world industrial agricultural application.
 %The information contained in the 3 dimensions of 2 spatial and 1 spectral could deliver exquisite predictive power, except that such sensors run in remote areas typically in areal drones and thus have limited local storage and network capacity.
-As with the high speed sensors being developed by the Department of Energy that are expected to keep abreast of the TBs per second potential data rates, we face the increasingly well understood liability of excessive data. 
-Novel event based camera technology is arising both within DOE R\&D programs and in the commercial sector \cite{Prophesee}.  
-Such technology will work well to capture relevant changing visual fields elements while suppressing the storage of still backround information, but in many applications in science, the backgrounds that should be suppressed are themselves vayring in time, and therefore a domain specific foreground/background identification must be implemented.
+High speed sensors being developed by the Department of Energy are expected to keep abreast of TB/s incoming data rates.
+The private sector is only beginning to approach this challenge, echoing a similar qunadry as the agriculture example methined above, users do not have the capacity to store streaming raw images at a rate above 10 kFps and so there is no incentive to build sensors capable of MFps frame rates.
+Futhermore, the generation of such a tremendous volume of data would overwhelm eAfforts in data mining, leading to an increasingly well understood liability of excessive data. 
+Nevertheless, real-time data-routing decisions must be made with MHz compatability at the cutting edge of DOE facilities as is also true for \textit{in situ} wafer inspection in modern semiconductor fabrication.
+What is needed is the distillation of raw sensor data into actionable information immediately at the point of data generation.
+
+%Novel event based camera technology is arising both within DOE R\&D programs and in the commercial sector \cite{Prophesee}.  
+%Similarly high frame-rate detectors are also being pursued for applications in semiconductor fabrication and 
+%Such technology will work well to capture relevant changing visual fields elements while suppressing the storage of still backround information, but in many applications in science, the backgrounds that should be suppressed are themselves vayring in time, and therefore a domain specific foreground/background identification must be implemented.
 
 \paragraph{Adaptive data-to-information mapping}
-For such experiment specific cases, we seek a computing solution that allows for user costomizable logic, be it conventional algortihm or custom machine learned inference models.
-In either case, the bespoke logic design will likely require adaptation to the existing computational environment, and as we have already begun to see with FPGAs, some architectures are better suited to GPUs than they are for FPGAs, and vice versa.
-One fairly common trend observed is that the GPU is better adept at dynamically changing the model over the course of hours or days, while the FPGA is a robust and high throughput data pipeline machine, but is significantly more fragile to even well compartmentalized modification.
-We expect therefore that FPGAs will likely collect in the early 
-
-
+We propose a shift to processing information at or very near to the point of production, ideally in the experimental sensors themselves, that provides orders of magnitude in data compression while preserving both validation and forensic reconstruction of decision chains.
 The upcoming very high frame-rate sensors and the correspondingly ultra-high duty cycle user facilities in the Department of Energy research portfolio requires use of low-latency and very high through put data processing engines that typically have very different compute constraints than conventional cloud-based machine learning.
 
-We propose a shift to processing information at or very near to the point of production, ideally in the experimental sensors themselves, that provides orders of magnitude in data compression while preserving both validation and forensic reconstruction of decision chains.
-
-\paragraph{Data Flow at the Edge}
+One of the most significant challenges for data distillation in sensor firmware at light sources is the is the weekly cycle of experimental reconfiguration.
+Each experiment brings its own domain specific conventional algortihms or custom machine learned inference models.
+These models will be flashed to custom logic regions in detector-side Field Programmable Gate Arrays (FPGAs).
+The computational complexity of optimizing FPGA routing \cite{FPGAcomplexity,FPGAgraph} is notoriously challenging and its $np$-completeness lies at the heart of why mdular code that easily compiles for conventional CPUs can fail in surprising ways when compiled to firmware for FPGA. 
+Our long experience with traditional imperative CPU programming has encouraged the paradim of designing the control flow of functions or procedures by stringing existing algorithmic modules.
+In a CPU, if a module implimentation changes, it should not affect the stability or function of its interacting modules.
+Declarative programming is differnt in that it focusses exclusively on the logical result of a computational task, not the control flow and as such is more ameanable to compilation to FPGA and other non-CPU hardware as well as better exploiting parallelism \cite{Lloyd1994}.
+A shift from imperative to declarative would thus enable easier compilation of logic flow across an interconnected variety of computational hardware, leveraging the strengths of e.g. the FPGA for convolutional layers in a network and the GPU for the fully connected layers.
+In such an on-sensor yet heterogeneous ecosystem one would leverage a hardware palette as envisioned in Fig.~\ref{fig;:EdgeFlow} whereby FPGA usage is likely concentrated at the earliest stages in data transformation, followed by deeper complex decision models in GPU chips with final data routing decisions likely controlled by the on-borad CPU.
 \begin{figure}
 	\centerline{\includegraphics[clip,width=\linewidth]{EdgeFlow.eps}}
 	\caption{
@@ -103,6 +110,17 @@ We propose a shift to processing information at or very near to the point of pro
 		Schematic of information flow through heterogeneous hardware with ID generation and provenance tracking.
 		}
 \end{figure}
+
+%Bespoke logic design would occupy the custom logic region of FPGAs and GPUs while inference-based data routing decisions would be made on the CPU and likely control the PCIe output traffic according to the state of the event.
+
+%One fairly common trend observed is that the GPU is better adept at dynamically changing the model over the course of hours or days, while the FPGA is a robust and high throughput data pipeline machine, but is significantly more fragile to even well compartmentalized modification.
+%We expect therefore that FPGAs will likely collect in the early 
+
+
+
+
+\paragraph{Data Flow at the Edge}
+HERE HERE HERE HERE
 
 An interoperable stack with fundamental coupling between algorithm and data individuals would allow for multiple data pipelines, some very low latency for making feedback control decisions, and others that are higher fidelity though lower throughput that provide validation and testing.  Furthermore, this is critical in a sensor ecosystem whereby the sensor reporting duty cycles may have vastly different timescales. 
 This is not unique to DOE facilities like the LCLS-II where come sensors will report at the 1MFps machine rate and others at a much slower e.g. pre-scaled 100Hz "validation" rate.  
