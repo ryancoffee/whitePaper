@@ -18,6 +18,18 @@ A continued exponential increase in value from scientific experiments can only e
 An intelligent data pipeline is needed, one that is reconfigurable, robust, and reconstructable that incorporates machine learning and enables autonomous real-time decision making.
 Ideally this data pipeline would not only produce unique data identifiers but also would incentivize information sharing in an open data marketplace.
 
+
+\section{Kelly notes:}
+Define a large problem that is viewed as important.
+Then give a credible list of milestones that deliver us some way toward the solution to that problem.
+BlockChain
+FPGA development (1st interaction with the data)
+GPU, TPU, FractalCore or other AI chip for the high-dimensional convolutions, RNN, or other initial layers
+Then different hardware, again maybe the Xilinx Veral chips for deeper fullyconnected.
+Then out through again FPGA, or direct to memory, or reverse back out for autoencoder.
+Decision output flags along the way.
+
+
 \section{Motivation}
 
 \subsection{Information not data}
@@ -120,9 +132,10 @@ An on-sensor heterogeneous ecosystem could leverage a hardware palette as envisi
 
 
 \paragraph{Data Flow at the Edge}
-HERE HERE HERE HERE
 
-Not shown in 
+Not shown in Fig.~\ref{fig::EdgeFlow} but implied by the chained inference decisions, the ideal use of edge inference is that the detector itself can hold multiple downstream models in the GPU and depending on the FPGA inference, it will autonomously choose which downstream path.% make an autonomous and the upstream 
+HERE HERE HERE HERE 
+
 An interoperable stack with fundamental coupling between algorithm and data individuals would allow for multiple data pipelines, some very low latency for making feedback control decisions, and others that are higher fidelity though lower throughput that provide validation and testing.  Furthermore, this is critical in a sensor ecosystem whereby the sensor reporting duty cycles may have vastly different timescales. 
 This is not unique to DOE facilities like the LCLS-II where come sensors will report at the 1MFps machine rate and others at a much slower e.g. pre-scaled 100Hz "validation" rate.  
 In the agriculture industry, aereal drones can provide hourly hyperspectral imaging data while soil testing likely occurs at most daily or monthly, thus also a multiple duty cycle sensor reporting rate that needs be fused.
