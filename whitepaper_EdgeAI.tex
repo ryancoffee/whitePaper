@@ -29,7 +29,6 @@ Then different hardware, again maybe the Xilinx Veral chips for deeper fullyconn
 Then out through again FPGA, or direct to memory, or reverse back out for autoencoder.
 Decision output flags along the way.
 
-\section{General Notes}
 
 \section{Motivation}
 
@@ -103,6 +102,16 @@ The private sector is only beginning to approach this challenge, echoing a simil
 Futhermore, the generation of such a tremendous volume of data would overwhelm eAfforts in data mining, leading to an increasingly well understood liability of excessive data. 
 Nevertheless, real-time data-routing decisions must be made with MHz compatability at the cutting edge of DOE facilities as is also true for \textit{in situ} wafer inspection in modern semiconductor fabrication.
 What is needed is the distillation of raw sensor data into actionable information immediately at the point of data generation.
+
+The liability of excessive data is easily understood by analogy with personal photography.
+The transition of family photography from analog, then digital, and now to cellular phones and tablets has brought with it a commensurate explosion of digital images in the ever increasing family photo libraries.
+Photo serving platforms offer utilities that autonomously help the user label photos with placenames and identified faces; this gives context to the image in the hopes that parents will more easily find the photo they vaguely remember taking on a surfing trip to Santa Barbara last winter to add to this year's holiday card collage.
+The more raw images in our library, labeled or not, the faster we lose interest and simply choose to leave that surf trip out.
+Our scientific data suffers exactly the same liability of volume and thus a need not only for the autonomous face identification and placename labeling, e.g. domain specific auto-label and classify at point of generation, but also we need the ability to use domain specific algorithms to aggregate and enhance the information.
+
+Again, by analogy, high dynamic range (HDR) photography is a technique enabled by the rapid variation in exposure and subsequent digital overlay to artificially increase the dynamic range of the CCD sensor; take multiple images each at a different exposure, then digitally align the images and differentially merge them to fill in under-exposed and over exposed regions.
+In this way, we use a limited resource--linear sensativity low-dynamic range CCD sensors, we briefly acquire many times more raw data than is conventional, and then we creatively merge this overkill of raw data into a reduced image that better represents the logarithmic sensativity of human sensation--the information we always wanted to capture.
+With the upcoming high event rate sources, it is not that we will produce tremendous amounts of raw or minimally compressed data, it is that we will invent solutions like the HDR example for the most socially important challenges that face modern science.
 
 %Novel event based camera technology is arising both within DOE R\&D programs and in the commercial sector \cite{Prophesee}.  
 %Similarly high frame-rate detectors are also being pursued for applications in semiconductor fabrication and 
