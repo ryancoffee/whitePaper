@@ -29,6 +29,7 @@ Then different hardware, again maybe the Xilinx Veral chips for deeper fullyconn
 Then out through again FPGA, or direct to memory, or reverse back out for autoencoder.
 Decision output flags along the way.
 
+\section{General Notes}
 
 \section{Motivation}
 
@@ -74,6 +75,11 @@ The looming TB/s data flood provides an opportune moment to rethink how we extra
 Parallelization allowed computing value to keep pace with the exponential transistor growth in spite of the clock and power physical limitations.
 A fundamental change to our concept of information rather than data will allow us to continue our exponential technolological and scientific advancement in spite of storage and network physical limitations.
 
+The coming of a much more heavily connected world is hastening the need for autonomous action and intelligent sensors. 
+``Edge Computing plays a critical role in the 5G world. Many of the 5G use cases require ultra-low latencies and edge computing infrastructure helps in realizing that. In the months and years to come, we would notice that edge computing gets a lot more attention\ldots.'' \cite{thetech}
+For our efforts to enable the 5G revolution, we find an equal need for a revolution in how we consider information versus data at its point of production at the ``far edge'' of the sensor.
+The drive in industry for intelligent sensors is is not mirrored within DOE-BES facility portfolio, it is amplified by many orders.
+We are therefore ideally positioned to use our Accelerator and Detector efforts to catalyze this Edge information revolution.
 
 %We predict another catalyzing event in the first half of the 2020s.
 %Sometime early in this decade the size of transistors will approach the a quantum mechanical scale of tens of atoms along a dimension.
@@ -103,11 +109,11 @@ What is needed is the distillation of raw sensor data into actionable informatio
 %Such technology will work well to capture relevant changing visual fields elements while suppressing the storage of still backround information, but in many applications in science, the backgrounds that should be suppressed are themselves vayring in time, and therefore a domain specific foreground/background identification must be implemented.
 
 \paragraph{Adaptive data-to-information mapping}
-We propose a shift to processing information at or very near to the point of production, ideally in the experimental sensors themselves, that provides orders of magnitude in data compression while preserving both validation and forensic reconstruction of decision chains.
+We propose a shift to processing information at the point of production, in the experimental sensors themselves, that provides many orders of magnitude in data compression while preserving both validation and forensic reconstruction of decision chains.
 The upcoming very high frame-rate sensors and the correspondingly ultra-high duty cycle user facilities in the Department of Energy research portfolio requires use of low-latency and very high through put data processing engines that typically have very different compute constraints than conventional cloud-based machine learning.
-One such novel challenge for user facilities is data distillation in sensor firmware that accomodates the weekly cycle of experimental reconfiguration.
+One such novel challenge for user facilities is data distillation in sensor firmware that accommodates the weekly cycle of experimental reconfiguration.
 
-Each experimental group will bring its own domain specific algortihms or custom machine learned inference models.
+Each experimental group will bring its own domain specific algorithms or custom machine learned inference models.
 These models will be flashed to custom logic regions in detector-side Field Programmable Gate Arrays (FPGAs).
 The computational complexity of optimizing FPGA routing \cite{FPGAcomplexity,FPGAgraph} is notoriously challenging and its $np$-completeness lies at the heart of why modular code can fail in surprising ways when compiled to firmware for FPGA. 
 %Our long experience with traditional imperative CPU programming has encouraged the paradim of designing the control flow of functions or procedures by stringing together existing algorithmic modules.
@@ -132,20 +138,32 @@ An on-sensor heterogeneous ecosystem could leverage a hardware palette as envisi
 
 
 \paragraph{Data Flow at the Edge}
+The data flow paradigm is very well matched to the micro-chip development and heterogeneous systems that are targeting Edge applications.
+From FPGAs to EdgeTPUs \cite{edgetpu,edgetpu_benchmarks}, Coarse Grained Reconfigurable Arrays (CGRAs) \cite{CGRAreview,waveCGRA} and ``Sea-of-Cores'' \cite{seaofcores} processors, data flow with low latency and high throughput is seen as the future of our connected digital world.
+The more intelligence that we can bake into this Edge computing the more locally that information can be digested and converted into actionable decisions.
+Within the DOE complex of upcoming very high rate light sources, these actionable decisions must work in the millisecond or even microsecond scales and therefore stand as an inspirational challenge for the Edge computing industry.
+Not shown in Fig.~\ref{fig::EdgeFlow} but implied by the chained inference decisions, the ideal use of edge inference is that the detector itself can hold multiple domain specific models in the downstream hardware.
+Depending on the Level 0 inference, the data flow would be autonomously routed to a particular Level 1 data flow path creating an event-dependent analysis stream.% make an autonomous and the upstream 
+Each event could potentially flow through a different analysis chain and therefore the transaction record should be built simultaneously, together with the data itself, so that the record of analysis path is incorporated directly into the data individual it produced. 
+%An interoperable stack with fundamental coupling between algorithm and data individuals would allow for multiple data pipelines, 
+Low latency inference would thus create control decisions that only route relevant events to computatoinally more expensive downstream models, less impactful events could be sent along for statistical aggregation or other light weight processing and more lossy compression schemes.
 
-Not shown in Fig.~\ref{fig::EdgeFlow} but implied by the chained inference decisions, the ideal use of edge inference is that the detector itself can hold multiple downstream models in the GPU and depending on the FPGA inference, it will autonomously choose which downstream path.% make an autonomous and the upstream 
-HERE HERE HERE HERE 
 
-An interoperable stack with fundamental coupling between algorithm and data individuals would allow for multiple data pipelines, some very low latency for making feedback control decisions, and others that are higher fidelity though lower throughput that provide validation and testing.  Furthermore, this is critical in a sensor ecosystem whereby the sensor reporting duty cycles may have vastly different timescales. 
-This is not unique to DOE facilities like the LCLS-II where come sensors will report at the 1MFps machine rate and others at a much slower e.g. pre-scaled 100Hz "validation" rate.  
-In the agriculture industry, aereal drones can provide hourly hyperspectral imaging data while soil testing likely occurs at most daily or monthly, thus also a multiple duty cycle sensor reporting rate that needs be fused.
 
-Provenance must be fundamentally included together with the data in particular as it is required for data fusion, and uplimately for forensic reconstruction in our common case of very high price of being wrong in autonomous inference.
+
+%, and others that are higher fidelity though lower throughput that provide validation and testing.  Furthermore, this is critical in a sensor ecosystem whereby the sensor reporting duty cycles may have vastly different timescales. 
+
+The need for sensor data fustion a heterogeneous environment is not unique to DOE facilities like the LCLS-II where come sensors will report at the 1MFps machine rate while  others will report at a much slower, pre-scaled, $\sim$100Hz "validation" rate.  
+In the agriculture industry, aerial drones can provide hourly hyper-spectral imaging of croplands whereas soil testing occurs at most frequency daily or weekly.
+Multiple duty cycle sensor reporting is a pervasive problem of data fusion that will only grow more complicated as the data rates increase.
+Again, provenance must be fundamentally included together with the data events since the event alignment for fusion of asynchronous sensors will nevertheless require forensic reconstruction.
+In the case of particle accelerators and x-ray beamlines, as mirrored in cutting edge automated agriculture, there is a very high price of being wrong.
 
 
 
 
 \subsection{Adaptive EdgeAI}
+HERE HERE HERE HERE
 \paragraph{Adaptive algorithms}
 Data curation must be fundamentally integrated into the design of the data acquisition.  This is a tremendous challenge in the context of DOE user facilities where the data transfomraion chain, the algorithm/data transaction chain, will make step changes each experiment cycle, every week at every beamiline will be a new data representaiton algorithm which will need to accommodate user and domain specific algorithms.
 This domain specificity lends better to a model of heterogeneous edge hardware whereby the data and algorithm identifiers are built into a transaction log or ledger while the specific algorithm is flashed to a user accessible logic region.
