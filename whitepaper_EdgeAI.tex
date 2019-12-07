@@ -109,9 +109,10 @@ Photo serving platforms offer utilities that autonomously help the user label ph
 The more raw images in our library, labeled or not, the faster we lose interest and simply choose to leave that surf trip out.
 Our scientific data suffers exactly the same liability of volume and thus a need not only for the autonomous face identification and placename labeling, e.g. domain specific auto-label and classify at point of generation, but also we need the ability to use domain specific algorithms to aggregate and enhance the information.
 
-Again, by analogy, high dynamic range (HDR) photography is a technique enabled by the rapid variation in exposure and subsequent digital overlay to artificially increase the dynamic range of the CCD sensor; take multiple images each at a different exposure, then digitally align the images and differentially merge them to fill in under-exposed and over exposed regions.
+The power to enhance desired information over and above obfuscating background and data clutter is where the high-repetition rate sources will likely make the bigest impact in the future of scientific discovery.
+Again, by analogy, high dynamic range (HDR) photography is a technique enabled by the rapid variation in exposure and subsequent digital overlay to artificially increase the dynamic range of the CCD sensor \cite{hdr_ref1994}; take multiple images each at a different exposure, then digitally align the images and differentially merge them to fill in under-exposed and over exposed regions.
 In this way, we use a limited resource--linear sensativity low-dynamic range CCD sensors, we briefly acquire many times more raw data than is conventional, and then we creatively merge this overkill of raw data into a reduced image that better represents the logarithmic sensativity of human sensation--the information we always wanted to capture.
-With the upcoming high event rate sources, it is not that we will produce tremendous amounts of raw or minimally compressed data, it is that we will invent solutions like the HDR example for the most socially important challenges that face modern science.
+With the upcoming high event rate sources, it is \emph{not} that we will produce tremendous amounts of raw or minimally compressed data, it is that we \emph{will} invent solutions like the HDR example for the most socially important challenges that face modern science.
 
 %Novel event based camera technology is arising both within DOE R\&D programs and in the commercial sector \cite{Prophesee}.  
 %Similarly high frame-rate detectors are also being pursued for applications in semiconductor fabrication and 
@@ -119,17 +120,20 @@ With the upcoming high event rate sources, it is not that we will produce tremen
 
 \paragraph{Adaptive data-to-information mapping}
 We propose a shift to processing information at the point of production, in the experimental sensors themselves, that provides many orders of magnitude in data compression while preserving both validation and forensic reconstruction of decision chains.
-The upcoming very high frame-rate sensors and the correspondingly ultra-high duty cycle user facilities in the Department of Energy research portfolio requires use of low-latency and very high through put data processing engines that typically have very different compute constraints than conventional cloud-based machine learning.
-One such novel challenge for user facilities is data distillation in sensor firmware that accommodates the weekly cycle of experimental reconfiguration.
+Conintuing with the HDR photoraphy analogy, we aim to encode the exposure set and image interlacing information into the header of the final HDR image out along with the firmware version and a pointer to the cloud hosted algortihm.
 
+%The upcoming very high frame-rate sensors and the correspondingly ultra-high duty cycle user facilities in the Department of Energy research portfolio requires use of low-latency and very high through put data processing engines that typically have very different compute constraints than conventional cloud-based machine learning.
+
+One rather novel challenge for Department of Energy user facilities is that unlike the HDR analogy, data distillation in sensor firmware at a beamline must accommodates a weekly cycle of experimental reconfiguration.
 Each experimental group will bring its own domain specific algorithms or custom machine learned inference models.
 These models will be flashed to custom logic regions in detector-side Field Programmable Gate Arrays (FPGAs).
 The computational complexity of optimizing FPGA routing \cite{FPGAcomplexity,FPGAgraph} is notoriously challenging and its $np$-completeness lies at the heart of why modular code can fail in surprising ways when compiled to firmware for FPGA. 
 %Our long experience with traditional imperative CPU programming has encouraged the paradim of designing the control flow of functions or procedures by stringing together existing algorithmic modules.
-In a CPU, if a module implimentation changes, it should never adversely affect the stability or function of any interacting modules.
-Unlike conventional imperative programming of CPUs, declarative programming focusses exclusively on the logical result of a computational task, not the control flow, and as such is more ameanable to compilation to FPGA and other non-CPU hardware as can also better exploit parallelism \cite{Lloyd1994}.
-A shift from imperative to declarative would thus enable easier compilation of logic flow across an interconnected variety of computational hardware, leveraging the strengths of e.g. the FPGA for convolutional layers in a network and the GPU for the fully connected layers.
-An on-sensor heterogeneous ecosystem could leverage a hardware palette as envisioned in Fig.~\ref{fig;:EdgeFlow} whereby FPGA usage is likely concentrated at the earliest stages in data transformation, followed by deeper decision models in GPU chips with final data routing decisions likely controlled by on-borad CPU.
+In a CPU, if a module implimentation changes, it generally never adversely affects the stability or function of any interacting modules, unless it is poorly constructed code.
+Unlike conventional imperative programming of CPUs, declarative programming focusses rather on the logical result of a computational task, not the control flow, and as such is more ameanable to compilation to FPGA and other non-CPU hardware that can also better exploit parallelism \cite{Lloyd1994}.
+A shift from imperative to declarative would thus enable easier compilation of logic flow across an interconnected variety of computational hardware, leveraging the strengths of e.g. the FPGA for convolutional ``featurizing'' layers in a neural network and the GPU for the large matrix multiplies of the fully connected layers.
+An on-sensor heterogeneous ecosystem could thus leverage domain specific portfolio of chip architectures as envisioned in Fig.~\ref{fig;:EdgeFlow} whereby FPGA usage is likely concentrated at the earliest stages in data transformation followed by deeper decision models in GPU or other inference specific ASIC chips with the final data routing decisions being controlled by on-borad ARM CPUs.
+HERE HERE HERE HERE
 \begin{figure}
 	\centerline{\includegraphics[clip,width=\linewidth]{EdgeFlow.eps}}
 	\caption{
