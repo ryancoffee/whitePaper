@@ -29,6 +29,7 @@ Then different hardware, again maybe the Xilinx Veral chips for deeper fullyconn
 Then out through again FPGA, or direct to memory, or reverse back out for autoencoder.
 Decision output flags along the way.
 
+\section{Send to Jana, Daniel, and Mike}
 
 \section{Motivation}
 
@@ -133,14 +134,14 @@ At the scientific user facilities like the AMP-U and LCLS-II, the data distillat
 Each experimental group will bring its own domain specific algorithms and custom machine learned inference models.
 These models will be flashed to custom logic regions in detector-side FPGAs, and this transfer of logic to FPGA in practice is not a trivial challenge.
 
-HERE HERE HERE HERE 
-
 The computational complexity of optimizing FPGA routing \cite{FPGAcomplexity,FPGAgraph} is notoriously challenging and its $np$-completeness lies at the heart of why modular code can fail in surprising ways when compiled to firmware for FPGA. 
 %Our long experience with traditional imperative CPU programming has encouraged the paradim of designing the control flow of functions or procedures by stringing together existing algorithmic modules.
 In a CPU, if a module implimentation changes, it generally never adversely affects the stability or function of any interacting modules, unless it is poorly constructed code.
 Unlike conventional imperative programming of CPUs, declarative programming focusses rather on the logical result of a computational task, not the control flow, and as such is more ameanable to compilation to FPGA and other non-CPU hardware that can also better exploit parallelism \cite{Lloyd1994}.
 A shift from imperative to declarative would thus enable easier compilation of logic flow across an interconnected variety of computational hardware, leveraging the strengths of e.g. the FPGA for convolutional ``featurizing'' layers in a neural network and the GPU for the large matrix multiplies of the fully connected layers.
-An on-sensor heterogeneous ecosystem could thus leverage domain specific portfolio of chip architectures as envisioned in Fig.~\ref{fig;:EdgeFlow} whereby FPGA usage is likely concentrated at the earliest stages in data transformation followed by deeper decision models in GPU or other inference specific ASIC chips with the final data routing decisions being controlled by on-borad ARM CPUs.
+An on-sensor heterogeneous ecosystem could leverage a domain specific palette of chip architectures as envisioned in Fig.~\ref{fig;:EdgeFlow}.
+Here the FPGA usage is likely concentrated at the earliest stages in data transformation followed by deeper decision models in GPU or other inference specific ASIC chips.
+The final data routing decisions would likely be controlled by on-borad ARM processors. 
 
 \begin{figure}
 	\centerline{\includegraphics[clip,width=\linewidth]{EdgeFlow.eps}}
@@ -174,28 +175,35 @@ Low latency inference would thus create control decisions that only route releva
 
 %, and others that are higher fidelity though lower throughput that provide validation and testing.  Furthermore, this is critical in a sensor ecosystem whereby the sensor reporting duty cycles may have vastly different timescales. 
 
-The need for sensor data fustion a heterogeneous environment is not unique to DOE facilities like the LCLS-II where come sensors will report at the 1MFps machine rate while  others will report at a much slower, pre-scaled, $\sim$100Hz "validation" rate.  
-In the agriculture industry, aerial drones can provide hourly hyper-spectral imaging of croplands whereas soil testing occurs at most frequency daily or weekly.
-Multiple duty cycle sensor reporting is a pervasive problem of data fusion that will only grow more complicated as the data rates increase.
-Again, provenance must be fundamentally included together with the data events since the event alignment for fusion of asynchronous sensors will nevertheless require forensic reconstruction.
-In the case of particle accelerators and x-ray beamlines, as mirrored in cutting edge automated agriculture, there is a very high price of being wrong.
+The need for sensor data fusion in a heterogeneous environment is not unique to the 1 MFps frame rates at DOE facilities like the LCLS-II.
+%where come sensors will report at the 1MFps machine rate while  others will report at a much slower, pre-scaled, $\sim$100Hz "validation" rate.  
+In the agriculture industry, aerial drones can provide hourly hyper-spectral imaging of croplands while soil testing occurs at most frequency daily or weekly.
+Multiple sensors reporting with disparate duty cycles is a pervasive problem that will only grow more complicated as the data rates and variety increase.
+Again, provenance must be fundamentally included together with the data events since the event alignment for fusion of asynchronous sensors will nevertheless require forensic reconstruction because of the very high price of being wrong.
+
+%In the case of particle accelerators and x-ray beamlines, as mirrored in cutting edge automated agriculture, there is a very high price of being wrong.
 
 
 
 
 \subsection{Adaptive EdgeAI}
-HERE HERE HERE HERE
 \paragraph{Adaptive algorithms}
-Data curation must be fundamentally integrated into the design of the data acquisition.  This is a tremendous challenge in the context of DOE user facilities where the data transfomraion chain, the algorithm/data transaction chain, will make step changes each experiment cycle, every week at every beamiline will be a new data representaiton algorithm which will need to accommodate user and domain specific algorithms.
-This domain specificity lends better to a model of heterogeneous edge hardware whereby the data and algorithm identifiers are built into a transaction log or ledger while the specific algorithm is flashed to a user accessible logic region.
-In FPGAs for instance, there can be IPcores that are hidden from user access.  These cores allow the Data Stack infrastrucure.  The user logic cores then serve the domain specific, potentially user developed, data transfomration logic and algorithm.
+The curation labels for recorded information must be fundamentally integrated into the design of the data acquisition.  
+This is a tremendous challenge in the context of DOE user facilities where the data transfomraion chain will make step changes each experiment cycle.
+It is bespoke to the particular sub-field and research group, changing every week at every beamiline.
+%will be a new data representaiton algorithm which will need to accommodate user and domain specific algorithms.
+Such domain specificity implies an edge computing hardware whereby the data and algorithm identifiers are consructed uniquely at the location of the transaction and built into a ledger.
+%while the specific algorithm is flashed to a user accessible logic region.
+In FPGAs for instance, hidden IP cores would enable the ledger infrastrucure while exposed logic cores can serve the user developed domain specific data transfomration logic and algorithm.
+
 
 \paragraph{Heterogeneous Hardware}
-Autonomous data routing and adaptive data mapping algorithms that are triggered by single event measurements \cite{Lutman2016,Wolfi2017_review,Hartmann2018} would allow for multiple targeted data sets to be recorded simultaneously.  
-For instance, in the case of SASE x-ray pulses, one user group may desire single attosecond pulse \cite{Cryan2016_impulsive} result while another group would prefer two-pulse x-ray pump-probe conditions \cite{Hartmann2018}.  
+Producing the ledger entries at the point of data generation and transformation would enable on-the-fly context switching.
+Autonomous data routing through the algorithm chain, triggered by single event measurements \cite{Lutman2016,Wolfi2017_review,Hartmann2018}, would allow for multiple experimental data sets to be recorded simultaneously.  
+For instance, in the case of SASE x-ray pulses, one user group might desire single attosecond pulse results \cite{Cryan2016_impulsive} while another group would prefer two-pulse x-ray pump-probe conditions \cite{Hartmann2018}.  
 Yet another group might prefer the stochastic spectral and temporal fluctuations \cite{Feurer2018,IanRobinson2018,Driver2019_spooktroscopy} that the other two groups would likely veto.  
-An autonomous data routing mechanism for on-the-fly adaptive data treatment could therefore use three specific analysis chains that would individually treat the incoming events appropriately for the targeted scientific interpretaiton.
-The upstream so-called ``data-router'' \cite{Audrey} would be implimented in the earliest layers in the data pipeline, allowing for dynamic routing through one of the three static analysis chains which themselves would likely be implimented in acceleration hardware either on-board or via PCIe bus in the recording computer node.
+An autonomous data routing mechanism for on-the-fly adaptive data treatment could therefore use three bespoke algorithm chains that would individually treat the incoming events appropriately for the targeted scientific interpretaiton.
+The upstream ``data-router'' \cite{Audrey} would be implimented in the earliest layers in the data pipeline, allowing for dynamic routing through one, or multiple of the three static analysis chains which themselves would likely be implimented in acceleration hardware either on-board or via PCIe bus in the recording computer node.
 %Example is using an x-ray attosecond double pulse experiment that quietly records spooktroscopy data with a forked data path. The producer of the spooltroscopy data then gets credit for his/her background production of that data even though that wasn’t the original goal of the experiment.
 
 \paragraph{Scientific Integrity versus the AI Black Box}
