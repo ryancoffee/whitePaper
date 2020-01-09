@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  9 NOV 2019 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  8 JAN 2020 11:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -199,31 +199,100 @@ File: plotting_technology.eps Graphic file (type eps)
 <plotting_technology.eps> [1
 
 ]
+
+Package natbib Warning: Citation `thetech' on page 2 undefined on input line 79
+.
+
+[2]
+
+Package natbib Warning: Citation `hdr_ref1994' on page 3 undefined on input lin
+e 114.
+
+
+Package natbib Warning: Citation `FPGAcomplexity' on page 3 undefined on input 
+line 137.
+
+
+Package natbib Warning: Citation `FPGAgraph' on page 3 undefined on input line 
+137.
+
+
+Package natbib Warning: Citation `Lloyd1994' on page 3 undefined on input line 
+140.
+
+
+LaTeX Warning: Reference `fig;:EdgeFlow' on page 3 undefined on input line 142.
+
+
 File: EdgeFlow.eps Graphic file (type eps)
- <EdgeFlow.eps> [2] [3] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 174.
+<EdgeFlow.eps>
+
+Package natbib Warning: Citation `edgetpu' on page 3 undefined on input line 16
+4.
 
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+Package natbib Warning: Citation `edgetpu_benchmarks' on page 3 undefined on in
+put line 164.
+
+
+Package natbib Warning: Citation `CGRAreview' on page 3 undefined on input line
+ 164.
+
+
+Package natbib Warning: Citation `waveCGRA' on page 3 undefined on input line 1
+64.
+
+
+Package natbib Warning: Citation `seaofcores' on page 3 undefined on input line
+ 164.
+
+[3] [4] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 253.
+
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 174.
- [5] [6]
-(./whitepaper_EdgeAI.bbl [7]
-Underfull \hbox (badness 10000) in paragraph at lines 94--99
-\OT1/cmr/m/n/10 https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-
-a-moores-law-for-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 253.
+
+[6] [7] (./whitepaper_EdgeAI.bbl
+Underfull \hbox (badness 7047) in paragraph at lines 15--19
+[]\OT1/cmr/m/n/10 Saro Vel-ra-jan.  Far edge vs. near edge in edge com-put-ing,
+ 2019.  Avail-able at:
  []
 
-) [8] (./whitepaper_EdgeAI.aux) ) 
+[8]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 ...wavecomp.ai/wp-content/uploads/2018/12/WP_
+                                                  CGRA.pdf.
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 
+     
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.69 
+     
+? 
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.69 
+     
+? x
+ 
 Here is how much of TeX's memory you used:
- 2168 strings out of 492610
- 27992 string characters out of 6129074
- 106651 words of memory out of 5000000
- 6093 multiletter control sequences out of 15000+600000
+ 2161 strings out of 492610
+ 27819 string characters out of 6129074
+ 107651 words of memory out of 5000000
+ 6088 multiletter control sequences out of 15000+600000
  10208 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,6n,32p,529b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on whitepaper_EdgeAI.dvi (8 pages, 33616 bytes).
+ 27i,6n,32p,529b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on whitepaper_EdgeAI.dvi (8 pages, 38352 bytes).

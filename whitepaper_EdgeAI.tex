@@ -19,7 +19,7 @@ An intelligent data pipeline is needed, one that is reconfigurable, robust, and 
 Ideally this data pipeline would not only produce unique data identifiers but also would incentivize information sharing in an open data marketplace.
 
 
-\section{Kelly notes:}
+\paragraph{Kelly notes:}
 Define a large problem that is viewed as important.
 Then give a credible list of milestones that deliver us some way toward the solution to that problem.
 BlockChain
@@ -29,7 +29,15 @@ Then different hardware, again maybe the Xilinx Veral chips for deeper fullyconn
 Then out through again FPGA, or direct to memory, or reverse back out for autoencoder.
 Decision output flags along the way.
 
-\section{Send to Jana, Daniel, and Mike}
+
+\paragraph{Send to Jana, Daniel, Ian Foster, possibly someone from DANSS, and Mike}
+
+\section{Executive Summary}
+Processing data at the point of generation, at the sensor or cluster of sensors, is key to the future \cite{Gartner2018,NetworkWorld2019}
+Data veracity can be bound to the data itself with a transaction ledger.
+For veracity and integrity sensative data, design the data encryption such that the transaction ledger is fundamentally used as the encryption salt so that tampering renders data useless.
+A perpetual ledger record would allow for data retention longevity to scale with the scientific and social value derived from the data or algorithm.
+Data access can be tightly controlled while keeping the data in an open repository and simply keeping tight control over the access to the encryption key.
 
 \section{Motivation}
 
@@ -78,7 +86,8 @@ A fundamental change to our concept of information rather than data will allow u
 The coming of a much more heavily connected world is hastening the need for autonomous action and intelligent sensors. 
 ``Edge Computing plays a critical role in the 5G world. Many of the 5G use cases require ultra-low latencies and edge computing infrastructure helps in realizing that. In the months and years to come, we would notice that edge computing gets a lot more attention\ldots.'' \cite{thetech}
 For our efforts to enable the 5G revolution, we find an equal need for a revolution in how we consider information versus data at its point of production at the ``far edge'' of the sensor.
-The drive in industry for intelligent sensors is is not mirrored within DOE-BES facility portfolio, it is amplified by many orders.
+Market analysis foresees an increase from today's 10\% of data being generated at the edge to over 75\% by 2025 \cite{NetworkWorld2019,Gartner2019}.
+The drive in industry for intelligent sensors is not mirrored within DOE-BES facility portfolio, it is amplified by many orders.
 We are therefore ideally positioned to use our Accelerator and Detector efforts to catalyze this Edge information revolution.
 
 %We predict another catalyzing event in the first half of the 2020s.
@@ -109,6 +118,7 @@ The transition of family photography from analog, then digital, and now to cellu
 Photo serving platforms offer utilities that autonomously help the user label photos with placenames and identified faces; this gives context to the image in the hopes that parents will more easily find the photo they vaguely remember taking on a surfing trip to Santa Barbara last winter to add to this year's holiday card collage.
 The more raw images in our library, labeled or not, the faster we lose interest and simply choose to leave that surf trip out.
 Our scientific data suffers exactly the same liability of volume and thus a need not only for the autonomous face identification and placename labeling, e.g. domain specific auto-label and classify at point of generation, but also we need the ability to use domain specific algorithms to aggregate and enhance the information.
+
 
 The power to enhance desired information over and above obfuscating background and data clutter is where the high-repetition rate sources will likely make the bigest impact in the future of scientific discovery.
 Again, by analogy, high dynamic range (HDR) photography is a technique enabled by the rapid variation in exposure and subsequent digital overlay to artificially increase the dynamic range of the CCD sensor \cite{hdr_ref1994}; take multiple images each at a different exposure, then digitally align the images and differentially merge them to fill in under-exposed and over exposed regions.
@@ -186,15 +196,15 @@ Again, provenance must be fundamentally included together with the data events s
 
 
 
-\subsection{Adaptive EdgeAI}
+\subsection{Traceable EdgeAI}
 \paragraph{Adaptive algorithms}
 The curation labels for recorded information must be fundamentally integrated into the design of the data acquisition.  
-This is a tremendous challenge in the context of DOE user facilities where the data transfomraion chain will make step changes each experiment cycle.
-It is bespoke to the particular sub-field and research group, changing every week at every beamiline.
-%will be a new data representaiton algorithm which will need to accommodate user and domain specific algorithms.
-Such domain specificity implies an edge computing hardware whereby the data and algorithm identifiers are consructed uniquely at the location of the transaction and built into a ledger.
-%while the specific algorithm is flashed to a user accessible logic region.
-In FPGAs for instance, hidden IP cores would enable the ledger infrastrucure while exposed logic cores can serve the user developed domain specific data transfomration logic and algorithm.
+This is a tremendous challenge in the context of the DOE and in particular scientific user facilities where the data transfomraion chain will make step changes each experiment cycle; bespoke analysis algorithms, unique to each research group, will change every week at every experimental end-station.
+Such domain specificity implies an edge computing hardware that transforms the data and binds it to the transformation algorithm uniquely at the location of the transaction.
+The transaction record initiates a ledger that will track the data provenance indefinately.
+In FPGAs for instance, hidden IP cores would enable the ledger infrastructure while exposed logic cores can serve the user developed domain specific data transfomration logic and algorithm.
+Together, the unique data identiriers can be constructed from the fingerprint of the active algorithm along with the chip ID such that the encryption key requires knowledge of each modification to the data element.
+The decrypted ledger also reveals the full analysis chain, revealing each sequential step in the data transformation along the analysis chain.
 
 
 \paragraph{Heterogeneous Hardware}
@@ -203,16 +213,24 @@ Autonomous data routing through the algorithm chain, triggered by single event m
 For instance, in the case of SASE x-ray pulses, one user group might desire single attosecond pulse results \cite{Cryan2016_impulsive} while another group would prefer two-pulse x-ray pump-probe conditions \cite{Hartmann2018}.  
 Yet another group might prefer the stochastic spectral and temporal fluctuations \cite{Feurer2018,IanRobinson2018,Driver2019_spooktroscopy} that the other two groups would likely veto.  
 An autonomous data routing mechanism for on-the-fly adaptive data treatment could therefore use three bespoke algorithm chains that would individually treat the incoming events appropriately for the targeted scientific interpretaiton.
-The upstream ``data-router'' \cite{Audrey} would be implimented in the earliest layers in the data pipeline, allowing for dynamic routing through one, or multiple of the three static analysis chains which themselves would likely be implimented in acceleration hardware either on-board or via PCIe bus in the recording computer node.
-%Example is using an x-ray attosecond double pulse experiment that quietly records spooktroscopy data with a forked data path. The producer of the spooltroscopy data then gets credit for his/her background production of that data even though that wasn’t the original goal of the experiment.
+The upstream ``data-router'' \cite{Audrey} would be implented in the earliest layers in the data pipeline, allowing for dynamic routing through one, or multiple, of the static analysis chains which themselves would likely be implimented in acceleration hardware ideally in the same front-end FPGA or other on-board or PCIe connected Edge computing chip.
 
-\paragraph{Scientific Integrity versus the AI Black Box}
-In this scenario, however, each data acquisition event would potentially incure a chain of analysis manipulations or flow through different inference models or compression encodings.
-This chain would be unique to the target scientific domain with each sensor event serving as the initial unique seed for the respective analytic transaction chain.
-By fundamentally encoding the event seeded routing decision chain, one could not only produce a unique data identifier that can be used to later to identify valuable with original data, but also it allows for the domain-specific forensic reconstruction of the analysis pipeline, assuming the transaction record also provides pointers to the inference models that were active in the pipeline.
-Such a task is likely prohibitively cumbersome unless we avoid precise network syncronization by using the analytic hardware itself to both flow the data and to simultaneously produce the transaction record.
+\paragraph{Data Integrity, Veracity, and Value} 
+In this scenario, however, each data acquisition event would potentially incure a chain of analysis manipulations, e.g. flow through different inference models, and thus undergo an event-by-event variable compression encoding.
+This chain would be unique to the target scientific domain with each event ID, sensor ID, and sensor firmware serving as the initial unique seed for the transaction chain.
+%The forensic tracability of the transaction record allows for the domain-specific forensic reconstruction of the analysis pipeline.
+The full reconstruction not only allows for future researchers to test new analysis algorithms along different stages of the data transformation chain, but it also enables verification to prevent unwanted data manipulation.  %--assuming the transaction record also provides pointers to the inference models that were active in the pipeline.
+Although this is low concern for the vast majority of scientific data analysis, some domains in the DOE portfolio and certainly in the private sector must guard against intellectual property theft and malicious data manipulation.
+Access to the data itself can also be logged into the transaction ledger, thus continuing to imbue the data with how it is continues to be used.
+Such continued use would inform data retention policies that could respect a dynamic archival lifetime for data since the uniquely identifiable transaction chain would thus assign real-world value to data elements and algortihms.
+This value would be based on the resultant inventions, publications, or consumer benefits that derive from that data element.
+%Such a task is likely prohibitively cumbersome unless we avoid precise network syncronization by using the analytic hardware itself to both flow the data and to simultaneously produce the transaction record.
 
-\subsection{Scientific Information Marketplace}
+
+
+
+
+\subsection{Scientific Information Marketplace} HERE HERE HERE HERE
 Models that map raw data input to lower dimensional information. 
 \paragraph{Current challenges}
 Conventional data warehouses collect and organize only the data that is generated in premisis or within the tight knit collaborative group.
@@ -259,6 +277,8 @@ Adapted from Ref.~\cite{Elbaz2012} we follow an example of a supply-chain like d
 
 In a data economy, one could imagine not only a single lab economy, but also an inter-lab and ultimately an international data economy.
 
+
+\paragraph{Data security and provenance}
 
 
 \section{Scope}

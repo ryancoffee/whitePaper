@@ -11,10 +11,65 @@ Karl Rupp.
 \newblock Available at:
   \\{https://github.com/karlrupp/microprocessor-trend-data}.
 
-\bibitem{Prophesee}
-Prophesee: the world’s first event-based vision sensor.
+\bibitem{thetech}
+Saro Velrajan.
+\newblock Far edge vs. near edge in edge computing, 2019.
 \newblock Available at:
-  \\{https://www.prophesee.ai/event-based-sensor-packaged/}.
+  https://www.thetech.in/2019/06/far-edge-vs-near-edge-in-edge-computing.html.
+
+\bibitem{hdr_ref1994}
+S.~Mann and R.W. Picard.
+\newblock Being `undigital' with digital cameras: Extending dynamic range by
+  combining differently exposed pictures.
+\newblock Technical Report 323, M.I.T. Media Lab Perceptual Computing Section,
+  Boston, Massachusetts, 1994.
+\newblock Also appears, {IS\&T}'s 48th annual conference, Cambridge,
+  Massachusetts, May 1995.
+
+\bibitem{FPGAcomplexity}
+{Yu-Liang Wu}, {Shuji Tsukiyama}, and {Malgorzata Marek-Sadowska}.
+\newblock On computational complexity of a detailed routing problem in two
+  dimensional fpgas.
+\newblock In {\em Proceedings of 4th Great Lakes Symposium on VLSI}, pages
+  70--75, March 1994.
+
+\bibitem{FPGAgraph}
+{Yu-Liang Wu}, S.~{Tsukiyama}, and M.~{Marek-Sadowska}.
+\newblock Graph based analysis of 2-d fpga routing.
+\newblock {\em IEEE Transactions on Computer-Aided Design of Integrated
+  Circuits and Systems}, 15(1):33--44, Jan 1996.
+
+\bibitem{Lloyd1994}
+JW~Lloyd.
+\newblock Practical advantages of declarative programming.
+\newblock In {\em Unknown}, pages 3 -- 17, 1994.
+\newblock Conference Proceedings/Title of Journal: Joint Conference on
+  Declarative Programming.
+
+\bibitem{edgetpu}
+Edge tpu, 2019.
+\newblock Available at: https://cloud.google.com/edge-tpu/.
+
+\bibitem{edgetpu_benchmarks}
+LLC. Google.
+
+\bibitem{CGRAreview}
+M.~{Wijtvliet}, L.~{Waeijen}, and H.~{Corporaal}.
+\newblock Coarse grained reconfigurable architectures in the past 25 years:
+  Overview and classification.
+\newblock In {\em 2016 International Conference on Embedded Computer Systems:
+  Architectures, Modeling and Simulation (SAMOS)}, pages 235--244, July 2016.
+
+\bibitem{waveCGRA}
+Chris Nicol.
+\newblock A coarse grain reconfigurable array (cgra) for statically scheduled
+  data flow computing.
+\newblock Avaialable at:
+  https://wavecomp.ai/wp-content/uploads/2018/12/WP_CGRA.pdf.
+
+\bibitem{seaofcores}
+Unique new streaming processor architecture, 2019.
+\newblock Available at: https://cornami.com/technology-products/.
 
 \bibitem{Lutman2016}
 Alberto~A. Lutman, James~P. MacArthur, Markus Ilchen, Anton~O. Lindahl, Jens
