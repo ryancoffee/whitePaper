@@ -3,56 +3,46 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: whitepaper_EdgeAI.aux
 The style file: unsrt.bst
 Database file #1: whitepaper.bib
-I was expecting a `,' or a `}'---line 256 of file whitepaper.bib
- :  
- :  note = {Avaialable at: https://coral.ai/docs/edgetpu/benchmarks/},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 269 of file whitepaper.bib
- :  
- :  author = {Google, LLC.}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--empty journal in Elbaz2012
-You've used 22 entries,
+You've used 26 entries,
             1791 wiz_defined-function locations,
-            578 strings with 9359 characters,
-and the built_in function-call counts, 5669 in all, are:
-= -- 365
-> -- 486
+            599 strings with 10356 characters,
+and the built_in function-call counts, 6253 in all, are:
+= -- 414
+> -- 509
 < -- 5
-+ -- 173
-- -- 151
-* -- 424
-:= -- 964
-add.period$ -- 68
-call.type$ -- 22
-change.case$ -- 20
++ -- 183
+- -- 157
+* -- 439
+:= -- 1059
+add.period$ -- 83
+call.type$ -- 26
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 219
-empty$ -- 469
-format.name$ -- 151
-if$ -- 1220
+cite$ -- 27
+duplicate$ -- 239
+empty$ -- 541
+format.name$ -- 157
+if$ -- 1353
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 26
 missing$ -- 15
-newline$ -- 113
-num.names$ -- 20
-pop$ -- 97
+newline$ -- 136
+num.names$ -- 25
+pop$ -- 127
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 131
+skip$ -- 136
 stack$ -- 0
 substring$ -- 151
-swap$ -- 66
+swap$ -- 70
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 31
-width$ -- 24
-write$ -- 232
-(There were 2 error messages)
+while$ -- 36
+width$ -- 28
+write$ -- 279
+(There was 1 warning)

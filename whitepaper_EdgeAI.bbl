@@ -1,21 +1,75 @@
 \begin{thebibliography}{10}
 
-\bibitem{Kurzweil}
-Ray Kurzweil.
-\newblock {\em The Singularity Is Near: When Humans Transcend Biology}.
-\newblock Penguin Books, Inc., 2006.
-
 \bibitem{MicroprocessorTrendData}
 Karl Rupp.
 \newblock Microprocessor trend data -- git repository.
 \newblock Available at:
   \\{https://github.com/karlrupp/microprocessor-trend-data}.
 
+\bibitem{Gartner2018}
+Rob van~der Meulen.
+\newblock What edge computing means for infrastructure and operations leaders,
+  October 2018.
+\newblock Available at:
+  https://www.gartner.com/smarterwithgartner/what-edge-computing-means-for-infrastructure-and-operations-leaders/.
+
+\bibitem{NetworkWorld2019}
+Ann Taylor.
+\newblock Edge computing is in most industries' future, April 2019.
+\newblock Available at:
+  https://www.networkworld.com/article/3391016/edge-computing-is-in-most-industries-future.html.
+
+\bibitem{Kurzweil}
+Ray Kurzweil.
+\newblock {\em The Singularity Is Near: When Humans Transcend Biology}.
+\newblock Penguin Books, Inc., 2006.
+
 \bibitem{thetech}
 Saro Velrajan.
 \newblock Far edge vs. near edge in edge computing, 2019.
 \newblock Available at:
   https://www.thetech.in/2019/06/far-edge-vs-near-edge-in-edge-computing.html.
+
+\bibitem{NetworkWorld2019b}
+Network~World Keith~Shaw.
+\newblock What is edge computing and why it matters, November 2019.
+\newblock Available at:
+  https://www.networkworld.com/article/3224893/what-is-edge-computing-and-how-it-s-changing-the-network.html.
+
+\bibitem{brookings2019}
+Tom Wheeler and David Simpson.
+\newblock Why 5g requires new approaches to cybersecurity: Racing to protect
+  the most important network of the 21st century, September 2019.
+\newblock 'Available at:
+  https://www.brookings.edu/research/why-5g-requires-new-approaches-to-cybersecurity/\#cancel'.
+
+\bibitem{edgetpu_benchmarks}
+LLC. Google.
+\newblock Edge tpu performance benchmarks, 2019.
+\newblock Avaialable at: https://coral.ai/docs/edgetpu/benchmarks/.
+
+\bibitem{edgetpu}
+LLC. Google.
+\newblock Edge tpu, 2019.
+\newblock Available at: https://cloud.google.com/edge-tpu/.
+
+\bibitem{waveCGRA}
+Chris Nicol.
+\newblock A coarse grain reconfigurable array (cgra) for statically scheduled
+  data flow computing.
+\newblock 'Avaialable at:
+  https://wavecomp.ai/wp-content/uploads/2018/12/WP\_CGRA.pdf'.
+
+\bibitem{CGRAreview}
+M.~{Wijtvliet}, L.~{Waeijen}, and H.~{Corporaal}.
+\newblock Coarse grained reconfigurable architectures in the past 25 years:
+  Overview and classification.
+\newblock In {\em 2016 International Conference on Embedded Computer Systems:
+  Architectures, Modeling and Simulation (SAMOS)}, pages 235--244, July 2016.
+
+\bibitem{seaofcores}
+Unique new streaming processor architecture, 2019.
+\newblock Available at: https://cornami.com/technology-products/.
 
 \bibitem{hdr_ref1994}
 S.~Mann and R.W. Picard.
@@ -45,31 +99,6 @@ JW~Lloyd.
 \newblock In {\em Unknown}, pages 3 -- 17, 1994.
 \newblock Conference Proceedings/Title of Journal: Joint Conference on
   Declarative Programming.
-
-\bibitem{edgetpu}
-Edge tpu, 2019.
-\newblock Available at: https://cloud.google.com/edge-tpu/.
-
-\bibitem{edgetpu_benchmarks}
-LLC. Google.
-
-\bibitem{CGRAreview}
-M.~{Wijtvliet}, L.~{Waeijen}, and H.~{Corporaal}.
-\newblock Coarse grained reconfigurable architectures in the past 25 years:
-  Overview and classification.
-\newblock In {\em 2016 International Conference on Embedded Computer Systems:
-  Architectures, Modeling and Simulation (SAMOS)}, pages 235--244, July 2016.
-
-\bibitem{waveCGRA}
-Chris Nicol.
-\newblock A coarse grain reconfigurable array (cgra) for statically scheduled
-  data flow computing.
-\newblock Avaialable at:
-  https://wavecomp.ai/wp-content/uploads/2018/12/WP_CGRA.pdf.
-
-\bibitem{seaofcores}
-Unique new streaming processor architecture, 2019.
-\newblock Available at: https://cornami.com/technology-products/.
 
 \bibitem{Lutman2016}
 Alberto~A. Lutman, James~P. MacArthur, Markus Ilchen, Anton~O. Lindahl, Jens

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  8 JAN 2020 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  10 JAN 2020 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -104,6 +104,22 @@ File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen114
 \WF@size=\dimen115
@@ -199,100 +215,63 @@ File: plotting_technology.eps Graphic file (type eps)
 <plotting_technology.eps> [1
 
 ]
-
-Package natbib Warning: Citation `thetech' on page 2 undefined on input line 79
-.
-
-[2]
-
-Package natbib Warning: Citation `hdr_ref1994' on page 3 undefined on input lin
-e 114.
-
-
-Package natbib Warning: Citation `FPGAcomplexity' on page 3 undefined on input 
-line 137.
-
-
-Package natbib Warning: Citation `FPGAgraph' on page 3 undefined on input line 
-137.
-
-
-Package natbib Warning: Citation `Lloyd1994' on page 3 undefined on input line 
-140.
-
-
-LaTeX Warning: Reference `fig;:EdgeFlow' on page 3 undefined on input line 142.
-
-
 File: EdgeFlow.eps Graphic file (type eps)
-<EdgeFlow.eps>
-
-Package natbib Warning: Citation `edgetpu' on page 3 undefined on input line 16
-4.
+ <EdgeFlow.eps> [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 117.
 
 
-Package natbib Warning: Citation `edgetpu_benchmarks' on page 3 undefined on in
-put line 164.
-
-
-Package natbib Warning: Citation `CGRAreview' on page 3 undefined on input line
- 164.
-
-
-Package natbib Warning: Citation `waveCGRA' on page 3 undefined on input line 1
-64.
-
-
-Package natbib Warning: Citation `seaofcores' on page 3 undefined on input line
- 164.
-
-[3] [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 253.
-
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 253.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
 
-[6] [7] (./whitepaper_EdgeAI.bbl
-Underfull \hbox (badness 7047) in paragraph at lines 15--19
+(./whitepaper_EdgeAI.bbl
+Underfull \hbox (badness 2744) in paragraph at lines 17--21
+[]\OT1/cmr/m/n/10 Ann Tay-lor.  Edge com-put-ing is in most in-dus-tries' fu-tu
+re, April 2019.  Avail-able at:
+ []
+
+
+Underfull \hbox (badness 7047) in paragraph at lines 28--32
 []\OT1/cmr/m/n/10 Saro Vel-ra-jan.  Far edge vs. near edge in edge com-put-ing,
  2019.  Avail-able at:
  []
 
-[8]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.68 ...wavecomp.ai/wp-content/uploads/2018/12/WP_
-                                                  CGRA.pdf.
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 
-     
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 
-     
-? 
-! Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.69 
-     
-? x
- 
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
+[]\OT1/cmr/m/n/10 LLC. Google.  Edge tpu per-for-mance bench-marks, 2019.  Ava-
+ial-able at:
+ []
+
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 178--183
+\OT1/cmr/m/n/10 https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-
+a-moores-law-for-
+ []
+
+) [5] [6]
+
+LaTeX Warning: Reference `fig;:EdgeFlow' on page 7 undefined on input line 232.
+
+
+[7] [8] [9] [10] [11] [12] (./whitepaper_EdgeAI.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2161 strings out of 492610
- 27819 string characters out of 6129074
- 107651 words of memory out of 5000000
- 6088 multiletter control sequences out of 15000+600000
+ 2675 strings out of 492610
+ 34086 string characters out of 6129074
+ 116913 words of memory out of 5000000
+ 6593 multiletter control sequences out of 15000+600000
  10208 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,6n,32p,529b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on whitepaper_EdgeAI.dvi (8 pages, 38352 bytes).
+ 27i,6n,35p,567b,306s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on whitepaper_EdgeAI.dvi (12 pages, 58984 bytes).
