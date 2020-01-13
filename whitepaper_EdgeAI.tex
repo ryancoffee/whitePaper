@@ -48,23 +48,30 @@ In industry as in basic science, human technological advancement progresses with
 Particular to DOE's flagship facilities, data rates are growing to velocities of 100s of GB/s to TB/s that will quickly exceed network and storage capacity, thus providing early insight into the next decade of IIoT challenges.
 We have an immediate need to reformulate data acquisition (DAQ) to the concept of information acquisition (IAQ)---we wish to record actionable information, not raw data, and to do it in a form that is flexible and compatible with the domain specific output targets.
 
+Scientific advancement, like all human technological advancement, progresses with exponential rapidity \cite{Kurzweil} and in spite of physical limitations.
 We see in the upper panel of Fig.~\ref{fig::technology} the increasing transistor density (upper: \textcolor{purple}{$\bullet$}).
 %It is no suprise that, respecting Nyquist waveform sampling, we hit a physical clock limitation in the vicinity of a few GHz (lower: \textcolor{purple}{$\bullet$}).
 When we hit the physical limitaiton of a few GHz (lower: \textcolor{purple}{$\bullet$}), industry immediately responded with the multi-threading paradigm (upper: \textcolor{green}{$\circ$}).
-The computing bottleneck of this decade is now data transfer to the compute engine, but the response to this limitation is already being formulated as Edge Computing \cite{thetech,NetworkWorld2019b}.
-Much like multi-threading allowed continued exponential growth in the data center, Edge Computing will enable continued exponential growth of distributed sensors for autonomous decisions and information compression.
+Physical limits are always circumvented by human creativity.
+The computing bottleneck of this decade is now data transfer.
+Our response to this limitation is already being formulated as Edge Computing \cite{thetech,NetworkWorld2019b}.
+Much like multi-threading allowed continued exponential growth in the data center, Edge Computing will enable continued exponential growth of distributed sensors for autonomous decision making and information compression.
 
 Although the Edge Computing paradigm has already begun, there is a rising concern for data security and provenance tracking \cite{brookings2019}.
-Security that data is not being manipulated ``in-flight'' is certainly critical to autonomous vehicles, but one can also imagine how bad actors might mettle with or contribute obfuscation into shared scientific data sets.
-This would potentially harm the inferred results of data analysis, potentially mis-leading technological development.
-Heading off such a threat by cooking data provenance and verification directly into the Edge Computing paradigm by capitolizing on recent developments in Blockchain Technology is the route we propose to demonstrate, initially with a few crisp examples from the DOE's user facility compex, and then expanded application to broader industrial and health sector use cases.
+Security that data is not being manipulated ``in-flight'' is certainly critical to autonomous vehicles, but one can also imagine how bad actors might mettle with or inject obfuscation into shared scientific data sets.
+This would potentially harm the inferred results of data analysis and potentially mis-lead technological development.
+Heading off such a threat by cooking data provenance and verification directly into the an adaptive Edge Computing paradigm is the route we propose to demonstrate, initially with a few crisp examples from DOE's user facilities, and then with expanded application to the broader industrial and health sector use cases.
 
 \paragraph{Proposed solution}
-Blockchain is a form of Distributed Ledgerr Technology (DLT) that is opening a new paradigm for data movement and the collaborative verification and storage of transactional data.
-We intend to use field programmable gate arrays (FPGAs) and application specific integrated circuits (ASICs) at the sensor along with emerging Edge Computing microchips such as the EdgeTPU \cite{edgetpu_benchmarks,edgetpu}, coarse-grained reconfigrurable arrays \cite{waveCGRA,CGRAreview}, the ``sea-of-cores'' \cite{seaofcores} and other AI accelerating chips at the convergence of multiple sensors.
-These chips will simultaneously execute Edge Computing inference models, fundamentally bind a fingerprint of the model to the information being produced, and update the blockchain for that unit of information regarding the algorithm execution chain as a uniquely identifiable transaction record.
+Blockchain is a form of Distributed Ledgerr Technology (DLT) that is opening a new paradigm for data movement with collaborative verification and storage of transactional data.
+We will initially focus on field programmable gate arrays (FPGAs) 
+%and application specific integrated circuits (ASICs) 
+at the sensor and quickly move to also include emerging Edge Computing microchips such as the EdgeTPU \cite{edgetpu_benchmarks,edgetpu}, coarse-grained reconfigrurable arrays \cite{waveCGRA,CGRAreview}, ``sea-of-cores'' \cite{seaofcores} and others.
+%AI accelerating chips. at the convergence of multiple sensors.
+The chips will simultaneously execute the Edge inference models while updating the blockchain for that unit of information.
+The sequence of block added to the chain will fundamentally bind a fingerprint of the inference model to the information being produced, and thus create a uniquely identifiable transaction record as depicted in Fig.~\ref{fig::EdgeFlow}.
 We plan to enable encryption that uses this transaction ledger as the encryption ``salt'' such that veracity can be bound to the data and its retrieval; one must match the ledger with the datum to achieve decryption.
-The perpetual ledger record allows for dynamic retention that scales with the scientific or social value derived from the combined data and algorithm.
+The perpetual ledger record allows for dynamic retention that scales with the scientific or social value derived from the data and/or algorithm.
 Not only does this inform the data centers of which data and algorithms can be safely discarded and which should be retained for continued value extraction, but also this data value can be aggregated to show value metrics for specefic scientific facilities or sensor technologies.
 
 
@@ -78,39 +85,43 @@ Not only does this inform the data centers of which data and algorithms can be s
 
 \paragraph{Plan/Milestones}
 %\emph{Year 1: \$750k + 50K for MHz camera + 20K in framegrabbers + 4x 120K digitizers}
-In the first period we will concentrate on FPGA development for interpreting electron time of flight spectra for a quentessential example of DOE's firehose data source, the so-called CookieBox detector for LCLS-II.
-We will demonstrate multiple pre-analysis algorithms in firmware of the digitizer FPGA where each algorithm is developed for a specific application of the detector and therefore represent unique domain specific algorithms that each effectively re-brand the detector for fundamentally different interpretations of the recorded analog waveforms.
-We will demonstrate that this same FPGA can generate the unique id that also binds to the corresponding algorithm, both of which produce a fingerprint to a unique data identifier.
+In the first period we will concentrate on FPGA development for interpreting electron time of flight spectra for one of DOE's quentessential examples of a firehose data source, the so-called CookieBox detector for LCLS-II.
+We will demonstrate multiple pre-analysis algorithms in firmware of the digitizer FPGA where each algorithm is developed for a specific application of the detector.
+These are unique domain specific algorithms that each effectively re-brand the detector for fundamentally different interpretations of the recorded analog waveforms.
+This is why we concentrate initially on FPGAs for the sake of an expected weekly overhaul of the FPGA firmware.
+We will demonstrate that the FPGA can generate the unique id that also binds to the corresponding algorithm, both of which yield a fingerprint to a unique data identifier.
 This identifier will form the initial block in the transaction chain, thus initiating the hyperledger record.
-The deeper analysis in GPU and CPU that follow this pre-processing will then be treated as subsequent blocks, transactions that will be added to the ledger.
+The deeper analysis in subsequent AI acceleration chips that follow will then be treated as subsequent transactions that will be added to the ledger.
 
 %Also in Year 1 we will design an RF ASIC that pre-conditions the analog waveform in order to optimally distribute the uniform sampling distribution of the ADC convertes in the digitizers.
 
 %\emph{Year 2: \$1M}
-In Year 2 we will work together with Euresys Inc. to demonstrate image transformation, also called ``featurization,'' as a preliminary step before presenting the information to a machine learning inference model.
-The featureization will occur in custom logic blocks in the framegrabber FPGAs and then transfer directly to a more ML tailored inference chip such as a secondary FPGA, CGRA, or FractalCore.
+Folloing this initial demonstration, we will work together with the high frame rate camera producer and the associated frame-grabber supplier to demonstrate the same transaction ledger Edge Computing paradigm for image transformation.
+The pre-analysis for images os often called ``featurization'' since it reduces typically MPix images into a mor eappropriate set of features before presenting to a machine learning inference model.
+The featureization will occur in custom logic blocks in the framegrabber FPGAs and then transfer directly to a more ML tailored inference chip such as a secondary inference accelerator \cite{waveCGRA,CGRAreview,seaofcores}.
 In this case we will demonstrate tight coupling between the compiled byte-code and the generating code for the ML model along with identification of the training data pool used to produce the inference model.
-These too will be treated as transaction that will be added to the blockchain.
-We will also demonstrate the value metric binding to data such that the outcome of e.g. resulting subsequent inference models can proportionatly increment the ``retention value'' of the data element.
-
-Also in year 2, we will design an RF analog ASIC that will work together with an ACD chip and FPGA on a custom board that allows for the full pre-analysis of all 16 data channels of the CookieBox to feed directly into an inference engine that bypasses the PCIe bus.
-
+These too will be treated as transactions that will be added to the blockchain.
+At this stage we will also demonstrate the value-binding for data such that the beneficial outcome of the data and inference models can proportionatly increment the ``retention value'' of the data element.
+Also in this second phase we will explore an RF analog ASIC that includes the 16 channel ADC with the pre-analysis FPGA and downstream inference chip on a custom board.
+This will allow for the full inference from all 16 data channels of the CookieBox to occur in an embedded inference engine that bypasses the PCIe bus.
 
 %\emph{Year 3: \$1M }
-In Year 3 we will work together with Vision Research and the various chip makers to integrate what had previously been hosted on the framegrabber into the camera electronics.
-We will also help define the EdgeAI chip integration standard for industrial diagnostic sensors and medical electronics, to be hosted as embedded daughter cards.
-We will demonstrate that intercepting data and making modifications ``in-flight'' will render the data useless as it will spoil the decription algorithm.
-By year 3 we will prepare demonstration examples for exansion to industry and medical sensor domains.
+In Year 3 we will work together with a high frame rate camera maker and the various AI acceleration chip makers to integrate what had previously been hosted on the frame-grabber into the camera electronics.
+We will also help to define an daughter card integration standard to promote a unifying embedded EdgeAI for scientific as well as industrial and medical diagnostic sensors.
+We attempt to intercept data and make modifications ``in-flight'' to show how it would render the data useless, spoiling the decription algorithm.
 
 \paragraph{Broader applications}
-With an increasing reliance on machine learning trained models for radio imaging applications in nuclear security comes the risk that such models can be nefariously altered.
-This alteration can come from tampering with the models themselves, or less directly by injecting falsified training data into the training pool.
-By using an algorithm fingerprint as a so-called ``salt'' in the data encryption process, we can render altered data useless; it will be non-decryptable.
-Furthermore, the ledger record will record interactions with the data such that attemts to use or alter the data will also appear in the transaction record.
-Beyond nuclear security, the sharing of anonamized health data can be controlled and rendered useless if alteration is attempted.
-In the same way as scientific value is imbued on the data set via the unique identifiers and transaction logs, so too with medical data the originator of the data could recieve direct benefit for sharing that information, a benefit that could scale in proportion to the market value of output that derived from thier data.
-We note that the medical sensor portfolio is tremendous, it could even extend application to secure transfer and value tracking of in-home sensors for e.g. elder care, nutrition, and diabetes.
+With an increasing reliance on machine learning for radio imaging applications in nuclear security comes the risk that such models can be nefariously altered.
+This alteration can come from tampering with the models themselves or by injecting falsified training data into the training pool.
+The ledger record will record interactions with the data in the training set such that attemts to use or alter the data will also appear in the transaction record.
+Since the transaction record and training set fingerprints are used as so-called ``salt'' in the data encryption process, altered data would be rendered non-decryptable.
+Beyond nuclear security, the sharing of anonamized health data can be more securely controlled and therefore more confidently shared with exclusive trusted partners.
+%and rendered useless if alteration is attempted.
+In the same way as the scientific data is itself imbued with folow on value, so too with medical data; the originator of data could recieve direct benefit for sharing, a benefit that could scale in proportion to the market value of output that derived from thier data.
+We note that the medical sensor portfolio is tremendous, it could even extend application to secure transfer and value tracking of in-home sensors for e.g. in-home elder care, nutrition, and diabetes.
 %Smart connected in-home sensors with guarnateed privacy would facilitate elders to age in place, retaining thier physical social community.
+
+HERE HERE HERE HERE
 
 \paragraph{Deliverables}
 \begin{itemize}
