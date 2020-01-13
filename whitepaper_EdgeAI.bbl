@@ -44,12 +44,12 @@ Tom Wheeler and David Simpson.
   https://www.brookings.edu/research/why-5g-requires-new-approaches-to-cybersecurity/\#cancel'.
 
 \bibitem{edgetpu_benchmarks}
-LLC. Google.
+Google.
 \newblock Edge tpu performance benchmarks, 2019.
 \newblock Avaialable at: https://coral.ai/docs/edgetpu/benchmarks/.
 
 \bibitem{edgetpu}
-LLC. Google.
+Google.
 \newblock Edge tpu, 2019.
 \newblock Available at: https://cloud.google.com/edge-tpu/.
 
@@ -70,115 +70,5 @@ M.~{Wijtvliet}, L.~{Waeijen}, and H.~{Corporaal}.
 \bibitem{seaofcores}
 Unique new streaming processor architecture, 2019.
 \newblock Available at: https://cornami.com/technology-products/.
-
-\bibitem{hdr_ref1994}
-S.~Mann and R.W. Picard.
-\newblock Being `undigital' with digital cameras: Extending dynamic range by
-  combining differently exposed pictures.
-\newblock Technical Report 323, M.I.T. Media Lab Perceptual Computing Section,
-  Boston, Massachusetts, 1994.
-\newblock Also appears, {IS\&T}'s 48th annual conference, Cambridge,
-  Massachusetts, May 1995.
-
-\bibitem{FPGAcomplexity}
-{Yu-Liang Wu}, {Shuji Tsukiyama}, and {Malgorzata Marek-Sadowska}.
-\newblock On computational complexity of a detailed routing problem in two
-  dimensional fpgas.
-\newblock In {\em Proceedings of 4th Great Lakes Symposium on VLSI}, pages
-  70--75, March 1994.
-
-\bibitem{FPGAgraph}
-{Yu-Liang Wu}, S.~{Tsukiyama}, and M.~{Marek-Sadowska}.
-\newblock Graph based analysis of 2-d fpga routing.
-\newblock {\em IEEE Transactions on Computer-Aided Design of Integrated
-  Circuits and Systems}, 15(1):33--44, Jan 1996.
-
-\bibitem{Lloyd1994}
-JW~Lloyd.
-\newblock Practical advantages of declarative programming.
-\newblock In {\em Unknown}, pages 3 -- 17, 1994.
-\newblock Conference Proceedings/Title of Journal: Joint Conference on
-  Declarative Programming.
-
-\bibitem{Lutman2016}
-Alberto~A. Lutman, James~P. MacArthur, Markus Ilchen, Anton~O. Lindahl, Jens
-  Buck, Ryan~N. Coffee, Georgi~L. Dakovski, Lars Dammann, Yuantao Ding,
-  Hermann~A. D{\"u}rr, Leif Glaser, Jan Gr{\"u}nert, Gregor Hartmann, Nick
-  Hartmann, Daniel Higley, Konstantin Hirsch, Yurii~I. Levashov, Agostino
-  Marinelli, Tim Maxwell, Ankush Mitra, Stefan Moeller, Timur Osipov, Franz
-  Peters, Marc Planas, Ivan Shevchuk, William~F. Schlotter, Frank Scholz,
-  J{\"o}rn Seltmann, Jens Viefhaus, Peter Walter, Zachary~R. Wolf, Zhirong
-  Huang, and Heinz-Dieter Nuhn.
-\newblock Polarization control in an x-ray free-electron laser.
-\newblock {\em Nature Photonics}, 10:468 EP --, May 2016.
-\newblock Article.
-
-\bibitem{Wolfi2017_review}
-Wolfram Helml, Ivanka Grguraš, Pavle~N. Juranić, Stefan Düsterer, Tommaso
-  Mazza, Andreas~R. Maier, Nick Hartmann, Markus Ilchen, Gregor Hartmann, Luc
-  Patthey, Carlo Callegari, John~T. Costello, Michael Meyer, Ryan~N. Coffee,
-  Adrian~L. Cavalieri, and Reinhard Kienberger.
-\newblock Ultrashort free-electron laser x-ray pulses.
-\newblock {\em Applied Sciences}, 7(9), 2017.
-
-\bibitem{Hartmann2018}
-N.~Hartmann, G.~Hartmann, R.~Heider, M.~S. Wagner, M.~Ilchen, J.~Buck, A.~O.
-  Lindahl, C.~Benko, J.~Gr{\"u}nert, J.~Krzywinski, J.~Liu, A.~A. Lutman,
-  A.~Marinelli, T.~Maxwell, A.~A. Miahnahri, S.~P. Moeller, M.~Planas,
-  J.~Robinson, A.~K. Kazansky, N.~M. Kabachnik, J.~Viefhaus, T.~Feurer,
-  R.~Kienberger, R.~N. Coffee, and W.~Helml.
-\newblock Attosecond time-energy structure of x-ray free-electron laser pulses.
-\newblock {\em Nature Photonics}, 12(4):215--220, 2018.
-
-\bibitem{Cryan2016_impulsive}
-James~P. Cryan, Andrei Kamalov, Matthew~R. Ware, Philip~H. Bucksbaum, Daniel~J.
-  Haxton, and Shungo Miyabe.
-\newblock Impulsive stimulated raman scattering by attosecond pulses.
-\newblock In {\em International Conference on Ultrafast Phenomena}, page
-  UTu4A.32. Optical Society of America, 2016.
-
-\bibitem{Feurer2018}
-Tobias Schweizer, Michael~H. Brügmann, Wolfram Helml, Nick Hartmann, Ryan
-  Coffee, and Thomas Feurer.
-\newblock Attoclock ptychography.
-\newblock {\em Applied Sciences}, 8(7), 2018.
-
-\bibitem{IanRobinson2018}
-Xiaowen Shi, Nicolas Burdet, Darren Batey, and Ian Robinson.
-\newblock Multi-modal ptychography: Recent developments and applications.
-\newblock {\em Applied Sciences}, 8(7), 2018.
-
-\bibitem{Driver2019_spooktroscopy}
-Taran Driver, Siqi Li, Elio~G. Champenois, Joseph Duris, Daniel Ratner,
-  TJ~Lane, Philipp Rosenberger, Andre Al-Haddad, Vitali Averbukh, Toby Barnard,
-  Nora Berrah, Christoph Bostedt, Philip~H. Bucksbaum, Ryan Coffee, Louis~F.
-  DiMauro, Li~Fang, Douglas Garratt, Averell Gatton, Zhaoheng Guo, Gregor
-  Hartmann, Daniel Haxton, Wolfram Helml, Zhirong Huang, Aaron LaForge, Andrei
-  Kamalov, Matthias~F. Kling, Jonas Knurr, Ming-Fu Lin, Alberto~A. Lutman,
-  James~P. MacArthur, Jon~P. Marangos, Megan Nantel, Adi Natan, Razib Obaid,
-  Niranjan~H. Shivaram, Aviad Schori, Peter Walter, Anna Wang, Thomas J.~A.
-  Wolf, Agostino Marinelli, and James~P. Cryan.
-\newblock Attosecond transient absorption spooktroscopy: a ghost imaging
-  approach to ultrafast absorption spectroscopy, 2019.
-
-\bibitem{Audrey}
-A.C et~al. Therrien.
-\newblock Machine learning at the edge for ultra high rate detectors.
-\newblock In {\em IEEE Nuclear Science Symposium and Medical Imaging
-  Conference}. IEEE, October 2019.
-
-\bibitem{Elbaz2012}
-Gil Elbaz.
-\newblock The data stack: A structured approach.
-\newblock July 24 2012.
-\newblock Available at:
-  \\{https://www.factual.com/blog/how-the-data-stack-can-organize-your-data-science-program/}.
-
-\bibitem{Woods2013}
-Dan Woods.
-\newblock How to create a moore's law for data.
-\newblock {\em Forbes}, December 12 2013.
-\newblock Available at:
-  \\{https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-a-moores-law-for-data/\#7051ed4f44ca}.
 
 \end{thebibliography}

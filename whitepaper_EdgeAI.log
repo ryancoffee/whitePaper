@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  10 JAN 2020 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  12 JAN 2020 21:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -217,14 +217,14 @@ File: plotting_technology.eps Graphic file (type eps)
 ]
 File: EdgeFlow.eps Graphic file (type eps)
  <EdgeFlow.eps> [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 117.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 119.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
 
 (./whitepaper_EdgeAI.bbl
 Underfull \hbox (badness 2744) in paragraph at lines 17--21
@@ -240,38 +240,18 @@ Underfull \hbox (badness 7047) in paragraph at lines 28--32
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 47--50
-[]\OT1/cmr/m/n/10 LLC. Google.  Edge tpu per-for-mance bench-marks, 2019.  Ava-
-ial-able at:
+[]\OT1/cmr/m/n/10 Google.  Edge tpu per-for-mance bench-marks, 2019.  Ava-ial-a
+ble at:
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 178--183
-\OT1/cmr/m/n/10 https://www.forbes.com/sites/danwoods/2013/12/12/how-to-create-
-a-moores-law-for-
- []
-
-) [5] [6]
-
-LaTeX Warning: Reference `fig;:EdgeFlow' on page 7 undefined on input line 232.
-
-
-[7] [8] [9] [10] [11] [12] (./whitepaper_EdgeAI.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[3]) [4] (./whitepaper_EdgeAI.aux) ) 
 Here is how much of TeX's memory you used:
- 2675 strings out of 492610
- 34086 string characters out of 6129074
- 116913 words of memory out of 5000000
- 6593 multiletter control sequences out of 15000+600000
- 10208 words of font info for 37 fonts, out of 8000000 for 9000
+ 2624 strings out of 492610
+ 33110 string characters out of 6129074
+ 115699 words of memory out of 5000000
+ 6542 multiletter control sequences out of 15000+600000
+ 9062 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,6n,35p,567b,306s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,6n,35p,566b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on whitepaper_EdgeAI.dvi (12 pages, 58984 bytes).
+Output written on whitepaper_EdgeAI.dvi (4 pages, 16888 bytes).
