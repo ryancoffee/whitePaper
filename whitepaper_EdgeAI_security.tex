@@ -60,19 +60,19 @@ Physical limits are always circumvented by human creativity and the limits of th
 Much like multi-threading allowed continued exponential growth in the data center, Edge Computing will enable continued exponential growth of distributed sensors for autonomous decision making and information compression.
 
 Although the Edge Computing paradigm has already begun, the DOE need for rapidly adaptive and flexible Edge Computing raises a simultaneous need data provenance tracking.
-%Security that data is not being manipulated ``in-flight'' is certainly critical to autonomous vehicles \cite{brookings2019}, but one can also imagine how bad actors might mettle with or inject obfuscation into shared scientific data sets.
-%This would potentially harm the inferred results of data analysis and potentially mislead technological development.
-Data provenance and verification must be baked directly into the adaptive Edge Computing paradigm for DOE's user facilities.
-%, and then with expanded application to the broader industrial and health sector use cases.
+Security that data is not being manipulated ``in-flight'' is certainly critical to autonomous vehicles \cite{brookings2019}, but one can also imagine how bad actors might mettle with or inject obfuscation into shared scientific data sets.
+This would potentially harm the inferred results of data analysis and potentially mislead technological development.
+Heading off such a threat by baking data provenance and verification directly into the adaptive Edge Computing paradigm is the route we propose to demonstrate, initially with a few crisp examples from DOE's user facilities, and then with expanded application to the broader industrial and health sector use cases.
 
 \paragraph{Proposed solution}
-We take inspiration for out Edge Computing from Nature's own ``wet ware'' solution in the human eye.
-Much of human vision processing occurs directly in the retna, in the Retinal Ganglion Cells (RGC), well before passage via axons into the occipital lobe for deeper neural network inference.
-Decicive actions are triggered in the cornea, stabilizing eye movements, attention and anomoly actions, these all can precede even the occipital awareness of the formulated image content.
-We propose a similarly function for our scientific sensors.
-We will use Field Programmable Gate Arrays (FPGAs) and other emerging Edge hardware \cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores} both directly at the sensor and also in directly connected intermediate computing nodes to host flexibly and dynamically adaptive algorithms and Machine Learning (ML) inference models to extract contextually relevant information for further propagation down the analysis chain toward eventual storage to memory.
-The FPGAs themselves will use the in-flight information to adapt the analysis chain dynamically, stitching into the data header not only the data ID, but also the shot-to-shot algorithm ID.
-The full transaction chain will bind the unique fingerprint of the active model to the produced information in a uniquely identifiable provenance record as depicted in Fig.~\ref{fig::EdgeFlow}.
+Blockchain is a form of Distributed Ledger that is opening a new paradigm for data movement with collaborative verification and storage of transactional data.
+We will initially focus on field programmable gate arrays (FPGAs) at the sensor to enable domain specific information extraction at the sensor that also initiates a unique ledger that recordes the analysis transactions used to extract, transform, and infer action from the data.
+We will quickly include emerging Edge Computing microchips such as the EdgeTPU \cite{edgetpu_benchmarks,edgetpu}, coarse-grained reconfigurable arrays \cite{waveCGRA,CGRAreview}, ``sea-of-cores'' \cite{seaofcores} and others.
+The chips will simultaneously execute the Edge inference models while updating the ledger.
+The transaction chain will bind the fingerprint of the active model to the produced information in a uniquely identifiable provenance record as depicted in Fig.~\ref{fig::EdgeFlow}.
+Encryption that uses this transaction ledger as the encryption ``salt'' will therefore require matching a valid ledger with its valid data set to achieve decryption.
+The ledger record furthermore allows for dynamic data retention whereby lifetime in archive can scale with the scientific or social value derived from the data and/or algorithm.
+value aggregation could then reveal the integrated value for scientific facilities or sensor technologies.
 
 \begin{figure}
 	\centerline{\includegraphics[clip,width=.75\linewidth]{EdgeFlow.eps}}
@@ -81,15 +81,6 @@ The full transaction chain will bind the unique fingerprint of the active model 
 		Schematic of information flow through heterogeneous hardware with ID generation and provenance tracking.
 		}
 \end{figure}
-
-%Blockchain is a form of Distributed Ledger that is opening a new paradigm for data movement with collaborative verification and storage of transactional data.
-We will initially focus on field programmable gate arrays (FPGAs) at the sensor to enable domain specific information extraction at the sensor that also initiates a unique ledger that recordes the analysis transactions used to extract, transform, and infer action from the data.
-We will quickly include emerging Edge Computing microchips such as the EdgeTPU \cite{edgetpu_benchmarks,edgetpu}, coarse-grained reconfigurable arrays \cite{waveCGRA,CGRAreview}, ``sea-of-cores'' \cite{seaofcores} and others.
-The chips will simultaneously execute the Edge inference models while updating the ledger.
-Encryption that uses this transaction ledger as the encryption ``salt'' will therefore require matching a valid ledger with its valid data set to achieve decryption.
-The ledger record furthermore allows for dynamic data retention whereby lifetime in archive can scale with the scientific or social value derived from the data and/or algorithm.
-value aggregation could then reveal the integrated value for scientific facilities or sensor technologies.
-
 
 \paragraph{Plan/Milestones}
 %\emph{Year 1: \$750k + 50K for MHz camera + 20K in framegrabbers + 4x 120K digitizers}
