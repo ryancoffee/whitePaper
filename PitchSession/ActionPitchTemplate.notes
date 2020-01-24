@@ -1,0 +1,114 @@
+From Hariet Kung:
+"Accessible"
+"Credible"
+"Compelling"
+
+
+
+Hook:
+
+
+	
+	Rare but critical events ... Always watching but rarely recording in order to understand why batteries fail, how DNA unzips and mutates to better understand cancer development and treatment.
+	But we need to look at each shot.
+	Extract information from every FEL shot
+	Terabytes of data every second is 588 HD movies to review for every shift.
+	The data hits as a hard drive every second, we need a way to save information, not data clutter.
+	
+	-- how to save information not data clutter
+	-- (Why "on the detector")
+	-- (We don't trust throwing away the data)
+	-- (Some data will be lost---How do we get more out of our investment since we are throwing away since we can't save it fast enough)
+	response: how do we choose which hard-drives to throw in the trash?
+	-- (Why not jsut get to cloud and do data mining?)
+
+	
+
+
+Need:
+	-- (Think about data per experiemnt or year)
+
+	At LCLS-II we are going to find the rarest of events, if we had to save the data for all events, that is 588 years of HD movies to review for every 12 hour shift.
+	
+	We don't want to wholesale throw away hard drives which is what we would have to do because current networks cannot handle this data velocity.
+	Even if we could if we could with a budget of $/GB storage = () xxx$/shift however 99.9% of that data is junk, we would end up with NNN HD movies per 12 hour shift, this would take excessive "data mining compute cycles/human interpretation" 
+
+
+
+ we would rather directly measure information, not data clutter.	
+
+	-- (this would be a novel approach to compressing data?)
+	-- (Didn't say the approach)
+	[almost enough to get us lunch to hear about the apprrooach]
+
+
+	-- (the 17M$ and cancer is good)
+
+	-- (Need is good with Cancer, DNA, Batteries)
+
+
+
+	IntellinAir for hyperspectral imaging, need+
+	NNSS explosive imaging for on-board analysis
+	CookieBox
+	ToF-PET for hyperspectral imaging
+
+	Each shot of LCLS-2 might be measuring differnt physics, e.g. ghost imaging versus attosocond Impulsive excitation vs x-ray pump-x-ray probe vs stimulated RIXS.
+		Can we dynamically change the analysis chain depending on the flavor of the x-ray pulse arriving at the experiment?
+
+
+
+Approach:
+
+	We want to extract information directly at the source.
+
+
+
+
+	Nature figured out how to handle sensor local computing, we should too.
+
+
+	Hook for the approach:
+		I contextually interpret the sensations in my eyes and ears, and dynamically change my interpretation of the information corresponding to that context.
+	
+	FPGA and ASIC design that is unique to sensor data flow onthe sensor board.
+	Develop RF pre-analysis circuits for eToFs and other radiation detectors
+	
+	HyperspectralImaging with tailored optical sensor
+
+
+Benefits/costs:
+
+	Autonomous decisions without high speed network connection to HPC.
+Very Strong
+A Lot of detail in the approach
+Reminding the numbers was good
+The flow was nice, clear connection between the parts
+
+Pretty generic problem, not unique to LCLS
+Why hasn'tit been done before? 
+
+Example to address the more science - what does more science mean. Faster articles because no swimming in vats of garbage data
+Competition - CERN - throws out 999 out of 100 events or something like that
+Danger that we might lose some data and miss some science - We aren't really finding it right now in the mess of data anyway
+
+
+Competition:
+	
+	EdgeSense, Xilinx, 
+
+	Partners (Nvidia, Vision research, Abaco Digitizers, EdgeTPU?, the Russians)
+
+Alternative: fill a buffer and analyze the buffer... this has long latency, so doesn't allow on the fly decision making.
+
+
+Action:
+	
+	Step 0	
+		Demonstrate Herbst KCU DMA to GPU over PCIe for existing 2d-TimeTool and CookieBox inference examples.
+	Step 1 	
+		Deploy existing algorithm/inference network to the FPGA on the Abaco digitizers and FireFly that inference output to GPU for larger model inference, bypassing PCIe bus
+		Deploy Edge Detection x-ray pulse arrival time to Euresys FrameGrabber FPGAs, FireFly connection of Quad boards for collating inference model on one or seperate FPGA, bypassing PCIe bus
+		Use Time-Resolved DFMX data from Leora Dresselhaus-Cooper (with Marylesa Howard) to run edge/pearl segmentation with Euresys FrameGrabber FPGAs, bypassing PCIe bus
+
+	
