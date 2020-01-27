@@ -47,13 +47,16 @@ The Linac Coherent Light Source II (LCLS-II) holds great promise to reveal criti
 But at the heart of all these areas lies the need to identify very weak and extremely rare events in often overwhelmingly cluttered data, and this is a problem not specific to DOE light sources like LCLS-II and the Advanced Photon Source Upgrade (APD-U).
 Processing data at the point of generation, at the sensor or cluster of sensors, is also key to the future of Industrial Internet of Things (IIoT) \cite{Gartner2018,NetworkWorld2019}, also referred to as Industry 4.0.
 In the context of DOE's flagship facilities, data rates could grow to velocities of 1TB/s as for the LCLS-II with similar methodologies following shortly thereafter at APS-U.
-[this is the dream] At this data velocity, the data volume for a single 12 hour shift is equivalent to producing 56 years worth of HD video \cite{HowBigVideo} requiring just shy of 1/2 M\$ in storage assuming \$0.01/GB \cite{CostPerTB}.
-[plan for multimegapix camera by 2028] wish we could run at a MHz full frame readout is ultimate goal. 
+At this data velocity, the data volume for a single 12 hour shift is equivalent to producing 56 years worth of HD video \cite{HowBigVideo} requiring just shy of 1/2 M\$ in storage assuming \$0.01/GB \cite{CostPerTB}.
+Given the SLAC development of the ePix family of x-ray imaging detectors, we expect an eventual full frame readout at the full 1 MHz capability of LCLS-II and the High Energy upgrade KCKS-II-HE.
+This family of x-ray detectors will likely also enable equally high data velocities for complimentary experimental methods at the APS-U for comlimentary experimental methods.
+%run at a MHz full frame readout is ultimate goal. 
 % 88GB/hr of movies = 11.4 hr of HD movies per second of LCLS-II ... 2454545 hours of movie per 5 shift experiment = 280 years of movie per experiment, 56 years per shift... thats a lot of grad students.
 %
 %that will quickly exceed network and storage capacity, thus providing early insight into the next decade of IIoT challenges.
-Such data liability, though not exclusive of DOE user facilities, it does pose unique challenges and excessive scale that we must reformulate traditional data acquisition and Cloud hosted data mining.
+This impending data liability poses unique challenges and excessive scale for DOE user facilities that prohibit traditional data acquisition and Cloud hosted data mining.
 We require information acquisition whereby our scientific instruments directly record actionable information, not raw data, in a form that can flexibly handle the weekly redefinition of ``information''---more likely redefinition every shift.
+
 
 Human scientific and technological advancement has always progressed with exponential rapidity \cite{Kurzweil} in spite of physical limitations.
 We see in the upper panel of Fig.~\ref{fig::technology} that transistor density (upper: \textcolor{purple}{$\bullet$}) increased exponentially until the physical limitation of a few GHz (lower: \textcolor{purple}{$\bullet$}).
@@ -95,7 +98,7 @@ The value aggregation could also reveal the integrated value for scientific faci
 
 \paragraph{Deliverables}
 \begin{itemize}
-	\item Bespoke raw data interpretation---``featurization''---via Edge AI using on-detector FPGAs in the EPix family sensors.
+	\item Bespoke raw data interpretation---``featurization''---via Edge AI using on-detector FPGAs in the ePix family sensors.
 	\item Demonstrate and set sandards for near-detector FPGAs and emerging Edge AI accelerator microchips for incorporation---via daughter cards---into commercial waveform digitizers and image capture cards.
 	\item The analysis chain will be dynamic, changing potentially from shot-to-shot depending on the inference results from previous links in the pipeline.
 	\item ASIC and FPGA fingerprint IDs with corresponding design and firmware IDs will be included in the data header which itself is composed on-the-fly from model IDs that track the data provenance through the dynamic transformation chain.
@@ -120,10 +123,10 @@ This identifier will form a transaction chain that records subsequent AI acceler
 
 %\emph{Year 2: \$1M}
 In year two we will demonstrate the dynamic switching of analysis algorithm from shot-to-shot depending on the particulars of each data event.
-Following this initial demonstration, we will focus on the EPix family of x-ray and particle area detectors being developed at SLAC.
+Following this initial demonstration, we will focus on the ePix family of x-ray and particle area detectors being developed at SLAC.
 %work together with the high frame rate camera producer and the associated frame-grabber supplier to demonstrate the same transaction ledger Edge Computing paradigm for image transformation.
 Featurization of images typically reduces MPix images into a significantly lower dimensional set of features before presenting to a machine learning inference model.
-This will occur in custom logic blocks in the frame-grabber FPGAs of commercial optical detectors, but we will incorporate these custom FPGA firmware blocks in to the sensor FPGAs for the SLAC developed EPix family of x-ray area detectors.
+This will occur in custom logic blocks in the frame-grabber FPGAs of commercial optical detectors, but we will incorporate these custom FPGA firmware blocks in to the sensor FPGAs for the SLAC developed ePix family of x-ray area detectors.
 Furthermore, featurized results will then transfer directly to ML tailored inference chips \cite{waveCGRA,CGRAreview,seaofcores}.
 In this case we will demonstrate tight coupling between the compiled byte-code and the generating code for the ML model along with identification of the training data pool used to produce the inference model.
 These too will be treated as transactions that will be added to the data transaction record.
