@@ -93,43 +93,6 @@ The value aggregation could also reveal the integrated value for scientific faci
 %The chips will simultaneously execute the Edge inference models while updating the ledger.
 
 
-
-\paragraph{Plan/Milestones}
-%\emph{Year 1: \$750k personnel + 60K for 800KFPs camera + 20K 4x quad framegrabbers + 120K 4x digitizers}
-\begin{itemize}
-	\item In the first period we will concentrate on FPGA development for two core LCLS-II projects, 1) interpreting electron time of flight spectra for the quintessential example of a fire hose data source, the so-called CookieBox detector, and 2) optical image segmentation and pattern recognition for 2D area detectors in the visible range for the 2D-TimeTool delar sorting diagnostic.
-	We will demonstrate multiple pre-analysis algorithms---so called ``featurization''---in firmware as bespoke algorithms that tailor the existing detector for different interpretations of the raw data.
-	\itme We will also generate unique data and algorithm IDs that chain together to be included in the corresponding the data header.
-	This identifier will form a transaction chain that records subsequent AI acceleration chips and actions that add their own ID and algorithm reference to the data header.
-\end{itemize}
-
-%\emph{Year 2: \$1M}
-In year two we will demonstrate the dynamic switching of analysis algorithm from shot-to-shot depending on the particulars of each data event.
-Following this initial demonstration, we will focus on the EPix family of x-ray and particle area detectors being developed at SLAC.
-%work together with the high frame rate camera producer and the associated frame-grabber supplier to demonstrate the same transaction ledger Edge Computing paradigm for image transformation.
-Pre-analysis for images---so called ``featurization''---reduces typically MPix images into a lower dimensional set of features before presenting to a machine learning inference model.
-This featurization will occur in custom logic blocks in the frame-grabber FPGAs and then transfer directly to a more ML tailored inference chip such as a secondary inference accelerator \cite{waveCGRA,CGRAreview,seaofcores}.
-In this case we will demonstrate tight coupling between the compiled byte-code and the generating code for the ML model along with identification of the training data pool used to produce the inference model.
-These too will be treated as transactions that will be added to the blockchain.
-At this stage we will also demonstrate the value-binding for data such that the beneficial outcome of the data and inference models can proportionately increment the ``retention value'' of the data element.
-Also in this second phase we will explore an RF analog ASIC that includes the 16 channel ADC with the pre-analysis FPGA and downstream inference chip on a custom board.
-This will allow for the full inference from all 16 data channels of the CookieBox to occur in an embedded inference engine that bypasses the PCIe bus.
-
-%\emph{Year 3: \$1M }
-In Year 3 we will work together with a high frame rate camera maker and the various AI acceleration chip makers to integrate what had previously been hosted on the frame-grabber into the camera electronics.
-We will also help to define an daughter card integration standard to promote a unifying embedded EdgeAI for scientific as well as industrial and medical diagnostic sensors.
-We attempt to intercept data and make modifications ``in-flight'' to show how it would render the data useless, spoiling the decryption algorithm.
-
-\paragraph{Broader applications}
-%With an increasing reliance on machine learning for radiography in nuclear security comes the risk that such models can be nefariously altered.
-%This alteration can come from tampering with the models themselves or by injecting falsified training data into the training pool.
-%The ledger record will record interactions with the data in the training set such that attempts to use or alter the data will also appear in the transaction record.
-%Since the transaction record and training set fingerprints are used as so-called ``salt'' in the data encryption process, making it all but impossible to decrypt altered data.
-%Beyond nuclear security, the sharing of anonymized health data can be more securely controlled and therefore more confidently shared with exclusive trusted partners.
-%In the same way as the scientific data is itself imbued with follow-on value, so too with medical data; the originator of data could receive direct benefit for sharing, a benefit that could scale in proportion to the market value of output that derived from their data.
-%We note that the medical sensor portfolio is tremendous, it could even extend application to secure transfer and value tracking of in-home sensors for e.g. in-home elder care, nutrition, and diabetes.
-%Smart connected in-home sensors with guarnateed privacy would facilitate elders to age in place, retaining thier physical social community.
-
 \paragraph{Deliverables}
 \begin{itemize}
 	\item Domain specific interpretation of raw data via Edge AI in multiple format sensor FPGAs, e.g. waveform digitizers and high frame rate imaging detectors including the EPix family of x-ray area detectors.
@@ -140,6 +103,46 @@ We attempt to intercept data and make modifications ``in-flight'' to show how it
 \end{itemize}
 
 \break
+
+\paragraph{Plan/Milestones}
+%\emph{Year 1: \$750k personnel + 60K for 800KFPs camera + 20K 4x quad framegrabbers + 120K 4x digitizers}
+%\begin{itemize}
+In the first period we will concentrate on FPGA development for two core LCLS-II projects, 1) interpreting electron time of flight spectra for the quintessential example of a fire hose data source, the so-called CookieBox detector, and 2) optical image segmentation and pattern recognition for 2D area detectors in the visible range for the 2D-TimeTool delar sorting diagnostic.
+We will demonstrate multiple pre-analysis algorithms---so called ``featurization''---in firmware as bespoke algorithms that tailor the existing detector for different interpretations of the raw data.
+We will also generate unique data and algorithm IDs that chain together to be included in the corresponding the data header.
+This identifier will form a transaction chain that records subsequent AI acceleration chips and actions that add their own ID and algorithm reference to the data header.
+%\end{itemize}
+
+%\emph{Year 2: \$1M}
+In year two we will demonstrate the dynamic switching of analysis algorithm from shot-to-shot depending on the particulars of each data event.
+Following this initial demonstration, we will focus on the EPix family of x-ray and particle area detectors being developed at SLAC.
+%work together with the high frame rate camera producer and the associated frame-grabber supplier to demonstrate the same transaction ledger Edge Computing paradigm for image transformation.
+Featurization of images typically reduces MPix images into a significantly lower dimensional set of features before presenting to a machine learning inference model.
+This will occur in custom logic blocks in the frame-grabber FPGAs of commercial optical detectors, but we will incorporate these custom FPGA firmware blocks in to the sensor FPGAs for the SLAC developed EPix family of x-ray area detectors.
+Furthermore, featurized results will then transfer directly to ML tailored inference chips \cite{waveCGRA,CGRAreview,seaofcores}.
+In this case we will demonstrate tight coupling between the compiled byte-code and the generating code for the ML model along with identification of the training data pool used to produce the inference model.
+These too will be treated as transactions that will be added to the data transaction record.
+At this stage we will also demonstrate the value-binding for data such that the beneficial outcome of the data and inference models can proportionately increment the ``retention value'' of the data element.
+%Also in this second phase we will explore an RF analog ASIC that includes the 16 channel ADC with the pre-analysis FPGA and downstream inference chip on a custom board.
+%This will allow for the full inference from all 16 data channels of the CookieBox to occur in an embedded inference engine that bypasses the PCIe bus.
+
+%\emph{Year 3: \$1M }
+HERE HERE HERE HERE
+In Year 3 we will incorporate emerging AI acceleration chips makers to integrate what had previously been hosted on the frame-grabber into the camera electronics.
+We will also help to define an daughter card integration standard to promote a unifying embedded EdgeAI for scientific as well as industrial and medical diagnostic sensors.
+We attempt to intercept data and make modifications ``in-flight'' to show how it would render the data useless, spoiling the decryption algorithm.
+
+%\paragraph{Broader applications}
+%With an increasing reliance on machine learning for radiography in nuclear security comes the risk that such models can be nefariously altered.
+%This alteration can come from tampering with the models themselves or by injecting falsified training data into the training pool.
+%The ledger record will record interactions with the data in the training set such that attempts to use or alter the data will also appear in the transaction record.
+%Since the transaction record and training set fingerprints are used as so-called ``salt'' in the data encryption process, making it all but impossible to decrypt altered data.
+%Beyond nuclear security, the sharing of anonymized health data can be more securely controlled and therefore more confidently shared with exclusive trusted partners.
+%In the same way as the scientific data is itself imbued with follow-on value, so too with medical data; the originator of data could receive direct benefit for sharing, a benefit that could scale in proportion to the market value of output that derived from their data.
+%We note that the medical sensor portfolio is tremendous, it could even extend application to secure transfer and value tracking of in-home sensors for e.g. in-home elder care, nutrition, and diabetes.
+%Smart connected in-home sensors with guarnateed privacy would facilitate elders to age in place, retaining thier physical social community.
+
+
 \bibliography{whitepaper.bib}
 
 \end{document}

@@ -19,6 +19,18 @@ Ann Taylor.
 \newblock Available at:
   https://www.networkworld.com/article/3391016/edge-computing-is-in-most-industries-future.html.
 
+\bibitem{HowBigVideo}
+filecast blog.
+\newblock How to move large video files, 2016.
+\newblock Available at:
+  https://filecatalyst.com/how-to-move-large-video-files/.
+
+\bibitem{CostPerTB}
+Hilbert Hagedoorn.
+\newblock Decline price per gb for hdds comes to an end, 2017.
+\newblock Available at:
+  https://www.guru3d.com/news-story/decline-price-per-gb-for-hdds-comes-to-an-end.html.
+
 \bibitem{Kurzweil}
 Ray Kurzweil.
 \newblock {\em The Singularity Is Near: When Humans Transcend Biology}.
@@ -35,13 +47,6 @@ Network~World Keith~Shaw.
 \newblock What is edge computing and why it matters, November 2019.
 \newblock Available at:
   https://www.networkworld.com/article/3224893/what-is-edge-computing-and-how-it-s-changing-the-network.html.
-
-\bibitem{brookings2019}
-Tom Wheeler and David Simpson.
-\newblock Why 5g requires new approaches to cybersecurity: Racing to protect
-  the most important network of the 21st century, September 2019.
-\newblock 'Available at:
-  https://www.brookings.edu/research/why-5g-requires-new-approaches-to-cybersecurity/\#cancel'.
 
 \bibitem{edgetpu_benchmarks}
 Google.
