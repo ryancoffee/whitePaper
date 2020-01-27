@@ -76,6 +76,8 @@ We propose a similar function for our scientific sensors; we will use Field Prog
 These inference accelerators will host flexibly and dynamically adaptive algorithms and inference models that extract contextually relevant information before transformation and passage down the analysis chain.
 The microchips themselves will use the in-flight information to adapt the analysis chain dynamically, stitching into the data header not only the data ID but also the shot-to-shot algorithm ID.
 The full transaction chain will bind the unique fingerprint of the active model to the produced information in a uniquely identifiable provenance record as depicted in Fig.~\ref{fig::EdgeFlow}.
+The transaction record not only ensures data and model provenance, but also it allows for a dynamic data retention police whereby lifetime in archive can scale with the scientific value derived from the data and active algorithm.
+The value aggregation could also reveal the integrated value for scientific facilities, experiemntal techniques, and sensor technologies.
 
 \begin{figure}
 	\centerline{\includegraphics[clip,width=.75\linewidth]{EdgeFlow.eps}}
@@ -90,25 +92,23 @@ The full transaction chain will bind the unique fingerprint of the active model 
 %We will quickly include emerging Edge Computing microchips such as the EdgeTPU \cite{edgetpu_benchmarks,edgetpu}, coarse-grained reconfigurable arrays \cite{waveCGRA,CGRAreview}, ``sea-of-cores'' \cite{seaofcores} and others.
 %The chips will simultaneously execute the Edge inference models while updating the ledger.
 
-HERE HERE HERE HERE 
-The ledger record furthermore allows for dynamic data retention whereby lifetime in archive can scale with the scientific or social value derived from the data and/or algorithm.
-value aggregation could then reveal the integrated value for scientific facilities or sensor technologies.
 
 
 \paragraph{Plan/Milestones}
-%\emph{Year 1: \$750k + 50K for MHz camera + 20K in framegrabbers + 4x 120K digitizers}
-In the first period we will concentrate on FPGA development for interpreting electron time of flight spectra for one of DOE's quintessential examples of a fire hose data source, the so-called CookieBox detector for LCLS-II.
-We will demonstrate multiple pre-analysis algorithms in firmware of the digitizer FPGA where each algorithm is developed for a specific application of the detector.
-These are unique domain specific algorithms that each effectively re-brand the detector for fundamentally different interpretations of the recorded analog waveforms.
-This is why we concentrate initially on FPGAs for the sake of an expected weekly overhaul of the FPGA firmware.
-We will demonstrate that the FPGA can generate the unique id that also binds to the corresponding algorithm, both of which yield a fingerprint to a unique data identifier.
-This identifier will form the initial block in the transaction chain, thus initiating the hyper-ledger record.
-The deeper analysis in subsequent AI acceleration chips that follow will then be treated as subsequent transactions that will be added to the ledger.
+%\emph{Year 1: \$750k personnel + 60K for 800KFPs camera + 20K 4x quad framegrabbers + 120K 4x digitizers}
+\begin{itemize}
+	\item In the first period we will concentrate on FPGA development for two core LCLS-II projects, 1) interpreting electron time of flight spectra for the quintessential example of a fire hose data source, the so-called CookieBox detector, and 2) optical image segmentation and pattern recognition for 2D area detectors in the visible range for the 2D-TimeTool delar sorting diagnostic.
+	We will demonstrate multiple pre-analysis algorithms---so called ``featurization''---in firmware as bespoke algorithms that tailor the existing detector for different interpretations of the raw data.
+	\itme We will also generate unique data and algorithm IDs that chain together to be included in the corresponding the data header.
+	This identifier will form a transaction chain that records subsequent AI acceleration chips and actions that add their own ID and algorithm reference to the data header.
+\end{itemize}
 
 %\emph{Year 2: \$1M}
-Following this initial demonstration, we will work together with the high frame rate camera producer and the associated frame-grabber supplier to demonstrate the same transaction ledger Edge Computing paradigm for image transformation.
-The pre-analysis for images os often called ``featurization'' since it reduces typically MPix images into a more appropriate set of features before presenting to a machine learning inference model.
-The featurization will occur in custom logic blocks in the frame-grabber FPGAs and then transfer directly to a more ML tailored inference chip such as a secondary inference accelerator \cite{waveCGRA,CGRAreview,seaofcores}.
+In year two we will demonstrate the dynamic switching of analysis algorithm from shot-to-shot depending on the particulars of each data event.
+Following this initial demonstration, we will focus on the EPix family of x-ray and particle area detectors being developed at SLAC.
+%work together with the high frame rate camera producer and the associated frame-grabber supplier to demonstrate the same transaction ledger Edge Computing paradigm for image transformation.
+Pre-analysis for images---so called ``featurization''---reduces typically MPix images into a lower dimensional set of features before presenting to a machine learning inference model.
+This featurization will occur in custom logic blocks in the frame-grabber FPGAs and then transfer directly to a more ML tailored inference chip such as a secondary inference accelerator \cite{waveCGRA,CGRAreview,seaofcores}.
 In this case we will demonstrate tight coupling between the compiled byte-code and the generating code for the ML model along with identification of the training data pool used to produce the inference model.
 These too will be treated as transactions that will be added to the blockchain.
 At this stage we will also demonstrate the value-binding for data such that the beneficial outcome of the data and inference models can proportionately increment the ``retention value'' of the data element.
@@ -121,27 +121,27 @@ We will also help to define an daughter card integration standard to promote a u
 We attempt to intercept data and make modifications ``in-flight'' to show how it would render the data useless, spoiling the decryption algorithm.
 
 \paragraph{Broader applications}
-With an increasing reliance on machine learning for radio imaging applications in nuclear security comes the risk that such models can be nefariously altered.
-This alteration can come from tampering with the models themselves or by injecting falsified training data into the training pool.
-The ledger record will record interactions with the data in the training set such that attempts to use or alter the data will also appear in the transaction record.
-Since the transaction record and training set fingerprints are used as so-called ``salt'' in the data encryption process, making it all but impossible to decrypt altered data.
-Beyond nuclear security, the sharing of anonymized health data can be more securely controlled and therefore more confidently shared with exclusive trusted partners.
-In the same way as the scientific data is itself imbued with follow-on value, so too with medical data; the originator of data could receive direct benefit for sharing, a benefit that could scale in proportion to the market value of output that derived from their data.
-We note that the medical sensor portfolio is tremendous, it could even extend application to secure transfer and value tracking of in-home sensors for e.g. in-home elder care, nutrition, and diabetes.
+%With an increasing reliance on machine learning for radiography in nuclear security comes the risk that such models can be nefariously altered.
+%This alteration can come from tampering with the models themselves or by injecting falsified training data into the training pool.
+%The ledger record will record interactions with the data in the training set such that attempts to use or alter the data will also appear in the transaction record.
+%Since the transaction record and training set fingerprints are used as so-called ``salt'' in the data encryption process, making it all but impossible to decrypt altered data.
+%Beyond nuclear security, the sharing of anonymized health data can be more securely controlled and therefore more confidently shared with exclusive trusted partners.
+%In the same way as the scientific data is itself imbued with follow-on value, so too with medical data; the originator of data could receive direct benefit for sharing, a benefit that could scale in proportion to the market value of output that derived from their data.
+%We note that the medical sensor portfolio is tremendous, it could even extend application to secure transfer and value tracking of in-home sensors for e.g. in-home elder care, nutrition, and diabetes.
 %Smart connected in-home sensors with guarnateed privacy would facilitate elders to age in place, retaining thier physical social community.
 
 \paragraph{Deliverables}
 \begin{itemize}
-	\item Domain specific interpretation of raw data via Edge Computing in multiple format sensor FPGAs, e.g. waveform digitizers and high frame rate imaging sensors.
-	\item ASIC ID and FPGA firmware fingerprint used for unique identification and seed for data encryption.
-	\item Transaction ledger based on block chain and distributed ledger technology that includes CPU model and code and GPU instructions as fingerprints written into the transaction record.
-	\item Imbue original data with value that scales with the successful output from subsequent data transactions.
-	\item Demonstrate that modifying data individuals in a training set renders the data useless and fundamentally spoils training convergence and identifies the offending transaction.
+	\item Domain specific interpretation of raw data via Edge AI in multiple format sensor FPGAs, e.g. waveform digitizers and high frame rate imaging detectors including the EPix family of x-ray area detectors.
+	\item ASIC ID and FPGA firmware fingerprint used for unique identification in the data header.
+	\item Dynimic analysis chain that is direcly encoded into the identification ledger of record.
+	\item Demonstration of data ID used to imbue data and algoritm with quantitative value that scales propotional to the scientific use of data and algorithms.
+	%\item Demonstrate that modifying data individuals in a training set renders the data useless and fundamentally spoils training convergence and identifies the offending transaction.
 \end{itemize}
 
+\break
 \bibliography{whitepaper.bib}
 
-\break
 \end{document}
 
 \section{SUPPLIMENTAL}
