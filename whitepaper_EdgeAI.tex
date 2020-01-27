@@ -44,7 +44,7 @@
 	}
 \end{wrapfigure}
 The Linac Coherent Light Source II (LCLS-II) holds great promise to reveal critical rare events such as the onset of battery failure, the first trigger events in cancer, the atomic scale motions in gene therapy and DNA zipping and unzipping.
-But at the heart of all these areas lies the need to identify very weak and extremely rare events in often overwhelmingly cluddered data, and this is a problem not specific to DOE light sources like LCLS-II and the Advanced Photon Source Upgrade (APD-U).
+But at the heart of all these areas lies the need to identify very weak and extremely rare events in often overwhelmingly cluttered data, and this is a problem not specific to DOE light sources like LCLS-II and the Advanced Photon Source Upgrade (APD-U).
 Processing data at the point of generation, at the sensor or cluster of sensors, is also key to the future of Industrial Internet of Things (IIoT) \cite{Gartner2018,NetworkWorld2019}, also referred to as Industry 4.0.
 In the context of DOE's flagship facilities, data rates could grow to velocities of 1TB/s as for the LCLS-II with similar methodologies following shortly thereafter at APS-U.
 [this is the dream] At this data velocity, the data volume for a single 12 hour shift is equivalent to producing 56 years worth of HD video \cite{HowBigVideo} requiring just shy of 1/2 M\$ in storage assuming \$0.01/GB \cite{CostPerTB}.
@@ -52,8 +52,8 @@ In the context of DOE's flagship facilities, data rates could grow to velocities
 % 88GB/hr of movies = 11.4 hr of HD movies per second of LCLS-II ... 2454545 hours of movie per 5 shift experiment = 280 years of movie per experiment, 56 years per shift... thats a lot of grad students.
 %
 %that will quickly exceed network and storage capacity, thus providing early insight into the next decade of IIoT challenges.
-Such data liability, though not exclusive of DOE user facilities, it does pose unique challenges and excessive scale that we must reformulate traditional data acquisition (DAQ) and Cloud hosted data mining.
-We require information acquisition (IAQ) whereby our scientific instruments directly record actionable information, not raw data, in a form that can flexibly handle the weekly redefinition of ``information''---more likely redefinition every shift.
+Such data liability, though not exclusive of DOE user facilities, it does pose unique challenges and excessive scale that we must reformulate traditional data acquisition and Cloud hosted data mining.
+We require information acquisition whereby our scientific instruments directly record actionable information, not raw data, in a form that can flexibly handle the weekly redefinition of ``information''---more likely redefinition every shift.
 
 Human scientific and technological advancement has always progressed with exponential rapidity \cite{Kurzweil} in spite of physical limitations.
 We see in the upper panel of Fig.~\ref{fig::technology} that transistor density (upper: \textcolor{purple}{$\bullet$}) increased exponentially until the physical limitation of a few GHz (lower: \textcolor{purple}{$\bullet$}).
@@ -70,14 +70,14 @@ Data and model provenance and verification must be baked directly into the adapt
 
 \paragraph{Proposed solution}
 We take inspiration for out Edge Computing from Nature's own solution in the human eye.
-Much of vision processing occurs directly in the retina, in the Retinal Ganglion Cells (RGC), well before passage via axons into the occipital lobe for deeper neural network inference.
-Decisive actions are triggered in the cornea---stabilizing eye movements, attention and anomoly actions---all of which precede awareness of the formulated image content.
+Much of vision processing occurs directly in the retina, in the Retinal Ganglion Cells well before passage via axons into the occipital lobe for deeper neural network inference.
+Decisive actions are triggered in the cornea---stabilizing eye movements, attention and anomaly actions---all of which precede awareness of the formulated image content.
 We propose a similar function for our scientific sensors; we will use Field Programmable Gate Arrays (FPGAs) and other emerging Edge AI hardware \cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores} directly at the sensor.
 These inference accelerators will host flexibly and dynamically adaptive algorithms and inference models that extract contextually relevant information before transformation and passage down the analysis chain.
 The microchips themselves will use the in-flight information to adapt the analysis chain dynamically, stitching into the data header not only the data ID but also the shot-to-shot algorithm ID.
 The full transaction chain will bind the unique fingerprint of the active model to the produced information in a uniquely identifiable provenance record as depicted in Fig.~\ref{fig::EdgeFlow}.
 The transaction record not only ensures data and model provenance, but also it allows for a dynamic data retention police whereby lifetime in archive can scale with the scientific value derived from the data and active algorithm.
-The value aggregation could also reveal the integrated value for scientific facilities, experiemntal techniques, and sensor technologies.
+The value aggregation could also reveal the integrated value for scientific facilities, experimental techniques, and sensor technologies.
 
 \begin{figure}
 	\centerline{\includegraphics[clip,width=.75\linewidth]{EdgeFlow.eps}}
@@ -95,12 +95,17 @@ The value aggregation could also reveal the integrated value for scientific faci
 
 \paragraph{Deliverables}
 \begin{itemize}
-	\item Domain specific interpretation of raw data via Edge AI in multiple format sensor FPGAs, e.g. waveform digitizers and high frame rate imaging detectors including the EPix family of x-ray area detectors.
-	\item ASIC ID and FPGA firmware fingerprint used for unique identification in the data header.
-	\item Dynimic analysis chain that is direcly encoded into the identification ledger of record.
-	\item Demonstration of data ID used to imbue data and algoritm with quantitative value that scales propotional to the scientific use of data and algorithms.
-	%\item Demonstrate that modifying data individuals in a training set renders the data useless and fundamentally spoils training convergence and identifies the offending transaction.
+	\item Bespoke raw data interpretation---``featurization''---via Edge AI using on-detector FPGAs in the EPix family sensors.
+	\item Demonstrate and set sandards for near-detector FPGAs and emerging Edge AI accelerator microchips for incorporation---via daughter cards---into commercial waveform digitizers and image capture cards.
+	\item The analysis chain will be dynamic, changing potentially from shot-to-shot depending on the inference results from previous links in the pipeline.
+	\item ASIC and FPGA fingerprint IDs with corresponding design and firmware IDs will be included in the data header which itself is composed on-the-fly from model IDs that track the data provenance through the dynamic transformation chain.
+	\item Data ID that can be used to imbue results, respective algorithms, experimental methods, and facility beamlines with quantitative value metrics that are proportional to the derived scientific output.
 \end{itemize}
+
+\bibliography{whitepaper.bib}
+
+\end{document}
+
 
 \break
 
@@ -142,10 +147,6 @@ We attempt to intercept data and make modifications ``in-flight'' to show how it
 %We note that the medical sensor portfolio is tremendous, it could even extend application to secure transfer and value tracking of in-home sensors for e.g. in-home elder care, nutrition, and diabetes.
 %Smart connected in-home sensors with guarnateed privacy would facilitate elders to age in place, retaining thier physical social community.
 
-
-\bibliography{whitepaper.bib}
-
-\end{document}
 
 \section{SUPPLIMENTAL}
 
