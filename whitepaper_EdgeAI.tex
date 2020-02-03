@@ -59,48 +59,26 @@ This raises a complimentary need for data and model provenance tracking of these
 Active data and model provenance must be baked directly into the adaptive Edge AI paradigm.
 
 
-\paragraph{Proposed solution}
-
-\paragraph{Audrey's}
-We take inspiration for our Edge AI from Nature's own solution in the distributed processing of the human nervous system.
+\paragraph{Proposed solution -- Audrey incorporated}
+We take inspiration for our Edge AI from Nature's own distributed processing in the human nervous system.
 For example, a significant portion of sensory processing occurs in the sensory organs themselves well before the information reaches the deeper neural networks inside the brain, i.e. the unconscious rapid reactions stabilizing eye movements.
-We propose a similar function for our scientific sensors; a processing unit as near the detector as we can make it that can analyze incoming data in real-time and provide actionable information to the detector, the source, and the downstream (more complex) analysis networks.
+We propose a similar function for our scientific sensors; a processing unit at or near to the detector that can analyze incoming data in real-time and provide actionable information to the detector, the source, and the downstream (more complex) analysis networks.
 These inference engines will host dynamically adaptive algorithms and AI models that extract contextually relevant information before transformation and passage down the analysis chain.
-As an example, this dynamic transformation chain will be able to use the result of an early analysis to select the most appropriate compression algorithm in subsequent step.
+For example, the dynamic transformation chain will use early stage analysis to select the most appropriate subsequent compression algorithm.
+This Edge AI system will be hosted on Field Programmable Gate Arrays (FPGAs) as well as emerging flexible Edge AI hardware \cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores} that will be incorporated directly into the sensor, or nearly so, to minimize latency as well as alleviate the need for inappropriately large buffer memory.
+The flexibility of FPGAs and Edge AI devices is critical for user facilities like LCLS-II and APS-U where the firmware inference models will be completly replaced every weekly experimental cycle.
 
-The Edge AI system will include an accountability system that uses the in-flight information to adapt the downstream analysis chain dynamically, stitching both the data ID and the shot-to-shot algorithm ID into the data header, logging the precise actions taken on the data.
-The full transaction chain will bind the unique fingerprint of the active algorithms to the produced information in a uniquely identifiable provenance record as depicted in Fig.~\ref{fig::EdgeFlow}.
-This transaction record not only ensures data and model provenance, but also allows for a dynamic data retention policy whereby lifetime in archive can scale with the scientific value derived from the data and active algorithm.
-In other words, the more the data is used for training Edge AI inference models and the higher the impact of resulting projects and products, the longer it stays active and elevated in the archive platform for sharing. %Fix this if I misunderstood.
-Aggregation would reveal the integrated value for scientific facilities, experimental techniques, and sensor technologies based on actual scientific impact.
-This Edge AI system will be hosted on Field Programmable Gate Arrays (FPGAs) and other emerging Edge AI hardware \cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores}, directly at the sensor, thus minimizing latency and eliminating the impending need for ridiculously large buffer memories.
-The flexibility of FPGA and other re-programmable devices is critical for user facilities like LCLS-II and APS-U so that the AI model can be replaced and upgraded for the requirements of different experiments. 
+The Edge AI system will also include an accountability system that stitches the data ID and the shot-to-shot state of the algorithm chain into the data header, thus logging the precise actions taken on the particular data event into a unique data provenance record or ledger (see Fig.~\ref{fig::EdgeFlow}).
+The provenane ledger continues to track and autoincrement a use metric according to the derived scientific value of both data and algorithm.
+This ``value aware'' ledger can then be used for an automated dynamic data retention policy whereby lifetime in archive scales proportial to the evolveing scientific value of a particular data set and/or algorithm.
+In other words, the more that data individuals are used for publications or even training AI inference models and the higher the impact of resulting projects and products, the longer the data individual remains active and discoverable in a data sharing marketplace. 
+Aggregation would reveal the integrated value for scientific facilities, experimental techniques, and sensor technologies based on quantifiable impact.
 
-SLAC has not only a critical need for the development of this technology, it also has the necessary infrastructure ---  including onsite detectors and computing infrastructure --- and the experience in implementing and deploying complex data acquisition systems. 
-The LCLS-II Data System has both an offline system to develop on and a compute layer tightly coupled to the detector to do near real-time processing.
-FPGA hardware is available both for standalone development and as a co-processor within the real-time compute layer. 
-Finally, SLAC has experts in instrumentation data analysis, FPGA development and machine learning on-site to create, implement and deploy this system.
-
-
-
-
-\paragraph{mine}
-We take inspiration for our Edge AI from Nature's own solution in the human brain.
-For example, a significant portion of vision processing occurs directly in the retina, well before the information reaches the deeper neural network inside the brain.
-This includes unconscious rapid reactions including stabilizing eye movements for example.
-We propose a similar function for our scientific sensors; a processing unit as near the detector as we can make it that can analyze incoming data in real-time and provide actionable information to the detector, the source, and the downstream (more complex) analysis networks.
-These inference engines will host dynamically adaptive algorithms and AI models that extract contextually relevant information before transformation and passage down the analysis chain.
-
-We take inspiration for our Edge AI from Nature's own solution in the human brain.
-Much of vision processing occurs directly in the retina, in the Retinal Ganglion Cells well before passage via axons into the occipital lobe for deeper neural network inference.
-Decisive actions are triggered in the cornea---stabilizing eye movements, attention and anomaly actions---all of which precede awareness of the formulated image content.
-We propose a similar function for our scientific sensors; we will use Field Programmable Gate Arrays (FPGAs) and other emerging Edge AI hardware \cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores} directly at the sensor.
-These inference accelerators will host flexibly and dynamically adaptive algorithms and inference models that extract contextually relevant information before transformation and passage down the analysis chain.
-
-The microchips themselves will use the in-flight information to adapt the analysis chain dynamically, stitching into the data header not only the data ID but also the shot-to-shot algorithm ID.
-The full transaction chain will bind the unique fingerprint of the active model to the produced information in a uniquely identifiable provenance record as depicted in Fig.~\ref{fig::EdgeFlow}.
-The transaction record not only ensures data and model provenance, but also it allows for a dynamic data retention police whereby lifetime in archive can scale with the scientific value derived from the data and active algorithm.
-The value aggregation could also reveal the integrated value for scientific facilities, experimental techniques, and sensor technologies.
+The immediacy of our need for ultra-low latency and dynamic data compression at SLAC coupled with our long history of detector development from sensor to readout electronics to complex data pipeline design makes SLAC a unique environment with the neccessary infrastructure to develop this Edge AI platform.
+%acquisition 
+%SLAC has not only a critical need for the development of this technology, it also has the necessary infrastructure ---  including onsite detectors and computing infrastructure --- and the experience in implementing and deploying complex data acquisition systems. 
+The LCLS-II Data System has both offline systems and a data reduction layer that is tightly coupled to the detector to do near real-time processing hosted in FPGA hardware as a co-processor within the real-time processing layer or as stand-alone analysis accelerators. 
+Finally, SLAC has experts in scientific instrumentation, data analysis, FPGA development, and machine learning all on-site to create, implement, and deploy the Edge AI system.
 
 \begin{figure}
 	\centerline{\includegraphics[clip,width=.75\linewidth]{./figs/EdgeFlow.eps}}
