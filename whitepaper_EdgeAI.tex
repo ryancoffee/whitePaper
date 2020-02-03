@@ -60,9 +60,34 @@ Active data and model provenance must be baked directly into the adaptive Edge A
 
 
 \paragraph{Proposed solution}
+
+\paragraph{Audrey's}
+We take inspiration for our Edge AI from Nature's own solution in the distributed processing of the human nervous system.
+For example, a significant portion of sensory processing occurs in the sensory organs themselves well before the information reaches the deeper neural networks inside the brain, i.e. the unconscious rapid reactions stabilizing eye movements.
+We propose a similar function for our scientific sensors; a processing unit as near the detector as we can make it that can analyze incoming data in real-time and provide actionable information to the detector, the source, and the downstream (more complex) analysis networks.
+These inference engines will host dynamically adaptive algorithms and AI models that extract contextually relevant information before transformation and passage down the analysis chain.
+As an example, this dynamic transformation chain will be able to use the result of an early analysis to select the most appropriate compression algorithm in subsequent step.
+
+The Edge AI system will include an accountability system that uses the in-flight information to adapt the downstream analysis chain dynamically, stitching both the data ID and the shot-to-shot algorithm ID into the data header, logging the precise actions taken on the data.
+The full transaction chain will bind the unique fingerprint of the active algorithms to the produced information in a uniquely identifiable provenance record as depicted in Fig.~\ref{fig::EdgeFlow}.
+This transaction record not only ensures data and model provenance, but also allows for a dynamic data retention policy whereby lifetime in archive can scale with the scientific value derived from the data and active algorithm.
+In other words, the more the data is used for training Edge AI inference models and the higher the impact of resulting projects and products, the longer it stays active and elevated in the archive platform for sharing. %Fix this if I misunderstood.
+Aggregation would reveal the integrated value for scientific facilities, experimental techniques, and sensor technologies based on actual scientific impact.
+This Edge AI system will be hosted on Field Programmable Gate Arrays (FPGAs) and other emerging Edge AI hardware \cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores}, directly at the sensor, thus minimizing latency and eliminating the impending need for ridiculously large buffer memories.
+The flexibility of FPGA and other re-programmable devices is critical for user facilities like LCLS-II and APS-U so that the AI model can be replaced and upgraded for the requirements of different experiments. 
+
+SLAC has not only a critical need for the development of this technology, it also has the necessary infrastructure ---  including onsite detectors and computing infrastructure --- and the experience in implementing and deploying complex data acquisition systems. 
+The LCLS-II Data System has both an offline system to develop on and a compute layer tightly coupled to the detector to do near real-time processing.
+FPGA hardware is available both for standalone development and as a co-processor within the real-time compute layer. 
+Finally, SLAC has experts in instrumentation data analysis, FPGA development and machine learning on-site to create, implement and deploy this system.
+
+
+
+
+\paragraph{mine}
 We take inspiration for our Edge AI from Nature's own solution in the human brain.
 For example, a significant portion of vision processing occurs directly in the retina, well before the information reaches the deeper neural network inside the brain.
-HERE HERE HERE HERE\ldots This includes unconscious rapid reactions including stabilizing eye movements for example.
+This includes unconscious rapid reactions including stabilizing eye movements for example.
 We propose a similar function for our scientific sensors; a processing unit as near the detector as we can make it that can analyze incoming data in real-time and provide actionable information to the detector, the source, and the downstream (more complex) analysis networks.
 These inference engines will host dynamically adaptive algorithms and AI models that extract contextually relevant information before transformation and passage down the analysis chain.
 
@@ -77,9 +102,6 @@ The full transaction chain will bind the unique fingerprint of the active model 
 The transaction record not only ensures data and model provenance, but also it allows for a dynamic data retention police whereby lifetime in archive can scale with the scientific value derived from the data and active algorithm.
 The value aggregation could also reveal the integrated value for scientific facilities, experimental techniques, and sensor technologies.
 
-
-
-
 \begin{figure}
 	\centerline{\includegraphics[clip,width=.75\linewidth]{./figs/EdgeFlow.eps}}
 	\caption{
@@ -88,14 +110,34 @@ The value aggregation could also reveal the integrated value for scientific faci
 		}
 \end{figure}
 
-\paragraph{Deliverables}
-\begin{itemize}
-	\item Bespoke raw data interpretation---``featurization''---via Edge AI using on-detector FPGAs in the ePix family sensors.
-	\item Demonstrate and set sandards for near-detector FPGAs and emerging Edge AI accelerator microchips for incorporation---via daughter cards---into commercial waveform digitizers and image capture cards.
-	\item The analysis chain will be dynamic, changing potentially from shot-to-shot depending on the inference results from previous links in the pipeline.
-	\item ASIC and FPGA fingerprint IDs with corresponding design and firmware IDs will be included in the data header which itself is composed on-the-fly from model IDs that track the data provenance through the dynamic transformation chain.
-	\item Data ID that can be used to imbue results, respective algorithms, experimental methods, and facility beamlines with quantitative value metrics that are proportional to the derived scientific output.
-\end{itemize}
+\paragraph{Deliverables -- Audrey incorporated}
+The primary objective of this project is deployment of an extremely low latency, real-time Edge AI system that maximizes data reduction while also maximizing domain-specific information preservation. 
+%Beyond reducing the buffer size requirements, 
+Ultra-low latency ltreaming analysis provides actionable informtaion for autonomous feedback control of both the light source and the detector, thus enabling an fully adaptive instrument, source, and analysis pipeline.
+%providing continuous monitoring and corrections for key parameters. 
+%The primary target is an extremely low latency early analysis in hardware and firmware.
+Since the transformation algorithms and ML models will adapt autonomously to the data in-flight, the sytem will encode a state-identifying fingerprint directly into the data header that serves as a prvenance ledger.
+This data and algorithm provenance ledger can in turn be used to imbue results, respective algorithms, experimental methods, and facility beamlines with quantitative metrics that perpetually track their evolving derived scientific value.
+
+%Concurrently, the algorithms and ML models affecting the data, as well as the data origin itself, will have a unique fingerprint included in the data header. 
+%This data provenance ledger will be composed on-the-fly for each step affecting the data along the dynamic transformation chain.
+%A secondary objective is to 
+%One could imagine the source self correcting to compensate for unavoidable drift of the energy target or the detector self correcting its gain during an experiment based on this immediate feedback.
+
+The project will initially target the ePix family of detectors, developing bespoke raw data interpretation---extracting relevant information rather than raw data---via the Edge AI framework. 
+The framework will also target commercial waveform digitizers and image capture cards for Edge AI which in turn will help formulate new interface standards for on- or near-detector FPGAs and emerging AI accelerating microchips.
+%combined into commercial waveform digitizers and image capture cards. 
+
+
+%%\begin{itemize}
+%	\item Bespoke raw data interpretation---``featurization''---via Edge AI using on-detector FPGAs in the ePix family sensors.
+%	\item Demonstrate and set sandards for near-detector FPGAs and emerging Edge AI accelerator microchips for incorporation---via daughter cards---into commercial waveform digitizers and image capture cards.
+%	\item The analysis chain will be dynamic, changing potentially from shot-to-shot depending on the inference results from previous links in the pipeline.
+%	\item ASIC and FPGA fingerprint IDs with corresponding design and firmware IDs will be included in the data header which itself is composed on-the-fly from model IDs that track the data provenance through the dynamic transformation chain.
+%	\item Data ID that can be used to imbue results, respective algorithms, experimental methods, and facility beamlines with quantitative value metrics that are proportional to the derived scientific output.
+%	\item 
+%\end{itemize}
+
 
 \bibliography{whitepaper.bib}
 
@@ -103,6 +145,8 @@ The value aggregation could also reveal the integrated value for scientific faci
 
 
 \break
+
+Look up: https://dst.lbl.gov/security/ regarding Trusted Execution Environment (TEE)
 
 \paragraph{Plan/Milestones}
 %\emph{Year 1: \$750k personnel + 60K for 800KFPs camera + 20K 4x quad framegrabbers + 120K 4x digitizers}
