@@ -6,7 +6,7 @@
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{unsrt}
 
-\title{Information Extraction at the Edge with an Analysis Transaction and Value Ledger}
+\title{Dynamic Information Extraction with Edge AI}% with an Analysis Transaction and Value Ledger}
 \author{Audrey Corbeil-Therrien, Angelo Dragone, Ryan Herbst, Jana Thayer, Ryan Coffee}
 
 \begin{document}
@@ -18,55 +18,55 @@
 %\paragraph{Kelly notes:} %Define a large problem that is viewed as important. %Then give a credible list of milestones that deliver us some way toward the solution to that problem. %BlockChain %FPGA development (1st interaction with the data) %GPU, TPU, FractalCore or other AI chip for the high-dimensional convolutions, RNN, or other initial layers %Then different hardware, again maybe the Xilinx Veral chips for deeper fullyconnected.  %Then out through again FPGA, or direct to memory, or reverse back out for autoencoder. %Decision output flags along the way. 
 
 %\section*{Executive Summary}
-\begin{wrapfigure}[27]{r}{.45\linewidth}
+\begin{wrapfigure}[23]{r}{.4\linewidth}
 	\vspace{-1.5\baselineskip}
 	\centerline{ \includegraphics[clip,trim={-2cm -2cm 1.5cm 1.5cm},width=\linewidth]{./figs/plotting.technology.eps} }
 	\vspace{-1\baselineskip}
 	\caption{
 		\label{fig::technology} 
-		Data adapted from Ref.~\cite{MicroprocessorTrendData}. Note the continued exponential growth of performance in spite of CPU clock and power limitations in the mid-2000s; limitations that triggered the multi-threading paradigm.
+		Adapted from Ref.~\cite{MicroprocessorTrendData}. Note that the limitations in the mid-2000s triggered the multi-threading paradigm.
 	}
 \end{wrapfigure}
-\paragraph{Problem Statement}% and Current state of the art}
+\paragraph{Problem Statement}%--Audrey incorporated}% and Current state of the art}
 The Linac Coherent Light Source II (LCLS-II) holds great promise to reveal critical rare events such as the onset of battery failure, mutation events and atomic scale motion during DNA zipping and protein folding.
-There is also a growing portfolio of newly enabled experimental techniques such as time-resolved x-ray holography imaging \cite{tais} of biomolecular systems and time-resolved dark field x-ray microscopy \cite{leora} that interrogate nano- and meso-scopic movies of the action of photochemistry and emergent materials properties.
+There is also a growing portfolio of newly enabled experimental techniques such as femtosecond x-ray Fourier holography \cite{Tais2018} and femtosecond dark field x-ray microscopy \cite{Simons2015} that interrogate nano- and meso-scopic movies of the action of photochemistry and emergent materials properties.
 At the heart of all these objectives lies the need to identify both very weak and/or very rare events in overwhelmingly cluttered and noisy data. 
-HERE HERE HERE HERE
-To target these science areas, SLAC is developing a suite of high rate detectors including the ePix family of x-ray imaging detectors with an eventual multi-megapixel readout at one million frames per second within this decade.
-Such a raw data volume would be equivalent to producing over 100 years worth of HD video \cite{HowBigVideo} every day, requiring nearly \$1M in storage \cite{CostPerTB}; conventional data-center hosted mining is not a viable option.
-Although the scale of the data for LCLS-II and the upcoming Advanced Photon Source Upgrade (APS-U) pose truly unique challenges, the evolution of Industry 4.0 and autonomous vehicles is revealing a shared need for data handeling at the point of generation, at the sensor \cite{Gartner2018,NetworkWorld2019}.
-Humans respond to physical limitations to scientific and technological advancement by innovating a paradigm shift, just as the multi-threading paradigm enabled continued exponential performance in spite of the clock and power limitations in the mid-2000s (Fig.~\ref{fig::technology}).
-Cloud to Edge AI is the paradigm shift that is upon us now.
+To target these science areas, SLAC is developing a suite of extreme data rate detectors including the ePix family of x-ray imaging detectors with an eventual multi-megapixel readout at one million frames per second within this decade.
+Such a raw data volume would be equivalent to producing over 100 years worth of 4K (Ultra-HD) video \cite{HowBigVideo} every day, requiring nearly \$1M\footnote{This only considers hardware costs. Actual costs including power, space and personnel are much higher (estimated at \$30 per GB per month) and accumulate over time.} in storage \cite{CostPerTB}; conventional Datacenter hosted mining is not a viable option.
+Similar to the multi-threading paradigm shift that enabled continued exponential computing performance in spite of physical clock and power limitations of the mid-2000s (Fig.~\ref{fig::technology}), the Datacenter HPC to Edge AI paradigm shift is upon us now.
+Although the scale of the data for LCLS-II and the upcoming Advanced Photon Source Upgrade (APS-U) pose truly unique challenges, the evolution of Industry 4.0 and 5G networked autonomous vehicles is revealing an critical need for data handeling at the point of generation, at the sensor \cite{Gartner2018,NetworkWorld2019}.
 
-At our facilities, every week new users mount experiments with vastly different requirements and objectives and so preclude a static data acquisition system. 
-We therefore require a paradigm of streaming actionable information extraction that can flexibly handle a weekly or daily re-definition of information.
-This raises a complimentary need for data and model provenance tracking of these dynamic Edge AI systems that will be actively manipulating the data in flight to storage.
-Active data and model provenance must be baked directly into the adaptive Edge AI paradigm.
+We therefore propose streaming actionable information extraction that can flexibly handle a weekly or daily re-definition of actionable information.
+At our National Lab facilities, every week new users mount experiments with vastly different requirements and objectives and preclude a static data acquisition system. 
+The ability to move CPU/GPU data analysis into firmware is an enabling step to high throughput but dynamically adaptive experiments that require ultra-low latency.
+We require real-time streaming inference that dynamically routes data through different Edge AI hardware throughout the data acquisition chain, be it FPGA, GPU, CPU, or other emerging hardware~\cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores}.
+This raises the complimentary requirement for data and model provenance tracking of the data flow through these chained Edge AI systems that will be actively manipulating the data in flight to storage.
+Active data and model provenance must therefore be baked directly into the adaptive Edge AI paradigm.
 
-\paragraph{from Audrey}
+%\paragraph{from Audrey}
 %The Linac Coherent Light Source II (LCLS-II) holds great promise to study critical rare events such as the onset of battery failure as well as the random cancer-inducing DNA mutations during DNA replication. 
 %Similarly, LCLS-II will enable to study the atomic motions and chemical reactions happening during gene therapy. 
-But at the heart of all these objectives lies the need to identify very weak and extremely rare events in overwhelmingly cluttered data. 
-This large data paradigm is not a problem exclusive to DOE light sources like LCLS-II and the Advanced Photon Source Upgrade (APS-U); it has become a critical issue for several large scientific experiments as well as for industrial applications with the ongoing growth of the Industrial Internet of Things (IIoT)\cite{Gartner2018,NetworkWorld2019}.
+%But at the heart of all these objectives lies the need to identify very weak and extremely rare events in overwhelmingly cluttered data. 
+%This large data paradigm is not a problem exclusive to DOE light sources like LCLS-II and the Advanced Photon Source Upgrade (APS-U); it has become a critical issue for several large scientific experiments as well as for industrial applications with the ongoing growth of the Industrial Internet of Things (IIoT)\cite{Gartner2018,NetworkWorld2019}.
 
-In the context of DOE's flagship facilities, LCLS-II data rates could grow to velocities beyond 1~TB/s with similar challenges following shortly thereafter at APS-U.
-At this data velocity, the data volume for a single 12 hour shift is equivalent to producing 28 years worth of HD video \cite{HowBigVideo} requiring just shy of 1/2 M\$ in storage assuming \$0.01/GB \cite{CostPerTB}\footnote{This only considers hardware costs. Actual costs including power, space and personnel are much higher (estimated at \$30 per GB per month) and accumulate over time.}.
-The data production is projected to increase further as we advance towards the goal of running the planned multi-megapixel camera at a MHz full frame readout by 2028.
-This dramatic increase in both data velocities and volumes pose unique challenges and require the reformulation and replacement of traditional data acquisition principles and cloud hosted data mining. 
+%In the context of DOE's flagship facilities, LCLS-II data rates could grow to velocities beyond 1~TB/s with similar challenges following shortly thereafter at APS-U.
+%At this data velocity, the data volume for a single 12 hour shift is equivalent to producing 28 years worth of HD video \cite{HowBigVideo} requiring just shy of 1/2 M\$ in storage assuming \$0.01/GB \cite{CostPerTB}\footnote{This only considers hardware costs. Actual costs including power, space and personnel are much higher (estimated at \$30 per GB per month) and accumulate over time.}.
+%The data production is projected to increase further as we advance towards the goal of running the planned multi-megapixel camera at a MHz full frame readout by 2028.
+%This dramatic increase in both data velocities and volumes pose unique challenges and require the reformulation and replacement of traditional data acquisition principles and cloud hosted data mining. 
 
-We propose the use of AI at or near the detector --- at the edge --- to analyze, veto and reduce the incoming data to a useful stream of information. 
-Although Edge AI growth is picking up speed, the DOE has a unique need for high velocity, low latency, easily adaptive and flexible Edge AI.
-In addition to reducing data volumes and throughput, the ability to move some of the CPU/GPU data analysis into hardware and firmware is an enabling step to dynamic experiments which require low latency.
-With fast analysis, feedback can be provided to the light source and the detector to dynamically adjust experiment parameters. 
-Furthermore, each week new users mount experiments with vastly different requirements and objectives which precludes a single static data acquisition system. 
-We require a flexible acquisition system whereby our scientific instruments directly record actionable information specific to the experiment, not raw data.
- This acquisition system must be in a form that can elegantly handle the frequent---weekly or daily---re-definition of ``information''.
-The process will require real-time low latency streaming inference engines that will dynamically route data directly through the different Edge AI hardware along the data acquisition chain, be it FPGA, GPU, CPU, or other emerging hardware~\cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores}.
-There exists a concomitant need for data and model provenance tracking for the dynamic Edge AI systems that are actively manipulating the data in flight to storage.
-Both data and model provenance and verification must therefore be baked directly into the adaptive Edge AI paradigm for DOE's user facilities.
+%We propose the use of AI at or near the detector --- at the edge --- to analyze, veto and reduce the incoming data to a useful stream of information. 
+%Although Edge AI growth is picking up speed, the DOE has a unique need for high velocity, low latency, easily adaptive and flexible Edge AI.
+%In addition to reducing data volumes and throughput, the ability to move some of the CPU/GPU data analysis into hardware and firmware is an enabling step to dynamic experiments which require low latency.
+%With fast analysis, feedback can be provided to the light source and the detector to dynamically adjust experiment parameters. 
+%Furthermore, each week new users mount experiments with vastly different requirements and objectives which precludes a single static data acquisition system. 
+%We require a flexible acquisition system whereby our scientific instruments directly record actionable information specific to the experiment, not raw data.
+% This acquisition system must be in a form that can elegantly handle the frequent---weekly or daily---re-definition of ``information''.
+%The process will require real-time low latency streaming inference engines that will dynamically route data directly through the different Edge AI hardware along the data acquisition chain, be it FPGA, GPU, CPU, or other emerging hardware~\cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores}.
+%There exists a concomitant need for data and model provenance tracking for the dynamic Edge AI systems that are actively manipulating the data in flight to storage.
+%Both data and model provenance and verification must therefore be baked directly into the adaptive Edge AI paradigm for DOE's user facilities.
 
 
-\paragraph{Proposed solution -- Audrey incorporated}
+\paragraph{Proposed solution}% -- Audrey incorporated}
 We take inspiration for our Edge AI from Nature's own distributed processing in the human nervous system.
 For example, a significant portion of sensory processing occurs in the sensory organs themselves well before the information reaches the deeper neural networks inside the brain, i.e. the unconscious rapid reactions stabilizing eye movements.
 We propose a similar function for our scientific sensors; a processing unit at or near to the detector that can analyze incoming data in real-time and provide actionable information to the detector, the source, and the downstream (more complex) analysis networks.
@@ -88,14 +88,17 @@ The LCLS-II Data System has both offline systems and a data reduction layer that
 Finally, SLAC has experts in scientific instrumentation, data analysis, FPGA development, and machine learning all on-site to create, implement, and deploy the Edge AI system.
 
 \begin{figure}
+	\vspace{-1\baselineskip}
 	\centerline{\includegraphics[clip,width=.75\linewidth]{./figs/EdgeFlow.eps}}
+	\vspace{-1\baselineskip}
 	\caption{
 		\label{fig::EdgeFlow}
 		Schematic of information flow through heterogeneous hardware with ID generation and provenance tracking.
 		}
+	\vspace{-1\baselineskip}
 \end{figure}
 
-\paragraph{Deliverables -- Audrey incorporated}
+\paragraph{Deliverables}% -- Audrey incorporated}
 The primary objective of this project is deployment of an extremely low latency, real-time Edge AI system that maximizes data reduction while also maximizing domain-specific information preservation. 
 %Beyond reducing the buffer size requirements, 
 Ultra-low latency ltreaming analysis provides actionable informtaion for autonomous feedback control of both the light source and the detector, thus enabling an fully adaptive instrument, source, and analysis pipeline.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  30 JAN 2020 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  4 FEB 2020 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -212,57 +212,37 @@ LaTeX Font Info:    ... okay on input line 12.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 File: ./figs/plotting.technology.eps Graphic file (type eps)
-<./figs/plotting.technology.eps>
-Underfull \hbox (badness 5274) in paragraph at lines 31--39
-[] \OT1/cmr/bx/n/10 Prob-lem State-ment[] \OT1/cmr/m/n/10 The Linac Co-her-ent 
-Light
- []
-
-[1
+<./figs/plotting.technology.eps> [1
 
 ]
 File: ./figs/EdgeFlow.eps Graphic file (type eps)
  <./figs/EdgeFlow.eps>
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
+(./whitepaper_EdgeAI.bbl [2]
+Underfull \hbox (badness 1205) in paragraph at lines 37--41
+[]\OT1/cmr/m/n/10 Hilbert Hage-doorn.  De-cline price per gb for hdds comes to 
+an end, 2017.  Avail-able at:
+ []
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
 
-(./whitepaper_EdgeAI.bbl
-Underfull \hbox (badness 2744) in paragraph at lines 17--21
+Underfull \hbox (badness 2744) in paragraph at lines 50--54
 []\OT1/cmr/m/n/10 Ann Tay-lor.  Edge com-put-ing is in most in-dus-tries' fu-tu
 re, April 2019.  Avail-able at:
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 29--33
-[]\OT1/cmr/m/n/10 Hilbert Hage-doorn.  De-cline price per gb for hdds comes to 
-an end, 2017.  Avail-able at:
- []
-
-[2]
-Underfull \hbox (badness 7047) in paragraph at lines 40--44
-[]\OT1/cmr/m/n/10 Saro Vel-ra-jan.  Far edge vs. near edge in edge com-put-ing,
- 2019.  Avail-able at:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--55
+Underfull \hbox (badness 10000) in paragraph at lines 56--59
 []\OT1/cmr/m/n/10 Google.  Edge tpu per-for-mance bench-marks, 2019.  Ava-ial-a
 ble at:
  []
 
 ) [3] (./whitepaper_EdgeAI.aux) ) 
 Here is how much of TeX's memory you used:
- 2626 strings out of 492610
- 33162 string characters out of 6129074
- 115782 words of memory out of 5000000
- 6543 multiletter control sequences out of 15000+600000
- 8608 words of font info for 31 fonts, out of 8000000 for 9000
+ 2610 strings out of 492610
+ 32838 string characters out of 6129074
+ 115729 words of memory out of 5000000
+ 6530 multiletter control sequences out of 15000+600000
+ 9062 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,6n,35p,832b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,8n,35p,832b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on whitepaper_EdgeAI.dvi (3 pages, 11576 bytes).
+Output written on whitepaper_EdgeAI.dvi (3 pages, 15320 bytes).
