@@ -7,7 +7,7 @@
 \bibliographystyle{unsrt}
 
 \title{Dynamic Information Extraction with Edge AI}% with an Analysis Transaction and Value Ledger}
-\author{Audrey Corbeil-Therrien, Angelo Dragone, Ryan Herbst, Jana Thayer, Ryan Coffee}
+\author{Audrey Corbeil Therrien, Angelo Dragone, Ryan Herbst, Jana Thayer, Ryan Coffee}
 
 \begin{document}
 
@@ -34,11 +34,11 @@ At the heart of all these objectives lies the need to identify both very weak an
 To target these science areas, SLAC is developing a suite of extreme data rate detectors including the ePix family of x-ray imaging detectors with an eventual multi-megapixel readout at one million frames per second within this decade.
 Such a raw data volume would be equivalent to producing over 100 years worth of 4K (Ultra-HD) video \cite{HowBigVideo} every day, requiring nearly \$1M\footnote{This only considers hardware costs. Actual costs including power, space and personnel are much higher (estimated at \$30 per GB per month) and accumulate over time.} in storage \cite{CostPerTB}; conventional Datacenter hosted mining is not a viable option.
 Similar to the multi-threading paradigm shift that enabled continued exponential computing performance in spite of physical clock and power limitations of the mid-2000s (Fig.~\ref{fig::technology}), the Datacenter HPC to Edge AI paradigm shift is upon us now.
-Although the scale of the data for LCLS-II and the upcoming Advanced Photon Source Upgrade (APS-U) pose truly unique challenges, the evolution of Industry 4.0 and 5G networked autonomous vehicles is revealing an critical need for data handeling at the point of generation, at the sensor \cite{Gartner2018,NetworkWorld2019}.
+The scale of the data for LCLS-II and the upcoming Advanced Photon Source Upgrade (APS-U) pose truly unique challenges, yet the evolution of Industry 4.0 and 5G networked autonomous vehicles are also revealing an critical need for data handling at the point of generation : the sensor \cite{Gartner2018,NetworkWorld2019}.
 
 We therefore propose streaming actionable information extraction that can flexibly handle a weekly or daily re-definition of actionable information.
-At our National Lab facilities, every week new users mount experiments with vastly different requirements and objectives and preclude a static data acquisition system. 
-The ability to move CPU/GPU data analysis into firmware is an enabling step to high throughput but dynamically adaptive experiments that require ultra-low latency.
+At our National Lab facilities, every week new users mount experiments with vastly different and objectives requirements which preclude a static data acquisition system. 
+The ability to move CPU/GPU data analysis into edge firmware is an enabling step to high throughput and dynamically adaptive experiments that require ultra-low latency.
 We require real-time streaming inference that dynamically routes data through different Edge AI hardware throughout the data acquisition chain, be it FPGA, GPU, CPU, or other emerging hardware~\cite{edgetpu_benchmarks,edgetpu,waveCGRA,CGRAreview,seaofcores}.
 This raises the complimentary requirement for data and model provenance tracking of the data flow through these chained Edge AI systems that will be actively manipulating the data in flight to storage.
 Active data and model provenance must therefore be baked directly into the adaptive Edge AI paradigm.
@@ -76,9 +76,9 @@ This Edge AI system will be hosted on Field Programmable Gate Arrays (FPGAs) as 
 The flexibility of FPGAs and Edge AI devices is critical for user facilities like LCLS-II and APS-U where the firmware inference models will be completly replaced every weekly experimental cycle.
 
 The Edge AI system will also include an accountability system that stitches the data ID and the shot-to-shot state of the algorithm chain into the data header, thus logging the precise actions taken on the particular data event into a unique data provenance record or ledger (see Fig.~\ref{fig::EdgeFlow}).
-The provenane ledger continues to track and autoincrement a use metric according to the derived scientific value of both data and algorithm.
-This ``value aware'' ledger can then be used for an automated dynamic data retention policy whereby lifetime in archive scales proportial to the evolveing scientific value of a particular data set and/or algorithm.
-In other words, the more that data individuals are used for publications or even training AI inference models and the higher the impact of resulting projects and products, the longer the data individual remains active and discoverable in a data sharing marketplace. 
+Beyond the experiment itself, the provenance ledger will continue to track and autoincrement a use metric according to the derived scientific value of both data and algorithm.
+This ``value aware'' ledger can then be used for an automated dynamic data retention policy whereby lifetime in archive scales proportionally to the evolving scientific value of a particular data set and/or algorithm.
+In other words, the more a dataset is used for publications or even training AI inference models and the higher the impact of resulting projects and products, the longer this dataset remains active and discoverable in a data sharing marketplace. %Data individuals really confused me. IF you distinguish it from a datset in any specific way, it should be explined.
 Aggregation would reveal the integrated value for scientific facilities, experimental techniques, and sensor technologies based on quantifiable impact.
 
 The immediacy of our need for ultra-low latency and dynamic data compression at SLAC coupled with our long history of detector development from sensor to readout electronics to complex data pipeline design makes SLAC a unique environment with the neccessary infrastructure to develop this Edge AI platform.
@@ -101,7 +101,7 @@ Finally, SLAC has experts in scientific instrumentation, data analysis, FPGA dev
 \paragraph{Deliverables}% -- Audrey incorporated}
 The primary objective of this project is deployment of an extremely low latency, real-time Edge AI system that maximizes data reduction while also maximizing domain-specific information preservation. 
 %Beyond reducing the buffer size requirements, 
-Ultra-low latency ltreaming analysis provides actionable informtaion for autonomous feedback control of both the light source and the detector, thus enabling an fully adaptive instrument, source, and analysis pipeline.
+Ultra-low latency streaming analysis provides actionable informtaion for autonomous feedback control of both the light source and the detector, thus enabling an fully adaptive instrument, source, and analysis pipeline.
 %providing continuous monitoring and corrections for key parameters. 
 %The primary target is an extremely low latency early analysis in hardware and firmware.
 Since the transformation algorithms and ML models will adapt autonomously to the data in-flight, the sytem will encode a state-identifying fingerprint directly into the data header that serves as a prvenance ledger.
