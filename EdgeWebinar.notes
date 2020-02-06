@@ -1,0 +1,36 @@
+Telecom sees Edge as in servers, buyt the AI on Edge device is more like in the tractor or on-prem (enterprise Edge)
+
+for ward thinking some training will also move to on prem, likely, maybe not so much yet on device
+
+70% inference Cloud edge 20% on device, 10% on prem
+
+Use the "mesh network" of devices with the infra-sound use case for seismic (nuclear security)
+
+How to handle updating hardware?
+
+Tradeoff  between the compression loss and loss of insights (information theory)
+
+
+Only actionable information sent through the network
+
+Remote autonomous control of e.g. wind turbines, when network is unavailable at the site (e.g. smartcatch use case)
+
+Gartner predics about 2-5 years for mainstream adoption of Edge analytics (this is more the on-prem enterprise edge)
+
+
+
+Try to get the the IBM figure about reduced rpecision training and inference
+ ~10x improvement from GPU
+
+in memory inference?  Same slide
+ ~100x improvement
+
+Streaming analytics... e.g. Crosser
+
+Emotibot :chinese, NLP and artificial emotional and emotional recognition and interaction.
+
+Xnor.ai: model running independently on an FPGA chip, bought by Apple
+
+Desperately need to make hacking a particular device more challenging than the payoff, then it would discourage hacking... but need to secure the firmware fransfer to the edge inference in device.
+
+
