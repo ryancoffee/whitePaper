@@ -1,5 +1,5 @@
-clock speed (MHz)	Performance			Utilization - CXP						ML Performance		ML Performance (row < 54, no suspiciously narrow/wide)		AggreGATOR stats (image prediction = mean(row predictions + offset), tossing out nonsensical rows)		
-250	throughput	latency (cycles)	latency (ns)	# Nodes	LUT	DSP	RAMB18	RAMB36	Reg	MSE	MAE	MSE	MAE	MSE	MAE	Avg Variance for Image
+#clock speed (MHz)	Performance			Utilization - CXP						ML Performance		ML Performance (row < 54, no suspiciously narrow/wide)		AggreGATOR stats (image prediction = mean(row predictions + offset), tossing out nonsensical rows)		
+#250	throughput	latency (cycles)	latency (ns)	# Nodes	LUT	DSP	RAMB18	RAMB36	Reg	MSE	MAE	MSE	MAE	MSE	MAE	Avg Variance for Image
 NN_64_RELU		39	156		24.46%	195.88%	0.00%	0.00%	16.62%	8228	27.9	379	8.8	85.28	2.84	452375.65
 NN_64_Leaky		45	180		26.91%	217.76%	0.00%	0.00%	18.47%	8785	29.3	436	9.9	19090.68	90.97	392703.63
 NN_32_32_RELU		56	224		56.86%	456.35%	0.00%	0.00%	38.65%	7320	24.6	335	10.6	114.36	6.56	454259.43
