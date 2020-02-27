@@ -184,18 +184,29 @@ set y2label 'latency [ns] for 250 MHz clock'
 set log y
 set log y2
 unset xtics
+set key font "Times,18"
+set ytics font "Times,18"
+set y2tics font "Times,18"
+set x2tics font "Times,12"
 set object 1 rect from 13.5,4 to 23.5,4e1 fc rgb 'green' fs pattern 4 noborder back
-set label 1 center at 18.5,50 'Gradient Boosted Trees'
+set label 1 center at 18.5,50 'Gradient Boosted Trees' font "Times,18"
+set xlabel font "Times,10"
+set x2label font "Times,10"
+set ylabel font "Times,18"
+set y2label font "Times,18"
 plot file u 0:14 w points lw 2 axis x2y1 title 'Mean Error',\
 	file u 0:4:x2tic(1) w points lw 2 axis x2y2 title 'latency'
 set xtics border in scale 1,0.5 mirror rotate by 60  offset character 0, 0, 0 right 
 set origin 0,0
-set ylabel 'Euresys resource usage [%]'
+set ylabel 'Euresys resource usage [%]' 
+set ylabel font "Times,18"
+set y2label font "Times,18"
 set log y
 set ytics mirror
 unset y2tics
 unset x2tics
 unset y2label
+set xtics font "Times,12"
 #set arrow 1 nohead from -.5,100 to 5.5,100 lw 2 lc rgb 'red' 
 set label 1 center at 18.5,10
 set object 1 rect from 13.5,.4 to 23.5,7 fc rgb 'green' fs pattern 4 noborder back
