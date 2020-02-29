@@ -6,25 +6,42 @@
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{unsrt}
 
+	
+
 \begin{document}
 \centerline{
 \large
 Dynamic Information Extraction and Provenance Ledger for Edge AI
 }
 \normalsize
-\begin{centering}
-	\textbf{Ryan Coffee (PI)}, Audrey Corbeil Therrien, 
-	Angelo Dragone, Ryan Herbst, 
-	\\Omar Quijano, 
-	and Jana Thayer -- 
-	SLAC National Accelerator Laboratory\\
-	Matt Feldman -- Stanford University\\
-	Ben Taylor -- LedgerDomain, LLC	\\
-	Topic: 1.b. ASCR-ISDM\\
-	February 28, 2020
-\\
-\end{centering}
-\vspace{\baselineskip}
+	\noindent\textbf{PI Ryan Coffee} -- Sr. Staff Scientist, LCLS/PULSE, SLAC National Accelerator Laboratory, \\coffee@slac.stanford.edu, 650-387-0981, \\
+	Audrey Corbeil Therrien -- Banting Research Fellow \& Linac Coherent Light Source (LCLS) Data Systems,\\
+	Angelo Dragone -- Department Head, Integrated Circuits, Technology \& Innovation Directorate, Advanced Instrumentation For Research Division,\\
+	Matt Feldman -- Graduate Fellow, Stanford Computer Science \& Developer SambaNova Systems, \\
+	Ryan Herbst -- Department Head, Electronics Systems, Technology \& Innovation Directorate, Advanced Instrumentation For Research Division,\\
+	Omar Quijano -- Department Head, Linac Coherent Light Source (LCLS) IT/Networking,\\
+	Ben Taylor -- Founder and CEO, LedgerDomain, LLC.,\\
+	Jana Thayer -- Department Head, Linac Coherent Light Source (LCLS) Data Systems.\\
+	Topic: 1b. Advanced Scientific Computing Research -- In Situ Data Management ASCR-ISDM\\
+	February 29, 2020\\
+
+\break
+\centerline{\large{Dynamic Information Extraction and Provenance Ledger for Edge AI}}
+\normalsize
+\vspace{0.5\baselineskip}
+\centerline{\textbf{PI Ryan Coffee},
+Audrey Corbeil Therrien,
+Angelo Dragone,
+Matt Feldman,}
+\centerline{
+Ryan Herbst,
+Omar Quijano,
+Ben Taylor, and 
+Jana Thayer.
+}
+\centerline{February 29, 2020}
+\vspace{0.5\baselineskip}
+
 \begin{wrapfigure}[23]{r}{.4\linewidth}
 	\vspace{-1.5\baselineskip}
 	\centerline{ \includegraphics[clip,trim={-2cm -2cm 1.5cm 1.5cm},width=\linewidth]{./figs/plotting.technology.eps} }
@@ -84,8 +101,9 @@ Furthermore, the PIs has existing collaboration with emerging Edge AI inference 
 
 \paragraph{Deliverables}
 Ultra-low latency streaming analysis provides actionable information for autonomous feedback control of both the light source and the detector, thus enabling an fully adaptive instrument, source, and analysis pipeline.
-The primary objective of this project is therefore the deployment of an extremely low latency, real-time Edge AI system that maximizes data reduction while also maximizing user-defined domain-specific information preservation. 
-The system will create a state-identifying transaction ledger that serves as a continual provenance ledger and enables dynamic access and retention control.
+The objective of this project is a microsecond scale latency streaming inference optimized for ``batch size=1'' on-sensor FPGA and inference acceleration chip configurations.
+The inference engine will optimize data reduction via dynamic data flow routing through a palette of inference accelerators that implement a variety of user-defined domain-specific trained ML model chained in stages. 
+The inter-stage control logic will create a state-identifying transaction record that serves as a continual provenance ledger and enables dynamic access and retention control.
 This data and algorithm provenance ledger will imbue respective data and algorithms with quantitative metrics that perpetually track derived scientific value.
 We will target ultra-high frame rate imaging detectors, including the ePix family of x-ray imaging detectors as well as commercial waveform digitizers and image capture cards.
 We will help formulate interface standards for emerging commercial on-detector inference acceleration microchips.
@@ -122,6 +140,8 @@ Patrick H Reisenthal, Daniel J. Lesieutre, Michael R. Mendenhall, Harrison S. Y.
 
 \paragraph{Matt Feldman, Graduate Fellow, Stanford Computer Science \& Developer SambaNova Systems. }
 \textbf{Graduate advisor: } Kunle Olukotun.
+\textbf{Colaborators: }
+David Koeplinger (Stanford), Raghu Prabhakar (Stanford), Yaqi Zhang (Stanford), Stefan Hadjis (Stanford), Ruben Fiszel (EPFL Switzerland), Tian Zhao (Stanford), Luigi Nardi (Stanford), Ardavan Pedram (Stanford), Christos Kozyrakis (Stanford)
 
 \paragraph{Angelo Dragone (not funded), Department Head, Integrated Circuits, Technology \& Innovation Directorate, Advanced Instrumentation For Research Division. }
 
