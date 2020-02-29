@@ -20,6 +20,34 @@ Tais Gorkhover, Anatoli Ulmer, Ken Ferguson, Max Bucher, Filipe R. N.~C. Maia,
   nanoparticles.
 \newblock {\em Nature Photonics}, 12(3):150--153, 2018.
 
+\bibitem{Taran2020}
+Taran Driver, Siqi Li, Elio~G. Champenois, Joseph Duris, Daniel Ratner,
+  Thomas~J. Lane, Philipp Rosenberger, Andre Al-Haddad, Vitali Averbukh, Toby
+  Barnard, Nora Berrah, Christoph Bostedt, Philip~H. Bucksbaum, Ryan Coffee,
+  Louis~F. DiMauro, Li~Fang, Douglas Garratt, Averell Gatton, Zhaoheng Guo,
+  Gregor Hartmann, Daniel Haxton, Wolfram Helml, Zhirong Huang, Aaron LaForge,
+  Andrei Kamalov, Matthias~F. Kling, Jonas Knurr, Ming-Fu Lin, Alberto~A.
+  Lutman, James~P. MacArthur, Jon~P. Marangos, Megan Nantel, Adi Natan, Razib
+  Obaid, Jordan~T. O{'}Neal, Niranjan~H. Shivaram, Aviad Schori, Peter Walter,
+  Anna Li~Wang, Thomas J.~A. Wolf, Agostino Marinelli, and James~P. Cryan.
+\newblock Attosecond transient absorption spooktroscopy: a ghost imaging
+  approach to ultrafast absorption spectroscopy.
+\newblock {\em Phys. Chem. Chem. Phys.}, 22:2704--2712, 2020.
+
+\bibitem{Mariano2013}
+M.~Trigo, M.~Fuchs, J.~Chen, M.~P. Jiang, M.~Cammarata, S.~Fahy, D.~M. Fritz,
+  K.~Gaffney, S.~Ghimire, A.~Higginbotham, S.~L. Johnson, M.~E. Kozina,
+  J.~Larsson, H.~Lemke, A.~M. Lindenberg, G.~Ndabashimiye, F.~Quirin,
+  K.~Sokolowski-Tinten, C.~Uher, G.~Wang, J.~S. Wark, D.~Zhu, and D.~A. Reis.
+\newblock Fourier-transform inelastic x-ray scattering from time- and
+  momentum-dependent phonon-phonon correlations.
+\newblock {\em Nature Physics}, 9(12):790--794, 2013.
+
+\bibitem{Abbamonte2013}
+Peter Abbamonte.
+\newblock Picking up fine vibrations.
+\newblock {\em Nature Physics}, 9(12):759--760, 2013.
+
 \bibitem{Simons2015}
 H.~Simons, A.~King, W.~Ludwig, C.~Detlefs, W.~Pantleon, S.~Schmidt,
   F.~St{\"o}hr, I.~Snigireva, A.~Snigirev, and H.~F. Poulsen.
@@ -79,5 +107,22 @@ M.~{Wijtvliet}, L.~{Waeijen}, and H.~{Corporaal}.
 \bibitem{seaofcores}
 Unique new streaming processor architecture, 2019.
 \newblock Available at: https://cornami.com/technology-products/.
+
+\bibitem{Audrey}
+A.C et~al. Therrien.
+\newblock Machine learning at the edge for ultra high rate detectors.
+\newblock In {\em IEEE Nuclear Science Symposium and Medical Imaging
+  Conference}. IEEE, October 2019.
+
+\bibitem{LedgerDomain}
+Ben Taylor and Victor Dodds.
+\newblock Ledgerdomain's blockchain-based communal trust platform.
+\newblock Available at: https://www.ledgerdomain.com/technology.
+
+\bibitem{BruinChain}
+UCLA Health and LedgerDomain.
+\newblock Bruinchain: A last-mile blockchain application designed to help
+  deliver real medications to real patients., 2020.
+\newblock Available at: https://www.bruinchain.com/.
 
 \end{thebibliography}
