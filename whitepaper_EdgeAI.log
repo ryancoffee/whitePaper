@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  2 MAR 2020 06:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  2 MAR 2020 07:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -215,35 +215,41 @@ LaTeX Font Info:    ... okay on input line 11.
 
 ]
 File: ./figs/plotting.technology.eps Graphic file (type eps)
- <./figs/plotting.technology.eps> [2]
+ <./figs/plotting.technology.eps> [1]
 File: ./figs/EdgeFlow.eps Graphic file (type eps)
- <./figs/EdgeFlow.eps> [3] [4]
-(./whitepaper_EdgeAI.bbl [5]
-Underfull \hbox (badness 1205) in paragraph at lines 65--69
-[]\OT1/cmr/m/n/10 Hilbert Hage-doorn.  De-cline price per gb for hdds comes to 
-an end, 2017.  Avail-able at:
+ <./figs/EdgeFlow.eps> [2] [3]
+(./whitepaper_EdgeAI.bbl [4]
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
+[]\OT1/cmr/m/n/10 Jana Thayer \OT1/cmr/m/it/10 et al.,\OT1/cmr/m/n/10 .  Data p
+ro-cess-ing at the linac co-her-
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 78--82
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
+\OT1/cmr/m/n/10 ent light source.  \OT1/cmr/m/it/10 Su-per-com-put-ing 2019\OT1
+/cmr/m/n/10 , 2019.  Ava-ial-able at:
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 85--89
 []\OT1/cmr/m/n/10 Ann Tay-lor.  Edge com-put-ing is in most in-dus-tries' fu-tu
 re, April 2019.  Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--87
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
 []\OT1/cmr/m/n/10 Google.  Edge tpu per-for-mance bench-marks, 2019.  Ava-ial-a
 ble at:
  []
 
-) [6] (./whitepaper_EdgeAI.aux) ) 
+) [5] (./whitepaper_EdgeAI.aux) ) 
 Here is how much of TeX's memory you used:
- 2628 strings out of 492610
- 33145 string characters out of 6129074
- 116731 words of memory out of 5000000
- 6550 multiletter control sequences out of 15000+600000
+ 2631 strings out of 492610
+ 33214 string characters out of 6129074
+ 116747 words of memory out of 5000000
+ 6553 multiletter control sequences out of 15000+600000
  7924 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,8n,35p,1966b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on whitepaper_EdgeAI.dvi (6 pages, 29532 bytes).
+Output written on whitepaper_EdgeAI.dvi (6 pages, 30028 bytes).

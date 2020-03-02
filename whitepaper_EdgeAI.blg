@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: whitepaper_EdgeAI.aux
 The style file: unsrt.bst
 Database file #1: whitepaper.bib
-You've used 18 entries,
+You've used 19 entries,
             1791 wiz_defined-function locations,
-            548 strings with 8520 characters,
-and the built_in function-call counts, 4442 in all, are:
-= -- 258
-> -- 415
+            553 strings with 8791 characters,
+and the built_in function-call counts, 4580 in all, are:
+= -- 271
+> -- 419
 < -- 1
-+ -- 148
-- -- 130
-* -- 344
-:= -- 776
-add.period$ -- 54
-call.type$ -- 18
-change.case$ -- 18
++ -- 150
+- -- 131
+* -- 347
+:= -- 802
+add.period$ -- 58
+call.type$ -- 19
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 133
-empty$ -- 380
-format.name$ -- 130
-if$ -- 930
+cite$ -- 19
+duplicate$ -- 141
+empty$ -- 394
+format.name$ -- 131
+if$ -- 960
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 7
-newline$ -- 92
-num.names$ -- 17
-pop$ -- 98
+int.to.str$ -- 19
+missing$ -- 8
+newline$ -- 98
+num.names$ -- 18
+pop$ -- 100
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 68
+skip$ -- 71
 stack$ -- 0
 substring$ -- 130
-swap$ -- 29
+swap$ -- 30
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 24
-width$ -- 20
-write$ -- 184
+while$ -- 25
+width$ -- 21
+write$ -- 196

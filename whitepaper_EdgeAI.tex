@@ -14,6 +14,12 @@
 Dynamic Information Extraction and Provenance Ledger for Edge AI \\
 \normalsize
 	\vspace{\baselineskip}
+	Topic: 1b. ASCR-ISDM\\
+	Advanced Scientific Computing Research\\
+	In Situ Data Management\\
+	\vspace{\baselineskip}
+	February 29, 2020\\
+	\vspace{2\baselineskip}
 	\textbf{PI Ryan Coffee}\\
 	Sr. Staff Scientist,\\
 	Linac Coherent Light Source \& the PULSE Institute,\\
@@ -38,6 +44,11 @@ Dynamic Information Extraction and Provenance Ledger for Edge AI \\
 	Advanced Instrumentation For Research Division,\\
 	SLAC National Accelerator Laboratory\\
 	\vspace{.5\baselineskip}
+	%Amedeo Perazzo\\
+	%Director\\
+	%Advanced Data and Computing\\
+	%SLAC National Accelerator Laboratory\\
+	%\vspace{.5\baselineskip}
 	Omar Quijano\\
 	Department Head\\
 	Linac Coherent Light Source (LCLS) IT/Networking,\\
@@ -51,14 +62,10 @@ Dynamic Information Extraction and Provenance Ledger for Edge AI \\
 	Department Head\\
 	Linac Coherent Light Source (LCLS) Data Systems.\\
 	SLAC National Accelerator Laboratory\\
-	\vspace{\baselineskip}
-	Topic: 1b. ASCR-ISDM\\
-	Advanced Scientific Computing Research\\
-	In Situ Data Management\\
-	\vspace{\baselineskip}
-	February 29, 2020\\
 \end{centering}
+\thispagestyle{empty}
 \break
+\addtocounter{page}{-1}
 \centerline{\large{Dynamic Information Extraction and Provenance Ledger for Edge AI}}
 \normalsize
 \vspace{0.5\baselineskip}
@@ -68,6 +75,7 @@ Angelo Dragone,
 Matt Feldman,}
 \centerline{
 Ryan Herbst,
+%Amedeo Perazzo, 
 Omar Quijano,
 Ben Taylor, and 
 Jana Thayer.
@@ -86,9 +94,10 @@ Jana Thayer.
 \end{wrapfigure}
 The Linac Coherent Light Source II (LCLS-II) holds great promise to answer critical questions regarding ultra-fast materials dynamics, the molecular motion responsible for light harvesting, and the first trigger events in catalysis. 
 The corresponding newly enabled experimental techniques such as femtosecond x-ray Fourier holography \cite{Tais2018}, time-domain ghost imaging \cite{Taran2020}, time-domain phonon dynamics \cite{Mariano2013,Abbamonte2013} and femtosecond resolved dark field x-ray microscopy \cite{Simons2015} extract valuable information only after sorting or otherwise statistically treating signal dependence on stochastic source parameters, e.g. time-delay, spectral content, or spatial mode.
-The need to identify both very weak and/or very rare events in overwhelmingly cluttered and noisy data requires extreme data rate detectors that could be capable of one million readout frames per second either as next-generation commercial visible cameras or SLAC's own ePix family of x-ray imaging detectors. 
-The raw data volume for such rates (TB/s) would be equivalent to producing 100 years worth of Ultra-HD video \cite{HowBigVideo} every day which would require nearly \$1M in new storage for each day of operation \cite{CostPerTB}.
-\footnote{This only considers hardware costs. Actual costs including power, space and personnel are much higher (estimated at \$30 per GB per month) and accumulate over time.} 
+The need to identify both very weak and/or very rare events in overwhelmingly cluttered and noisy data requires extreme data rate detectors ultimately capable of one million readout frames per second as expected for next-generation commercial visible cameras or SLAC's own ePix family of x-ray imaging detectors. 
+The raw data volume for such rates (TB/s) \cite{lcls_processing} would be equivalent to producing 100 years worth of Ultra-HD video \cite{HowBigVideo} every day.  
+This would require nearly \$1M in permanent storage for each day of operation \cite{CostPerTB}
+\footnote{This considers hardware costs only. Actual costs including power, space and personnel are much higher (estimated at \$30 per GB per month) and accumulate over time.}.
 Although the scale of the data for the complementary facilities LCLS-II and the upcoming Advanced Photon Source Upgrade (APS-U) pose extreme scale challenges, the evolution of 5G networked sensors driving autonomous industrial decision portends a critical need for data handling at the point of generation, at the sensor \cite{Gartner2018,NetworkWorld2019}---conventional data center hosted mining is not a viable option for DOE labs and for Industry 4.0 alike.
 Similar to the multi-threading paradigm shift of the mid-2000s (Fig.~\ref{fig::technology}), the Edge AI paradigm shift is upon us now.
 

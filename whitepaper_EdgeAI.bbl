@@ -55,6 +55,13 @@ H.~Simons, A.~King, W.~Ludwig, C.~Detlefs, W.~Pantleon, S.~Schmidt,
   characterization.
 \newblock {\em Nature Communications}, 6(1):6098, 2015.
 
+\bibitem{lcls_processing}
+Jana~Thayer \textit{et al.,}.
+\newblock Data processing at the linac coherent light source.
+\newblock {\em Supercomputing 2019}, 2019.
+\newblock Avaialable at:
+  https://sc19.supercomputing.org/proceedings/workshops/workshop\_pages/ws\_xloop106.html.
+
 \bibitem{HowBigVideo}
 filecast blog.
 \newblock How to move large video files, 2016.
@@ -64,7 +71,7 @@ filecast blog.
 \bibitem{CostPerTB}
 Hilbert Hagedoorn.
 \newblock Decline price per gb for hdds comes to an end, 2017.
-\newblock Available at:
+\newblock Assuming \$10/TB drives for permanent storage. Available at:
   https://www.guru3d.com/news-story/decline-price-per-gb-for-hdds-comes-to-an-end.html.
 
 \bibitem{Gartner2018}
@@ -109,7 +116,7 @@ Unique new streaming processor architecture, 2019.
 \newblock Available at: https://cornami.com/technology-products/.
 
 \bibitem{Audrey}
-A.C et~al. Therrien.
+A.C.~Therrien \textit{et al.,}.
 \newblock Machine learning at the edge for ultra high rate detectors.
 \newblock In {\em IEEE Nuclear Science Symposium and Medical Imaging
   Conference}. IEEE, October 2019.
