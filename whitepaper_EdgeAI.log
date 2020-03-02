@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  28 FEB 2020 22:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.8.11)  2 MAR 2020 06:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -211,11 +211,6 @@ LaTeX Font Info:    ... okay on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--27
-
- []
-
 [1
 
 ]
@@ -243,12 +238,12 @@ ble at:
 
 ) [6] (./whitepaper_EdgeAI.aux) ) 
 Here is how much of TeX's memory you used:
- 2627 strings out of 492610
- 33133 string characters out of 6129074
+ 2628 strings out of 492610
+ 33145 string characters out of 6129074
  116731 words of memory out of 5000000
- 6549 multiletter control sequences out of 15000+600000
+ 6550 multiletter control sequences out of 15000+600000
  7924 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,8n,35p,1966b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on whitepaper_EdgeAI.dvi (6 pages, 28600 bytes).
+Output written on whitepaper_EdgeAI.dvi (6 pages, 29532 bytes).
