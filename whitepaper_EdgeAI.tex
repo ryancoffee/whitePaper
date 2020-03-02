@@ -18,7 +18,7 @@ Dynamic Information Extraction and Provenance Ledger for Edge AI \\
 	Advanced Scientific Computing Research\\
 	In Situ Data Management\\
 	\vspace{\baselineskip}
-	February 29, 2020\\
+	March 2, 2020\\
 	\vspace{2\baselineskip}
 	\textbf{PI Ryan Coffee}\\
 	Sr. Staff Scientist,\\
@@ -80,7 +80,7 @@ Omar Quijano,
 Ben Taylor, and 
 Jana Thayer.
 }
-\centerline{February 29, 2020}
+\centerline{March 2, 2020}
 \vspace{0.5\baselineskip}
 
 \begin{wrapfigure}[23]{r}{.4\linewidth}
@@ -109,13 +109,15 @@ This Edge AI system will be hosted on sensor-based Field Programmable Gate Array
 The streaming information extraction must flexibly handle the weekly re-definition of actionable information since new users mount experiments with vastly different objectives every week; this precludes a static data acquisition system. 
 We therefore require user trained real-time streaming inference that can dynamically route data flow through the entire acquisition chain.
 The path of the data flow will typically depend on the particulars of the stochastically varying source parameters.
-For instance, in the case of time-domain phonon dynamics \cite{Mariano2013}, diffuse scattering images would be sorted into time ordered bins until each bin holds sufficient statistics.
-At this point the time axis would be Fourier transformed to obtain a phonon-frequency map relevant for the experiment.
-Since only narrow regions in the frequency domain need to be sent from the Edge node to permanent storage, the desirable information can be as small as $10^{-3}$ compressed relative to the millions of individual images that were produce that information.
+For instance, in the case of time-domain phonon dynamics \cite{Mariano2013}, diffuse scattering images would be sorted into time order, updating the corresponding delay bin of the accumulated time-series of images.
+Once each of the 1000 time bins has accumulated at least 1000 individual images ($10^{-3}$ compression), the time axis can be Fourier transformed to obtain a phonon-frequency map relevant for the experiment.
+In the frequency domain, the information is sparsely represented and so another factor of 10--100 in compression can be expected for data sent from the Edge node to permanent storage.
+%, the desirable information can be as small as $10^{-3}$ compressed relative to the millions of individual images that were produce that information.
 In the case of time-domain ghost imaging \cite{Taran2020}, the spectroscopic information comes from the batch covariance of measured signal with incoming x-ray pulse time-energy distribution, itself the result of a trained inference model \cite{Audrey}.
-Since each group will train its own data processing and diagnostic inference models, these models will change weekly with each new arriving user group.
-This weekly re-definition requires that an Edge AI system fundamentally records both data and model provenance into a transaction ledger.
 
+Each user group will train its own data processing and diagnostic inference models, with a new group arriving each week.
+%This weekly re-definition requires that an 
+The Edge AI system must therefore fundamentally record both data and model (or code) provenance into a persistent transaction ledger.
 The transaction ledger will log the precise actions taken on the particular data event into a unique data provenance record (see Fig.~\ref{fig::EdgeFlow}).
 The ledger then will continue to track and update a quantifiable metric according to the derived scientific value of both data and algorithm.
 This ``value aware'' ledger can then be used for an automated dynamic retention policy whereby lifetime in archive would scale proportionally with the evolving scientific value.
@@ -184,7 +186,7 @@ Ani Aprahamian (Notre Dame), Nora Berrah (U Connecticut), Christoph Bostedt (PSI
 \textbf{Postdoctoral advisors: } Ryan N. Coffee (SLAC), Jana B. Thayer (SLAC)
 \textbf{Graduate advisors: } Serge A. Charlebois (Sherbrooke), R\'{e}jean Fontaine (Sherbrooke), Roger Lecomte (Sherbrooke), Paul Lecoq (CERN), Jean-Francois Pratte (Sherbrooke) 
 \textbf{Collaborators: }
-Averell Gatton (SLAC), Stefan Gundacker (CERN), William Lemaire (Sherbrooke), Samuel Parent (Sherbrooke), Omar Quijano (SLAC), Marc-Ande\'{e} T\'{e}trault (Sherbrooke, now Harvard Medical School).
+Averell Gatton (SLAC), Stefan Gundacker (CERN), William Lemaire (Sherbrooke), Samuel Parent (Sherbrooke), Omar Quijano (SLAC), Marc-And\'{e} T\'{e}trault (Sherbrooke, now Harvard Medical School).
 
 \paragraph{Ryan Herbst: Department Head, Electronics Systems, Technology \& Innovation Directorate, Advanced Instrumentation For Research Division. }
 \textbf{Collaborators: }
